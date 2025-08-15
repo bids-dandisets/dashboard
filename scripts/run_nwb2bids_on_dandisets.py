@@ -1,7 +1,7 @@
 import pathlib
 import traceback
 
-import dandi
+import dandi.dandiapi
 import nwb2bids
 
 LIMIT = 2

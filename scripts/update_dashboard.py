@@ -1,6 +1,6 @@
 import pathlib
 
-import dandi
+import dandi.dandiapi
 
 dashboard_directory = pathlib.Path(__file__).parent.parent
 dandisets_directory = dashboard_directory / "dandisets"

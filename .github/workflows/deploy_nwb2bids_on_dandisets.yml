@@ -36,10 +36,13 @@ jobs:
       - name: Update dashboard
         run: python scripts/update_dashboard.py
 
-      - name: Push changes to dashboard
-        run: |
+      - name: Add and commit changes
+        run: | # `|| true` below to skip if nothing changed
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          git add dandisets
+          git add README.md
+          git commit -m "pre-commit" -a || true
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.8.0

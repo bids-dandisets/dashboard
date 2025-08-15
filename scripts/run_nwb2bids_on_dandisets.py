@@ -4,7 +4,7 @@ import traceback
 import dandi.dandiapi
 import nwb2bids
 
-LIMIT = 2
+LIMIT = 1
 
 dashboard_directory = pathlib.Path(__file__).parent.parent
 dandisets_directory = dashboard_directory / "dandisets"

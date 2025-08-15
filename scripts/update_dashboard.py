@@ -29,3 +29,5 @@ for dandiset in client.get_dandisets():
         readme_content += [f"| {dandiset_id:<{padding[0]}} | {status:<{padding[1]}} |"]
     else:
         readme_content += [f"| {dandiset_id:<{padding[0]}} | {'Waiting...':<{padding[1]}} |"]
+
+readme_file_path.write_text("\n".join(readme_content))

@@ -47,6 +47,17 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
 
-      - name: Send fail signal if changes were detected
-        if: env.CHANGES == 'true'
-        run: exit 1
+      - name: Send email notification on failure
+        if: ${{ always() && failure() }}  # 'always' for if any 'needs' are cancelled/skipped
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "nwb2bids Dandiset Dashboard Update Failed"
+          to: cody.c.baker.phd@gmail.com  # Add more with comma separation (no spaces)
+          from: nwb2bids Dashboard
+          body: |
+            The scheduled run of nwb2bids updates encountered an issue, please check status at
+            https://github.com/con/nwb2bids-dandisets-dashboard/actions/workflows/deploy_nwb2bids_on_dandisets.yml

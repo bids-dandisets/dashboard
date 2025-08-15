@@ -20,6 +20,7 @@ client = dandi.dandiapi.DandiAPIClient()
 for dandiset in client.get_dandisets():
     dandiset_id = dandiset.identifier
     dandiset_directory = dandisets_directory / dandiset_id
+    dandiset_directory.mkdir(exist_ok=True)
 
     status_file_path = dandiset_directory / "status.txt"
     if status_file_path.exists():

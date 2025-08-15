@@ -18,6 +18,8 @@ for counter, dandiset in enumerate(client.get_dandisets()):
 
     dandiset_id = dandiset.identifier
     dandiset_directory = dandisets_directory / dandiset_id
+    dandiset_directory.mkdir(exist_ok=True)
+
     status_file_path = dandiset_directory / "status.txt"
     if dandiset_directory.exists() and status_file_path.exists():
         continue

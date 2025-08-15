@@ -31,7 +31,7 @@ jobs:
           pip install dandi remfile
 
       - name: Run nwb2bids over Dandisets
-        run: python scripts/update_dashboard.py
+        run: python scripts/run_nwb2bids_on_dandisets.py
 
       - name: Update dashboard
         run: python scripts/update_dashboard.py

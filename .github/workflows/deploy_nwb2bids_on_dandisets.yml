@@ -1,4 +1,4 @@
-name: Tests
+name: Run and update dashboard
 
 on:
   schedule:
@@ -27,7 +27,8 @@ jobs:
       - name: Install nwb2bids with dandiset converter
         run: |
           python -m pip install --upgrade pip wheel
-          pip install git+https://github.com/con/nwb2bids.git@add_dandiset_converter[dandi]
+          pip install git+https://github.com/con/nwb2bids.git@add_dandiset_converter
+          pip install dandi remfile
 
       - name: Run nwb2bids over Dandisets
         run: python scripts/update_dashboard.py

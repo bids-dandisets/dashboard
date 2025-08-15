@@ -1,2 +1,5 @@
-# nwb2bids-dandisets-dashboard
-A simple dashboard for displaying the success or failures of running nwb2bids on a Dandiset.
+# nwb2bids Dandisets Dashboard
+
+A simple dashboard for displaying the successes or failures of running nwb2bids on a Dandiset.
+
+

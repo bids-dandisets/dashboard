@@ -5,7 +5,7 @@ A simple dashboard for displaying the successes or failures of running nwb2bids 
 | Dandiset ID | Status          |
 | :----------: | :---------------: |
 | 000003     | Success         |
-| 000004     | Waiting...      |
+| 000004     | Success         |
 | 000005     | Waiting...      |
 | 000006     | Waiting...      |
 | 000007     | Waiting...      |

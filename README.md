@@ -57,10 +57,10 @@ A simple dashboard for displaying the successes or failures of running nwb2bids 
 | 000054     | [Failed](https://github.com/con/nwb2bids-dandisets-dashboard/blob/main/dandisets/000054/status.txt) |
 | 000055     | [Failed](https://github.com/con/nwb2bids-dandisets-dashboard/blob/main/dandisets/000055/status.txt) |
 | 000056     | Success         |
-| 000058     | Waiting...      |
-| 000059     | Waiting...      |
-| 000060     | Waiting...      |
-| 000061     | Waiting...      |
+| 000058     | [Failed](https://github.com/con/nwb2bids-dandisets-dashboard/blob/main/dandisets/000058/status.txt) |
+| 000059     | [Failed](https://github.com/con/nwb2bids-dandisets-dashboard/blob/main/dandisets/000059/status.txt) |
+| 000060     | [Failed](https://github.com/con/nwb2bids-dandisets-dashboard/blob/main/dandisets/000060/status.txt) |
+| 000061     | Success         |
 | 000063     | Waiting...      |
 | 000064     | Waiting...      |
 | 000065     | Waiting...      |

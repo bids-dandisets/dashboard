@@ -12,7 +12,8 @@ dandisets_directory.mkdir(exist_ok=True)
 
 client = dandi.dandiapi.DandiAPIClient()
 
-for counter, dandiset in enumerate(client.get_dandisets()):
+counter = 0
+for dandiset in client.get_dandisets():
     if counter >= LIMIT:
         break
 
@@ -28,6 +29,7 @@ for counter, dandiset in enumerate(client.get_dandisets()):
         dataset_converter = nwb2bids.DatasetConverter.from_remote_dandiset(dandiset_id="000003")
         dataset_converter.extract_metadata()
         status_file_path.write_text(data="Success")
+        counter += 1
     except Exception as exception:
         status_file_path.write_text(
             data=f"Failed to convert dandiset {dandiset_id}: {exception}\n\nTraceback:\n{traceback.format_exc()}"

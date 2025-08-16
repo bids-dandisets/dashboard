@@ -6,7 +6,7 @@ A simple dashboard for displaying the successes or failures of running nwb2bids 
 | :----------: | :---------------: |
 | 000003     | Success         |
 | 000004     | Success         |
-| 000005     | Waiting...      |
+| 000005     | Success         |
 | 000006     | Waiting...      |
 | 000007     | Waiting...      |
 | 000008     | Waiting...      |

@@ -26,7 +26,7 @@ for dandiset in client.get_dandisets():
         continue
 
     try:
-        dataset_converter = nwb2bids.DatasetConverter.from_remote_dandiset(dandiset_id="000003")
+        dataset_converter = nwb2bids.DatasetConverter.from_remote_dandiset(dandiset_id=dandiset_id)
         dataset_converter.extract_metadata()
         status_file_path.write_text(data="Success")
         counter += 1

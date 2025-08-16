@@ -111,8 +111,8 @@ A simple dashboard for displaying the successes or failures of running nwb2bids 
 | 000145     | [Failed](https://github.com/con/nwb2bids-dandisets-dashboard/blob/main/dandisets/000145/status.txt) |
 | 000146     | [Failed](https://github.com/con/nwb2bids-dandisets-dashboard/blob/main/dandisets/000146/status.txt) |
 | 000147     | Success         |
-| 000148     | Waiting...      |
-| 000149     | Waiting...      |
+| 000148     | [Failed](https://github.com/con/nwb2bids-dandisets-dashboard/blob/main/dandisets/000148/status.txt) |
+| 000149     | Success         |
 | 000150     | Waiting...      |
 | 000151     | Waiting...      |
 | 000153     | Waiting...      |

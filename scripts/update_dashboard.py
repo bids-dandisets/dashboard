@@ -1,10 +1,26 @@
+import json
+import os
 import pathlib
 
 import dandi.dandiapi
+import requests
+import tabulate2
+import tqdm
+
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", None)
+if GITHUB_TOKEN is None:
+    message = "GITHUB_TOKEN environment variable not set"
+    raise ValueError(message)
 
 dashboard_directory = pathlib.Path(__file__).parent.parent
 dandisets_directory = dashboard_directory / "dandisets"
 readme_file_path = dashboard_directory / "README.md"
+content_directory = dashboard_directory / "content"
+content_directory.mkdir(exist_ok=True)
+table_data_file_path = content_directory / "table_data.json"
+
+client = dandi.dandiapi.DandiAPIClient()
+github_auth_header = {"Authorization": f"token {GITHUB_TOKEN}"}
 
 readme_lines = [
     "# nwb2bids Dandisets Dashboard",
@@ -12,127 +28,85 @@ readme_lines = [
     "A simple dashboard for displaying the successes or failures of running nwb2bids on a Dandiset.",
     "",
 ]
-client = dandi.dandiapi.DandiAPIClient()
+table_data = []
 
-dandiset_ids = []
-statuses = []
-for dandiset in client.get_dandisets():
+repo_base_url = "https://github.com/bids-dandisets/"
+repo_api_base_url = "https://api.github.com/repos/bids-dandisets"
+raw_content_base_url = "https://raw.githubusercontent.com/bids-dandisets"
+
+nwb2bids_inspection_file_path = "draft/derivatives/inspections/nwb2bids_inspection_results.json"
+nwb_inspection_file_path = "draft/derivatives/inspections/nwb_inspection.json"
+bids_validation_file_path = "draft/derivatives/inspections/bids_validation.json"
+dandi_validation_file_path = "draft/derivatives/inspections/dandi_validation.json"
+
+dandisets = list(client.get_dandisets())
+for dandiset in tqdm.tqdm(
+    iterable=dandisets[:5], total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
+):
     dandiset_id = dandiset.identifier
 
-    inspection_content_url = f"https://raw.githubusercontent.com/bids-dandisets/{dandiset_id}/"
+    row = dict()
+    row["Dandiset ID"] = dandiset_id
 
-    dandiset_directory = dandisets_directory / dandiset_id
-    dandiset_directory.mkdir(exist_ok=True)
+    # TODO: skip update based on commit hash or other etag
 
-    status_file_path = dandiset_directory / "status.txt"
-    if status_file_path.exists():
-        status_content = status_file_path.read_text().strip()
-        status_url = f"https://github.com/con/nwb2bids-dandisets-dashboard/blob/main/dandisets/{dandiset_id}/status.txt"
-        status = "Success" if status_content == "Success" else f"[Failed]({status_url})"
+    repo_api_url = f"{repo_api_base_url}/{dandiset_id}"
+    response = requests.get(url=repo_api_url, headers=github_auth_header)
+    if response.status_code != 200:
+        row["Dandiset (BIDS)"] = "❌"
+        row["nwb2bids hash"] = "❌"
+        row["nwb2bids Inspection"] = "❌"
+        row["NWB Inspection"] = "❌"
+        row["BIDS Validation"] = "❌"
+        row["DANDI Validation"] = "❌"
+        continue
+    row["Dandiset (BIDS)"] = f"[{dandiset_id}]({repo_base_url}/{dandiset_id})"
+
+    nwb2bids_hash_content_url = f"{raw_content_base_url}/{dandiset_id}/draft/.nwb2bids_commit_hash"
+    response = requests.get(url=nwb2bids_hash_content_url, headers=github_auth_header)
+    if response.status_code != 200:
+        row["nwb2bids hash"] = "❌"
     else:
-        status = "Not processed"
+        row["nwb2bids hash"] = f"`{response.text.strip()}`"
 
-    dandiset_ids.append(dandiset_id)
-    statuses.append(status)
+    inspection_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_inspection_file_path}"
+    response = requests.get(url=inspection_content_url, headers=github_auth_header)
+    if response.status_code != 200:
+        row["nwb2bids Inspection"] = "❌"
+    else:
+        row["nwb2bids Inspection"] = f"[⚠️]({repo_base_url}/{dandiset_id}/blob/{nwb2bids_inspection_file_path})"
+    # TODO: look at content to determine pass[green]/warning
 
-content_json = {
-    "data": {
-        "Dandiset ID": [dandiset.identifier for dandiset in client.get_dandisets()],
-        "Status": [
-            "Success" if (dandisets_directory / dandiset.identifier / "status.txt").read_text().strip() == "Success"
-            else "Failed"
-            for dandiset in client.get_dandisets()
-        ],
-    },
-}
+    nwb_inspection_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb_inspection_file_path}"
+    response = requests.get(url=nwb_inspection_content_url, headers=github_auth_header)
+    if response.status_code != 200:
+        row["NWB Inspection"] = "❌"
+    else:
+        row["NWB Inspection"] = f"[⚠️]({repo_base_url}/{dandiset_id}/blob/{nwb_inspection_file_path})"
+    # TODO: look at content to determine pass[green]/warning
 
-padding = (10, 15)
-readme_lines += json_to_markdown_table(json_table=content_json, padding=padding)
+    bids_validation_content_url = f"{raw_content_base_url}/{dandiset_id}/{bids_validation_file_path}"
+    response = requests.get(url=bids_validation_content_url, headers=github_auth_header)
+    if response.status_code != 200:
+        row["BIDS Validation"] = "❌"
+    else:
+        row["BIDS Validation"] = f"[⚠️]({repo_base_url}/{dandiset_id}/blob/{bids_validation_file_path})"
+    # TODO: look at content to determine pass[green]/warning
 
-readme = "\n".join(readme_lines)
-readme_file_path.write_text(data=readme)
+    dandi_validation_content_url = f"{raw_content_base_url}/{dandiset_id}/{dandi_validation_file_path}"
+    response = requests.get(url=dandi_validation_content_url, headers=github_auth_header)
+    if response.status_code != 200:
+        row["DANDI Validation"] = "❌"
+    else:
+        row["DANDI Validation"] = f"[⚠️]({repo_base_url}/{dandiset_id}/blob/{dandi_validation_file_path})"
+    # TODO: look at content to determine pass[green]/warning
 
-# TODO: move this to a standalone package
-def json_to_markdown_table(json_table: dict, *, padding: tuple[int, ...] | None = None) -> list[str]:
-    """
-    Convert a JSON object to a Markdown table.
+    table_data.append(row)
 
-    Parameters
-    ----------
-    json_table : dict
-        The JSON data to convert.
+markdown_table = tabulate2.tabulate(tabular_data=table_data, headers="keys", tablefmt="github", numalign="center")
+markdown_lines = markdown_table.splitlines()
+readme_lines += markdown_lines
 
-    Returns
-    -------
-    str
-        A string representing the Markdown table.
-
-    Examples
-    --------
-    json_table = {
-        "title": "My Example Table",
-        "subtitle": "This is a subtitle.",
-        "headers": ["My header 1.", "My header 2."],
-        "tails": ["This is a tail.", "This is another tail."],
-        "data": {
-             "Name": ["Alice", "Bob", "Charlie"],
-             "Age": [30, 25, 35],
-             "City": ["New York", "Los Angeles", "Chicago"]
-         }
-    }
-
-    print(json_to_markdown_table(json_table=json_table))
-    >>> # My Example Table
-
-    # This is a subtitle.
-
-    My header 1.
-    My header 2.
-
-    | Name    | Age | City         |
-    | :---: | :---: | :----: |
-    | Alice   | 30  | New York     |
-    | Bob     | 25  | Los Angeles  |
-    | Charlie | 35  | Chicago      |
-
-    This is a tail.
-    This is another tail.
-    """
-    title = json_table.get("title", None)
-    subtitle = json_table.get("subtitle", None)
-    headers = json_table.get("headers", None)
-    tails = json_table.get("tails", None)
-
-    data = json_table["data"]
-    column_names = list(data.keys())
-    rows: list[list[str, ...]] = [list(row) for row in zip(*(data[column_name] for column_name in column_names))]
-
-    if padding is None:
-        padding = tuple(
-            max(len(column_name), max(len(str(value)) for value in [column_name] + [row[column_index] for row in rows]))
-            for column_index, column_name in enumerate(column_names)
-        )
-
-    markdown_table = []
-    if title is not None:
-        markdown_table += [f"# {title}", ""]
-    if subtitle is not None:
-        markdown_table += [f"## {subtitle}", ""]
-    if headers is not None:
-        markdown_table += headers
-        markdown_table += [""]
-    formatted_column_names = [
-        f"{column_name:<{padding[column_index]}}" for column_index, column_name in enumerate(column_names)
-    ]
-    markdown_table += ["| " + " | ".join(formatted_column_names) + " |"]
-    formatted_dashes = [":" + "-" * (padding[column_index] - 2) + ":" for column_index in range(len(column_names))]
-    markdown_table += ["| " + " | ".join(formatted_dashes) + " |"]
-    for row in rows:
-        markdown_table += [
-            "| " + " | ".join(f"{value:<{padding[column_index]}}" for column_index, value in enumerate(row)) + " |"
-        ]
-    if tails is not None:
-        markdown_table += [""]
-        markdown_table += tails
-
-    return markdown_table
+readme_file_path.write_text(data="\n".join(readme_lines), encoding="utf-8")
+with table_data_file_path.open(mode="w") as file_stream:
+    json.dump(obj=table_data, fp=file_stream, indent=4)

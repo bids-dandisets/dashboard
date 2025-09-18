@@ -1,0 +1,28 @@
+Failed to convert dandiset 000219: 1 validation error for SessionConverter
+session_id
+  String should match pattern '^[^_]+$' [type=string_pattern_mismatch, input_value='180207_a002', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_pattern_mismatch
+
+Traceback:
+Traceback (most recent call last):
+  File "/home/runner/work/nwb2bids-dandisets-dashboard/nwb2bids-dandisets-dashboard/scripts/run_nwb2bids_on_dandisets.py", line 29, in <module>
+    dataset_converter = nwb2bids.DatasetConverter.from_remote_dandiset(dandiset_id=dandiset_id)
+  File "/opt/hostedtoolcache/Python/3.13.6/x64/lib/python3.13/site-packages/pydantic/_internal/_validate_call.py", line 39, in wrapper_function
+    return wrapper(*args, **kwargs)
+  File "/opt/hostedtoolcache/Python/3.13.6/x64/lib/python3.13/site-packages/pydantic/_internal/_validate_call.py", line 136, in __call__
+    res = self.__pydantic_validator__.validate_python(pydantic_core.ArgsKwargs(args, kwargs))
+  File "/opt/hostedtoolcache/Python/3.13.6/x64/lib/python3.13/site-packages/nwb2bids/_converters/_dataset_converter.py", line 93, in from_remote_dandiset
+    SessionConverter(
+    ~~~~~~~~~~~~~~~~^
+        session_id=session_id,
+        ^^^^^^^^^^^^^^^^^^^^^^
+        nwbfile_paths=[asset.get_content_url(follow_redirects=1, strip_query=True) for asset in assets],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/hostedtoolcache/Python/3.13.6/x64/lib/python3.13/site-packages/pydantic/main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for SessionConverter
+session_id
+  String should match pattern '^[^_]+$' [type=string_pattern_mismatch, input_value='180207_a002', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_pattern_mismatch

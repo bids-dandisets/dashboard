@@ -59,6 +59,7 @@ for dandiset in tqdm.tqdm(
         row["NWB Inspection"] = "❌"
         row["BIDS Validation"] = "❌"
         row["DANDI Validation"] = "❌"
+        table_data.append(row)
         continue
     row["Dandiset (BIDS)"] = f"[{dandiset_id}]({repo_base_url}/{dandiset_id})"
 
@@ -103,7 +104,7 @@ for dandiset in tqdm.tqdm(
 
     table_data.append(row)
 
-markdown_table = tabulate2.tabulate(tabular_data=table_data, headers="keys", tablefmt="github", numalign="center")
+markdown_table = tabulate2.tabulate(tabular_data=table_data, headers="keys", tablefmt="github", colglobalalign="center")
 markdown_lines = markdown_table.splitlines()
 readme_lines += markdown_lines
 

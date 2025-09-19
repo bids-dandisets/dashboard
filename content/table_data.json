@@ -3,9 +3,9 @@
         "Dandiset ID": "000003",
         "Dandiset (BIDS)": "[000003](https://github.com/bids-dandisets//000003)",
         "nwb2bids hash": "\u274c",
-        "nwb2bids Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000003/blob/draft/derivatives/inspections/nwb2bids_inspection_results.json)",
+        "nwb2bids Inspection": "\u274c",
         "NWB Inspection": "\u274c",
-        "BIDS Validation": "\u274c",
+        "BIDS Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000003/blob/draft/derivatives/inspections/bids_validation.json)",
         "DANDI Validation": "\u274c"
     },
     {
@@ -14,7 +14,7 @@
         "nwb2bids hash": "\u274c",
         "nwb2bids Inspection": "\u274c",
         "NWB Inspection": "\u274c",
-        "BIDS Validation": "\u274c",
+        "BIDS Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000004/blob/draft/derivatives/inspections/bids_validation.json)",
         "DANDI Validation": "\u274c"
     },
     {
@@ -23,7 +23,7 @@
         "nwb2bids hash": "\u274c",
         "nwb2bids Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000005/blob/draft/derivatives/inspections/nwb2bids_inspection_results.json)",
         "NWB Inspection": "\u274c",
-        "BIDS Validation": "\u274c",
+        "BIDS Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000005/blob/draft/derivatives/inspections/bids_validation.json)",
         "DANDI Validation": "\u274c"
     },
     {
@@ -32,7 +32,7 @@
         "nwb2bids hash": "\u274c",
         "nwb2bids Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000006/blob/draft/derivatives/inspections/nwb2bids_inspection_results.json)",
         "NWB Inspection": "\u274c",
-        "BIDS Validation": "\u274c",
+        "BIDS Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000006/blob/draft/derivatives/inspections/bids_validation.json)",
         "DANDI Validation": "\u274c"
     },
     {
@@ -41,7 +41,7 @@
         "nwb2bids hash": "\u274c",
         "nwb2bids Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000007/blob/draft/derivatives/inspections/nwb2bids_inspection_results.json)",
         "NWB Inspection": "\u274c",
-        "BIDS Validation": "\u274c",
+        "BIDS Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000007/blob/draft/derivatives/inspections/bids_validation.json)",
         "DANDI Validation": "\u274c"
     },
     {

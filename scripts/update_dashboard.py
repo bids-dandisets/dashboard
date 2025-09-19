@@ -34,9 +34,10 @@ repo_base_url = "https://github.com/bids-dandisets/"
 repo_api_base_url = "https://api.github.com/repos/bids-dandisets"
 raw_content_base_url = "https://raw.githubusercontent.com/bids-dandisets"
 
-nwb2bids_inspection_file_path = "draft/derivatives/inspections/nwb2bids_inspection_results.json"
-nwb_inspection_file_path = "draft/derivatives/inspections/nwb_inspection.json"
-bids_validation_file_path = "draft/derivatives/inspections/bids_validation.json"
+nwb2bids_inspection_file_path = "draft/derivatives/inspections/nwb2bids_inspection.json"
+nwb_inspection_file_path = "draft/derivatives/inspections/src-nwb-inspector_ver-0-6-5.txt"  # TODO: figure out dynamic
+bids_validation_file_path = "draft/derivatives/inspections/bids_validation.txt"
+bids_validation_json_file_path = "draft/derivatives/inspections/bids_validation.json"
 dandi_validation_file_path = "draft/derivatives/inspections/dandi_validation.json"
 
 dandisets = list(client.get_dandisets())
@@ -63,12 +64,14 @@ for dandiset in tqdm.tqdm(
         continue
     row["Dandiset (BIDS)"] = f"[{dandiset_id}]({repo_base_url}/{dandiset_id})"
 
-    nwb2bids_hash_content_url = f"{raw_content_base_url}/{dandiset_id}/draft/.nwb2bids_commit_hash"
-    response = requests.get(url=nwb2bids_hash_content_url, headers=github_auth_header)
+    run_info_file_path = f"{raw_content_base_url}/{dandiset_id}/draft/.run_info.json"
+    response = requests.get(url=run_info_file_path, headers=github_auth_header)
     if response.status_code != 200:
         row["nwb2bids hash"] = "❌"
     else:
-        row["nwb2bids hash"] = f"`{response.text.strip()}`"
+        previous_run_info = response.json()
+        previous_commit_hash = previous_run_info["commit_hash"]
+        row["nwb2bids hash"] = f"`{previous_commit_hash}`"  # TODO: when more formally merged, perhaps link to nwb2bids
 
     inspection_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_inspection_file_path}"
     response = requests.get(url=inspection_content_url, headers=github_auth_header)

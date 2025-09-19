@@ -56,7 +56,7 @@ for dandiset in tqdm.tqdm(
     if response.status_code != 200:
         row["Dandiset (BIDS)"] = "❌"
         row["`nwb2bids` Version"] = "❌"
-        row["nwb2bids Inspection"] = "❌"
+        row["`nwb2bids` Inspection"] = "❌"
         row["BIDS Validation"] = "❌"
         row["NWB Inspection"] = "❌"
         row["DANDI Validation"] = "❌"
@@ -76,9 +76,9 @@ for dandiset in tqdm.tqdm(
     inspection_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_inspection_file_path}"
     response = requests.get(url=inspection_content_url, headers=github_auth_header)
     if response.status_code != 200:
-        row["nwb2bids Inspection"] = "❌"
+        row["`nwb2bids` Inspection"] = "❌"
     else:
-        row["nwb2bids Inspection"] = f"[⚠️]({repo_base_url}/{dandiset_id}/blob/{nwb2bids_inspection_file_path})"
+        row["`nwb2bids` Inspection"] = f"[⚠️]({repo_base_url}/{dandiset_id}/blob/{nwb2bids_inspection_file_path})"
     # TODO: look at content to determine pass[green]/warning
 
     bids_validation_content_url = f"{raw_content_base_url}/{dandiset_id}/{bids_validation_file_path}"
@@ -93,9 +93,9 @@ for dandiset in tqdm.tqdm(
         bids_validation_text = "✅"
         if len(issues) > 0:
             errors = [issue for issue in issues if issue.get("severity", "") == "error"]
-            errors_text = f"❌{len(errors)} Errors❌"
+            errors_text = f"❌{len(errors)} Errors"
             warnings = [issue for issue in issues if issue.get("severity","") == "warning"]
-            warnings_text = f"⚠️{len(warnings)} Warnings⚠️"
+            warnings_text = f"⚠️{len(warnings)} Warnings"
             if len(errors) > 0 and len(warnings) > 0:
                 bids_validation_text = f"{errors_text}<br>{warnings_text}"
             elif len(errors) > 0:
@@ -122,10 +122,25 @@ for dandiset in tqdm.tqdm(
 
     table_data.append(row)
 
-markdown_table = tabulate2.tabulate(tabular_data=table_data, headers="keys", tablefmt="github", colglobalalign="center")
-markdown_lines = markdown_table.splitlines()
-readme_lines += markdown_lines
+readme_lines += ["### Summary"]
+total = len(table_data)
+converted_count = sum(1 for row in table_data if "❌" not in row["Dandiset (BIDS)"])
+passing_nwb2bids_count = sum(1 for row in table_data if "❌" not in row["`nwb2bids` Inspection"])
+passing_bids_count = sum(1 for row in table_data if "❌" not in row["BIDS Validation"])
+summary_data = [{
+    "Dandisets Successfully Converted": f"{converted_count} / {total} ({converted_count/total:0.1f}%)",
+    "Passing `nwb2bids` Inspection": f"{passing_nwb2bids_count} / {converted_count} ({passing_nwb2bids_count/converted_count:0.1f}%)",
+    "Passing BIDS Validation": f"{passing_bids_count} / {converted_count} ({passing_bids_count/total:0.1f}%)"
+}]
+summary_table = tabulate2.tabulate(tabular_data=summary_data, headers="keys", tablefmt="github", colglobalalign="center")
+summary_table_lines = summary_table.splitlines()
+readme_lines += summary_table_lines
+
+readme_lines += ["### Dandisets"]
+full_table = tabulate2.tabulate(tabular_data=table_data, headers="keys", tablefmt="github", colglobalalign="center")
+full_table_lines = full_table.splitlines()
+readme_lines += full_table_lines
 
 readme_file_path.write_text(data="\n".join(readme_lines), encoding="utf-8")
 with table_data_file_path.open(mode="w") as file_stream:
-    json.dump(obj=table_data, fp=file_stream, indent=4)
+    json.dump(obj=table_data, fp=file_stream, indent=2)

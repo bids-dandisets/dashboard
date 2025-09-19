@@ -24,9 +24,7 @@ github_auth_header = {"Authorization": f"token {GITHUB_TOKEN}"}
 
 readme_lines = [
     "# BIDS-Dandisets Dashboard",
-    "",
     "A simple dashboard for displaying the successes or failures of running nwb2bids on a Dandiset.",
-    "",
 ]
 table_data = []
 
@@ -128,9 +126,9 @@ converted_count = sum(1 for row in table_data if "❌" not in row["Dandiset (BID
 passing_nwb2bids_count = sum(1 for row in table_data if "❌" not in row["`nwb2bids` Inspection"])
 passing_bids_count = sum(1 for row in table_data if "❌" not in row["BIDS Validation"])
 summary_data = [{
-    "Dandisets Successfully Converted": f"{converted_count} / {total} ({converted_count/total:0.1f}%)",
-    "Passing `nwb2bids` Inspection": f"{passing_nwb2bids_count} / {converted_count} ({passing_nwb2bids_count/converted_count:0.1f}%)",
-    "Passing BIDS Validation": f"{passing_bids_count} / {converted_count} ({passing_bids_count/total:0.1f}%)"
+    "Dandisets Successfully Converted": f"{converted_count} / {total} ({converted_count/total*100:0.1f}%)",
+    "Passing `nwb2bids` Inspection": f"{passing_nwb2bids_count} / {converted_count} ({passing_nwb2bids_count/converted_count*100:0.1f}%)",
+    "Passing BIDS Validation": f"{passing_bids_count} / {converted_count} ({passing_bids_count/total*100:0.1f}%)"
 }]
 summary_table = tabulate2.tabulate(tabular_data=summary_data, headers="keys", tablefmt="github", colglobalalign="center")
 summary_table_lines = summary_table.splitlines()

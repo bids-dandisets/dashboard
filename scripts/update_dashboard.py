@@ -23,7 +23,7 @@ client = dandi.dandiapi.DandiAPIClient()
 github_auth_header = {"Authorization": f"token {GITHUB_TOKEN}"}
 
 readme_lines = [
-    "# nwb2bids Dandisets Dashboard",
+    "# BIDS-Dandisets Dashboard",
     "",
     "A simple dashboard for displaying the successes or failures of running nwb2bids on a Dandiset.",
     "",
@@ -38,7 +38,7 @@ nwb2bids_inspection_file_path = "draft/derivatives/inspections/nwb2bids_inspecti
 nwb_inspection_file_path = "draft/derivatives/inspections/src-nwb-inspector_ver-0-6-5.txt"  # TODO: figure out dynamic
 bids_validation_file_path = "draft/derivatives/inspections/bids_validation.txt"
 bids_validation_json_file_path = "draft/derivatives/inspections/bids_validation.json"
-dandi_validation_file_path = "draft/derivatives/inspections/dandi_validation.json"
+dandi_validation_file_path = "draft/derivatives/inspections/dandi_validation.txt"
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
@@ -55,7 +55,7 @@ for dandiset in tqdm.tqdm(
     response = requests.get(url=repo_api_url, headers=github_auth_header)
     if response.status_code != 200:
         row["Dandiset (BIDS)"] = "❌"
-        row["nwb2bids hash"] = "❌"
+        row["`nwb2bids` hash"] = "❌"
         row["nwb2bids Inspection"] = "❌"
         row["NWB Inspection"] = "❌"
         row["BIDS Validation"] = "❌"
@@ -67,11 +67,11 @@ for dandiset in tqdm.tqdm(
     run_info_file_path = f"{raw_content_base_url}/{dandiset_id}/draft/.run_info.json"
     response = requests.get(url=run_info_file_path, headers=github_auth_header)
     if response.status_code != 200:
-        row["nwb2bids hash"] = "❌"
+        row["`nwb2bids` hash"] = "❌"
     else:
         previous_run_info = response.json()
         previous_commit_hash = previous_run_info["commit_hash"]
-        row["nwb2bids hash"] = f"`{previous_commit_hash}`"  # TODO: when more formally merged, perhaps link to nwb2bids
+        row["`nwb2bids` hash"] = f"`{previous_commit_hash}`"  # TODO: when more formally merged, perhaps link to nwb2bids
 
     inspection_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_inspection_file_path}"
     response = requests.get(url=inspection_content_url, headers=github_auth_header)

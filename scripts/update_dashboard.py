@@ -60,7 +60,7 @@ for dandiset in tqdm.tqdm(
         row["DANDI Validation"] = "❌"
         table_data.append(row)
         continue
-    row["Dandiset (BIDS)"] = f"[{dandiset_id}]({repo_base_url}/{dandiset_id})"
+    row["Dandiset (BIDS)"] = f"[raw/]({repo_base_url}/{dandiset_id})"
 
     run_info_file_path = f"{raw_content_base_url}/{dandiset_id}/draft/.run_info.json"
     response = requests.get(url=run_info_file_path, headers=github_auth_header)
@@ -87,12 +87,12 @@ for dandiset in tqdm.tqdm(
         row["BIDS Validation"] = "❌"
     else:
         bids_validation = response2.json()
-        issues = bids_validation.get("issues", dict()).get("issues",[])
+        issues = bids_validation.get("issues", dict()).get("issues", [])
         bids_validation_text = "✅"
         if len(issues) > 0:
             errors = [issue for issue in issues if issue.get("severity", "") == "error"]
             errors_text = f"❌{len(errors)} Errors"
-            warnings = [issue for issue in issues if issue.get("severity","") == "warning"]
+            warnings = [issue for issue in issues if issue.get("severity", "") == "warning"]
             warnings_text = f"⚠️{len(warnings)} Warnings"
             if len(errors) > 0 and len(warnings) > 0:
                 bids_validation_text = f"{errors_text}<br>{warnings_text}"
@@ -100,7 +100,9 @@ for dandiset in tqdm.tqdm(
                 bids_validation_text = errors_text
             elif len(warnings) > 0:
                 bids_validation_text = warnings_text
-        row["BIDS Validation"] = f"[{bids_validation_text}]({repo_base_url}/{dandiset_id}/blob/{bids_validation_file_path})"
+        row["BIDS Validation"] = (
+            f"[{bids_validation_text}]({repo_base_url}/{dandiset_id}/blob/{bids_validation_file_path})"
+        )
 
     nwb_inspection_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb_inspection_file_path}"
     response = requests.get(url=nwb_inspection_content_url, headers=github_auth_header)
@@ -125,12 +127,20 @@ total = len(table_data)
 converted_count = sum(1 for row in table_data if "❌" not in row["Dandiset (BIDS)"])
 passing_nwb2bids_count = sum(1 for row in table_data if "❌" not in row["`nwb2bids` Inspection"])
 passing_bids_count = sum(1 for row in table_data if "❌" not in row["BIDS Validation"])
-summary_data = [{
-    "Dandisets Successfully Converted": f"{converted_count} / {total} ({converted_count/total*100:0.1f}%)",
-    "Passing `nwb2bids` Inspection": f"{passing_nwb2bids_count} / {converted_count} ({passing_nwb2bids_count/converted_count*100:0.1f}%)",
-    "Passing BIDS Validation": f"{passing_bids_count} / {converted_count} ({passing_bids_count/total*100:0.1f}%)"
-}]
-summary_table = tabulate2.tabulate(tabular_data=summary_data, headers="keys", tablefmt="github", colglobalalign="center")
+
+nwb2bids_inspection_summary_text = (
+    f"{passing_nwb2bids_count} / {converted_count} ({passing_nwb2bids_count/converted_count*100:0.1f}%)"
+)
+summary_data = [
+    {
+        "Dandisets Successfully Converted": f"{converted_count} / {total} ({converted_count/total*100:0.1f}%)",
+        "Passing `nwb2bids` Inspection": nwb2bids_inspection_summary_text,
+        "Passing BIDS Validation": f"{passing_bids_count} / {converted_count} ({passing_bids_count/total*100:0.1f}%)",
+    }
+]
+summary_table = tabulate2.tabulate(
+    tabular_data=summary_data, headers="keys", tablefmt="github", colglobalalign="center"
+)
 summary_table_lines = summary_table.splitlines()
 readme_lines += summary_table_lines
 

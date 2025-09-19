@@ -1,7 +1,7 @@
 [
   {
     "Dandiset ID": "000003",
-    "Dandiset (BIDS)": "[000003](https://github.com/bids-dandisets//000003)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000003)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000003/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c47 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//000003/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -10,7 +10,7 @@
   },
   {
     "Dandiset ID": "000004",
-    "Dandiset (BIDS)": "[000004](https://github.com/bids-dandisets//000004)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000004)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "\u274c",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000004/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -19,7 +19,7 @@
   },
   {
     "Dandiset ID": "000005",
-    "Dandiset (BIDS)": "[000005](https://github.com/bids-dandisets//000005)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000005)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000005/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000005/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -28,7 +28,7 @@
   },
   {
     "Dandiset ID": "000006",
-    "Dandiset (BIDS)": "[000006](https://github.com/bids-dandisets//000006)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000006)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000006/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000006/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -37,7 +37,7 @@
   },
   {
     "Dandiset ID": "000007",
-    "Dandiset (BIDS)": "[000007](https://github.com/bids-dandisets//000007)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000007)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000007/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000007/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -46,7 +46,7 @@
   },
   {
     "Dandiset ID": "000008",
-    "Dandiset (BIDS)": "[000008](https://github.com/bids-dandisets//000008)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000008)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000008/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c8 Errors<br>\u26a0\ufe0f8 Warnings](https://github.com/bids-dandisets//000008/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -55,7 +55,7 @@
   },
   {
     "Dandiset ID": "000009",
-    "Dandiset (BIDS)": "[000009](https://github.com/bids-dandisets//000009)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000009)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000009/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000009/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -64,7 +64,7 @@
   },
   {
     "Dandiset ID": "000010",
-    "Dandiset (BIDS)": "[000010](https://github.com/bids-dandisets//000010)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000010)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000010/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000010/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -73,7 +73,7 @@
   },
   {
     "Dandiset ID": "000011",
-    "Dandiset (BIDS)": "[000011](https://github.com/bids-dandisets//000011)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000011)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000011/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000011/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -82,7 +82,7 @@
   },
   {
     "Dandiset ID": "000012",
-    "Dandiset (BIDS)": "[000012](https://github.com/bids-dandisets//000012)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000012)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000012/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c6 Errors<br>\u26a0\ufe0f8 Warnings](https://github.com/bids-dandisets//000012/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -91,7 +91,7 @@
   },
   {
     "Dandiset ID": "000013",
-    "Dandiset (BIDS)": "[000013](https://github.com/bids-dandisets//000013)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000013)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000013/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000013/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -100,7 +100,7 @@
   },
   {
     "Dandiset ID": "000015",
-    "Dandiset (BIDS)": "[000015](https://github.com/bids-dandisets//000015)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000015)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000015/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000015/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -109,7 +109,7 @@
   },
   {
     "Dandiset ID": "000016",
-    "Dandiset (BIDS)": "[000016](https://github.com/bids-dandisets//000016)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000016)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000016/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c8 Errors<br>\u26a0\ufe0f8 Warnings](https://github.com/bids-dandisets//000016/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -118,7 +118,7 @@
   },
   {
     "Dandiset ID": "000017",
-    "Dandiset (BIDS)": "[000017](https://github.com/bids-dandisets//000017)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000017)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000017/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000017/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -127,7 +127,7 @@
   },
   {
     "Dandiset ID": "000018",
-    "Dandiset (BIDS)": "[000018](https://github.com/bids-dandisets//000018)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000018)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000018/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000018/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -136,7 +136,7 @@
   },
   {
     "Dandiset ID": "000019",
-    "Dandiset (BIDS)": "[000019](https://github.com/bids-dandisets//000019)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000019)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000019/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c12 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//000019/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -145,7 +145,7 @@
   },
   {
     "Dandiset ID": "000020",
-    "Dandiset (BIDS)": "[000020](https://github.com/bids-dandisets//000020)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000020)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "\u274c",
     "BIDS Validation": "[\u274c4 Errors<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000020/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -154,7 +154,7 @@
   },
   {
     "Dandiset ID": "000021",
-    "Dandiset (BIDS)": "[000021](https://github.com/bids-dandisets//000021)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000021)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000021/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000021/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -163,7 +163,7 @@
   },
   {
     "Dandiset ID": "000022",
-    "Dandiset (BIDS)": "[000022](https://github.com/bids-dandisets//000022)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000022)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000022/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000022/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -172,7 +172,7 @@
   },
   {
     "Dandiset ID": "000023",
-    "Dandiset (BIDS)": "[000023](https://github.com/bids-dandisets//000023)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000023)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000023/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c4 Errors<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000023/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -181,7 +181,7 @@
   },
   {
     "Dandiset ID": "000024",
-    "Dandiset (BIDS)": "[000024](https://github.com/bids-dandisets//000024)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000024)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000024/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000024/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -190,7 +190,7 @@
   },
   {
     "Dandiset ID": "000025",
-    "Dandiset (BIDS)": "[000025](https://github.com/bids-dandisets//000025)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000025)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000025/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c3 Errors<br>\u26a0\ufe0f8 Warnings](https://github.com/bids-dandisets//000025/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -199,7 +199,7 @@
   },
   {
     "Dandiset ID": "000026",
-    "Dandiset (BIDS)": "[000026](https://github.com/bids-dandisets//000026)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000026)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "\u274c",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000026/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -208,7 +208,7 @@
   },
   {
     "Dandiset ID": "000027",
-    "Dandiset (BIDS)": "[000027](https://github.com/bids-dandisets//000027)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000027)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "\u274c",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f6 Warnings](https://github.com/bids-dandisets//000027/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -217,7 +217,7 @@
   },
   {
     "Dandiset ID": "000028",
-    "Dandiset (BIDS)": "[000028](https://github.com/bids-dandisets//000028)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000028)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000028/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000028/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -226,7 +226,7 @@
   },
   {
     "Dandiset ID": "000029",
-    "Dandiset (BIDS)": "[000029](https://github.com/bids-dandisets//000029)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000029)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000029/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c3 Errors<br>\u26a0\ufe0f8 Warnings](https://github.com/bids-dandisets//000029/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -235,7 +235,7 @@
   },
   {
     "Dandiset ID": "000030",
-    "Dandiset (BIDS)": "[000030](https://github.com/bids-dandisets//000030)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000030)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000030/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000030/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -244,7 +244,7 @@
   },
   {
     "Dandiset ID": "000031",
-    "Dandiset (BIDS)": "[000031](https://github.com/bids-dandisets//000031)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000031)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000031/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000031/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -253,7 +253,7 @@
   },
   {
     "Dandiset ID": "000032",
-    "Dandiset (BIDS)": "[000032](https://github.com/bids-dandisets//000032)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000032)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000032/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000032/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -262,7 +262,7 @@
   },
   {
     "Dandiset ID": "000033",
-    "Dandiset (BIDS)": "[000033](https://github.com/bids-dandisets//000033)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000033)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000033/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000033/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -271,7 +271,7 @@
   },
   {
     "Dandiset ID": "000034",
-    "Dandiset (BIDS)": "[000034](https://github.com/bids-dandisets//000034)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000034)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000034/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000034/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -280,7 +280,7 @@
   },
   {
     "Dandiset ID": "000035",
-    "Dandiset (BIDS)": "[000035](https://github.com/bids-dandisets//000035)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000035)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000035/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c8 Errors<br>\u26a0\ufe0f8 Warnings](https://github.com/bids-dandisets//000035/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -289,7 +289,7 @@
   },
   {
     "Dandiset ID": "000036",
-    "Dandiset (BIDS)": "[000036](https://github.com/bids-dandisets//000036)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000036)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "\u274c",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000036/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -298,7 +298,7 @@
   },
   {
     "Dandiset ID": "000037",
-    "Dandiset (BIDS)": "[000037](https://github.com/bids-dandisets//000037)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000037)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000037/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000037/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -307,7 +307,7 @@
   },
   {
     "Dandiset ID": "000038",
-    "Dandiset (BIDS)": "[000038](https://github.com/bids-dandisets//000038)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000038)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000038/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000038/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -316,7 +316,7 @@
   },
   {
     "Dandiset ID": "000039",
-    "Dandiset (BIDS)": "[000039](https://github.com/bids-dandisets//000039)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000039)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000039/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c30 Errors<br>\u26a0\ufe0f18 Warnings](https://github.com/bids-dandisets//000039/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -325,7 +325,7 @@
   },
   {
     "Dandiset ID": "000040",
-    "Dandiset (BIDS)": "[000040](https://github.com/bids-dandisets//000040)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000040)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000040/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000040/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -334,7 +334,7 @@
   },
   {
     "Dandiset ID": "000041",
-    "Dandiset (BIDS)": "[000041](https://github.com/bids-dandisets//000041)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000041)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000041/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c12 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//000041/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -343,7 +343,7 @@
   },
   {
     "Dandiset ID": "000042",
-    "Dandiset (BIDS)": "[000042](https://github.com/bids-dandisets//000042)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000042)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000042/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000042/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -352,7 +352,7 @@
   },
   {
     "Dandiset ID": "000043",
-    "Dandiset (BIDS)": "[000043](https://github.com/bids-dandisets//000043)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000043)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000043/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000043/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -361,7 +361,7 @@
   },
   {
     "Dandiset ID": "000044",
-    "Dandiset (BIDS)": "[000044](https://github.com/bids-dandisets//000044)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000044)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000044/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c12 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//000044/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -370,7 +370,7 @@
   },
   {
     "Dandiset ID": "000045",
-    "Dandiset (BIDS)": "[000045](https://github.com/bids-dandisets//000045)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000045)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000045/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f6 Warnings](https://github.com/bids-dandisets//000045/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -379,7 +379,7 @@
   },
   {
     "Dandiset ID": "000046",
-    "Dandiset (BIDS)": "[000046](https://github.com/bids-dandisets//000046)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000046)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000046/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000046/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -388,7 +388,7 @@
   },
   {
     "Dandiset ID": "000047",
-    "Dandiset (BIDS)": "[000047](https://github.com/bids-dandisets//000047)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000047)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000047/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000047/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -397,7 +397,7 @@
   },
   {
     "Dandiset ID": "000048",
-    "Dandiset (BIDS)": "[000048](https://github.com/bids-dandisets//000048)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000048)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000048/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000048/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -406,7 +406,7 @@
   },
   {
     "Dandiset ID": "000049",
-    "Dandiset (BIDS)": "[000049](https://github.com/bids-dandisets//000049)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000049)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "\u274c",
     "BIDS Validation": "[\u274c29 Errors<br>\u26a0\ufe0f15 Warnings](https://github.com/bids-dandisets//000049/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -415,7 +415,7 @@
   },
   {
     "Dandiset ID": "000050",
-    "Dandiset (BIDS)": "[000050](https://github.com/bids-dandisets//000050)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000050)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000050/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c28 Errors<br>\u26a0\ufe0f18 Warnings](https://github.com/bids-dandisets//000050/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -424,7 +424,7 @@
   },
   {
     "Dandiset ID": "000051",
-    "Dandiset (BIDS)": "[000051](https://github.com/bids-dandisets//000051)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000051)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000051/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000051/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -433,7 +433,7 @@
   },
   {
     "Dandiset ID": "000052",
-    "Dandiset (BIDS)": "[000052](https://github.com/bids-dandisets//000052)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000052)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000052/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000052/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -442,7 +442,7 @@
   },
   {
     "Dandiset ID": "000053",
-    "Dandiset (BIDS)": "[000053](https://github.com/bids-dandisets//000053)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000053)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "\u274c",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000053/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -451,7 +451,7 @@
   },
   {
     "Dandiset ID": "000054",
-    "Dandiset (BIDS)": "[000054](https://github.com/bids-dandisets//000054)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000054)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "\u274c",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000054/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -460,7 +460,7 @@
   },
   {
     "Dandiset ID": "000055",
-    "Dandiset (BIDS)": "[000055](https://github.com/bids-dandisets//000055)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000055)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000055/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000055/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -469,7 +469,7 @@
   },
   {
     "Dandiset ID": "000056",
-    "Dandiset (BIDS)": "[000056](https://github.com/bids-dandisets//000056)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000056)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000056/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c47 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//000056/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -478,7 +478,7 @@
   },
   {
     "Dandiset ID": "000058",
-    "Dandiset (BIDS)": "[000058](https://github.com/bids-dandisets//000058)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000058)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000058/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000058/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -487,7 +487,7 @@
   },
   {
     "Dandiset ID": "000059",
-    "Dandiset (BIDS)": "[000059](https://github.com/bids-dandisets//000059)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000059)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000059/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c12 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//000059/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -496,7 +496,7 @@
   },
   {
     "Dandiset ID": "000060",
-    "Dandiset (BIDS)": "[000060](https://github.com/bids-dandisets//000060)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000060)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000060/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000060/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -505,7 +505,7 @@
   },
   {
     "Dandiset ID": "000061",
-    "Dandiset (BIDS)": "[000061](https://github.com/bids-dandisets//000061)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000061)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000061/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c57 Errors<br>\u26a0\ufe0f19 Warnings](https://github.com/bids-dandisets//000061/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -514,7 +514,7 @@
   },
   {
     "Dandiset ID": "000063",
-    "Dandiset (BIDS)": "[000063](https://github.com/bids-dandisets//000063)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000063)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000063/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000063/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -523,7 +523,7 @@
   },
   {
     "Dandiset ID": "000064",
-    "Dandiset (BIDS)": "[000064](https://github.com/bids-dandisets//000064)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000064)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000064/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000064/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -532,7 +532,7 @@
   },
   {
     "Dandiset ID": "000065",
-    "Dandiset (BIDS)": "[000065](https://github.com/bids-dandisets//000065)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000065)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000065/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000065/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -541,7 +541,7 @@
   },
   {
     "Dandiset ID": "000066",
-    "Dandiset (BIDS)": "[000066](https://github.com/bids-dandisets//000066)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000066)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000066/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000066/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -550,7 +550,7 @@
   },
   {
     "Dandiset ID": "000067",
-    "Dandiset (BIDS)": "[000067](https://github.com/bids-dandisets//000067)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000067)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000067/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c57 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//000067/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -559,7 +559,7 @@
   },
   {
     "Dandiset ID": "000068",
-    "Dandiset (BIDS)": "[000068](https://github.com/bids-dandisets//000068)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000068)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000068/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000068/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -568,7 +568,7 @@
   },
   {
     "Dandiset ID": "000070",
-    "Dandiset (BIDS)": "[000070](https://github.com/bids-dandisets//000070)",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000070)",
     "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "\u274c",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000070/blob/draft/derivatives/inspections/bids_validation.txt)",
@@ -577,8 +577,8 @@
   },
   {
     "Dandiset ID": "000071",
-    "Dandiset (BIDS)": "[000071](https://github.com/bids-dandisets//000071)",
-    "`nwb2bids` Version": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000071)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000071/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000071/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
@@ -586,8 +586,8 @@
   },
   {
     "Dandiset ID": "000072",
-    "Dandiset (BIDS)": "[000072](https://github.com/bids-dandisets//000072)",
-    "`nwb2bids` Version": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000072)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000072/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
     "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000072/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
@@ -595,169 +595,169 @@
   },
   {
     "Dandiset ID": "000105",
-    "Dandiset (BIDS)": "[000105](https://github.com/bids-dandisets//000105)",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000105)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000105/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000105/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000105/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000106",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000106)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000106/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000106/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000106/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000107",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000107)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000107/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000107/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000107/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000108",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000108)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000108/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000108/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000109",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000109)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000109/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c6 Errors<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000109/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000109/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000111",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000111)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000111/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000111/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000111/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000112",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000112)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000112/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000112/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000112/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000113",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000113)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000113/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000113/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000113/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000114",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000114)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000114/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c12 Errors<br>\u26a0\ufe0f8 Warnings](https://github.com/bids-dandisets//000114/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000114/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000115",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000115)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000115/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c12 Errors<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000115/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000115/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000116",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000116)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000116/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000116/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000116/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000117",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000117)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000117/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f6 Warnings](https://github.com/bids-dandisets//000117/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000117/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000118",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000118)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000118/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000118/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000118/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000120",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000120)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000120/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000120/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000120/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000121",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000121)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000121/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000121/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000121/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000122",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000122)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
     "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f6 Warnings](https://github.com/bids-dandisets//000122/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000122/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000123",
-    "Dandiset (BIDS)": "\u274c",
-    "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000123)",
+    "`nwb2bids` Version": "`v0.4.0-42-ga9e2a68`",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000123/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000123/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000123/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000124",
-    "Dandiset (BIDS)": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000124)",
     "`nwb2bids` Version": "\u274c",
-    "`nwb2bids` Inspection": "\u274c",
-    "BIDS Validation": "\u274c",
+    "`nwb2bids` Inspection": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000124/blob/draft/derivatives/inspections/nwb2bids_inspection.json)",
+    "BIDS Validation": "[\u274c1 Errors<br>\u26a0\ufe0f9 Warnings](https://github.com/bids-dandisets//000124/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
-    "DANDI Validation": "\u274c"
+    "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//000124/blob/draft/derivatives/inspections/dandi_validation.txt)"
   },
   {
     "Dandiset ID": "000125",
-    "Dandiset (BIDS)": "\u274c",
+    "Dandiset (BIDS)": "[raw/](https://github.com/bids-dandisets//000125)",
     "`nwb2bids` Version": "\u274c",
     "`nwb2bids` Inspection": "\u274c",
     "BIDS Validation": "\u274c",

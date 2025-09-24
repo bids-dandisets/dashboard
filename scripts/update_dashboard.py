@@ -45,14 +45,13 @@ for dandiset in tqdm.tqdm(
     dandiset_id = dandiset.identifier
 
     row = dict()
-    row["Dandiset ID"] = dandiset_id
+    row["Dandiset ID (BIDS)"] = dandiset_id
 
     # TODO: skip update based on commit hash or other etag
 
     repo_api_url = f"{repo_api_base_url}/{dandiset_id}"
     response = requests.get(url=repo_api_url, headers=github_auth_header)
     if response.status_code != 200:
-        row["Dandiset (BIDS)"] = "❌"
         row["`nwb2bids` Version"] = "❌"
         row["`nwb2bids` Inspection"] = "❌"
         row["BIDS Validation"] = "❌"
@@ -60,7 +59,7 @@ for dandiset in tqdm.tqdm(
         row["DANDI Validation"] = "❌"
         table_data.append(row)
         continue
-    row["Dandiset (BIDS)"] = f"[raw/]({repo_base_url}/{dandiset_id})"
+    row["Dandiset ID (BIDS)"] = f"[{dandiset_id}]({repo_base_url}/{dandiset_id})"
 
     run_info_file_path = f"{raw_content_base_url}/{dandiset_id}/draft/.run_info.json"
     response = requests.get(url=run_info_file_path, headers=github_auth_header)
@@ -124,20 +123,26 @@ for dandiset in tqdm.tqdm(
 
 readme_lines += ["### Summary"]
 total = len(table_data)
-converted_count = sum(1 for row in table_data if "❌" not in row["Dandiset (BIDS)"])
+converted_count = sum(1 for row in table_data if row["Dandiset ID (BIDS)"].startswith("["))
 passing_nwb2bids_count = sum(1 for row in table_data if "❌" not in row["`nwb2bids` Inspection"])
 passing_bids_count = sum(1 for row in table_data if "❌" not in row["BIDS Validation"])
 
 nwb2bids_inspection_summary_text = (
     f"{passing_nwb2bids_count} / {converted_count} ({passing_nwb2bids_count/converted_count*100:0.1f}%)"
 )
-summary_data = [
-    {
+
+if converted_count == 0:
+    summary_entry = {
+        "Passing BIDS Validation": f"{passing_bids_count} / {converted_count} ({passing_bids_count/total*100:0.1f}%)",
+    }
+else:
+    summary_entry = {
         "Dandisets Successfully Converted": f"{converted_count} / {total} ({converted_count/total*100:0.1f}%)",
         "Passing `nwb2bids` Inspection": nwb2bids_inspection_summary_text,
         "Passing BIDS Validation": f"{passing_bids_count} / {converted_count} ({passing_bids_count/total*100:0.1f}%)",
     }
-]
+
+summary_data = [summary_entry]
 summary_table = tabulate2.tabulate(
     tabular_data=summary_data, headers="keys", tablefmt="github", colglobalalign="center"
 )

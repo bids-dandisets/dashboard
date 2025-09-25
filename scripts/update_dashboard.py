@@ -70,11 +70,23 @@ for dandiset in tqdm.tqdm(
         previous_nwb2bids_version_tag = previous_run_info["nwb2bids_version_tag"]
         row["`nwb2bids` Version"] = f"`{previous_nwb2bids_version_tag}`"
 
-    inspection_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_inspection_file_path}"
-    response = requests.get(url=inspection_content_url, headers=github_auth_header)
+    nwb2bids_inspection_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_inspection_file_path}"
+    response = requests.get(url=nwb2bids_inspection_content_url, headers=github_auth_header)
     if response.status_code != 200:
         row["`nwb2bids` Inspection"] = "❌"
     else:
+        nwb2bids_inspection = response.json()
+
+        already_bids = (issue for issue in nwb2bids_inspection if issue.get("title", "") == "Dandiset is already BIDS")
+        if any(already_bids):
+            row["Dandiset ID (BIDS)"] = dandiset_id
+            row["`nwb2bids` Inspection"] = "Skipped (already BIDS)"
+            row["BIDS Validation"] = ""
+            row["NWB Inspection"] = ""
+            row["DANDI Validation"] = ""
+            table_data.append(row)
+            continue
+
         row["`nwb2bids` Inspection"] = f"[⚠️]({repo_base_url}/{dandiset_id}/blob/{nwb2bids_inspection_file_path})"
     # TODO: look at content to determine pass[green]/warning
 

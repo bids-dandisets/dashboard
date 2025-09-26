@@ -3,6 +3,7 @@ import os
 import pathlib
 
 import dandi.dandiapi
+import packaging.version
 import requests
 import tabulate2
 import tqdm
@@ -135,23 +136,41 @@ for dandiset in tqdm.tqdm(
 
 readme_lines += ["### Summary"]
 total = len(table_data)
-converted_count = sum(1 for row in table_data if row["Dandiset ID (BIDS)"].startswith("["))
+latest_version = max(
+    packaging.version.Version(version=row["`nwb2bids` Version"].split("-")[0].removeprefix("`v"))
+    for row in table_data
+    if row["`nwb2bids` Version"] != "❌"
+)
+
+run_on_count = 0
+for row in table_data:
+    if row["`nwb2bids` Version"] == "❌":
+        continue
+
+    version = packaging.version.Version(version=row["`nwb2bids` Version"].split("-")[0].removeprefix("`v"))
+    if version != latest_version:
+        continue
+
+    if row["`nwb2bids` Inspection"] == "Skipped (already BIDS)" or row["Dandiset ID (BIDS)"].startswith("["):
+        run_on_count += 1
+
 passing_nwb2bids_count = sum(1 for row in table_data if "❌" not in row["`nwb2bids` Inspection"])
 passing_bids_count = sum(1 for row in table_data if "❌" not in row["BIDS Validation"])
 
 nwb2bids_inspection_summary_text = (
-    f"{passing_nwb2bids_count} / {converted_count} ({passing_nwb2bids_count/converted_count*100:0.1f}%)"
+    f"{passing_nwb2bids_count} / {run_on_count} ({passing_nwb2bids_count / run_on_count * 100:0.1f}%)"
 )
 
-if converted_count == 0:
+if run_on_count == 0:
     summary_entry = {
-        "Passing BIDS Validation": f"{passing_bids_count} / {converted_count} ({passing_bids_count/total*100:0.1f}%)",
+        "Passing BIDS Validation": f"{passing_bids_count} / {run_on_count} ({passing_bids_count / total * 100:0.1f}%)",
     }
 else:
     summary_entry = {
-        "Dandisets Successfully Converted": f"{converted_count} / {total} ({converted_count/total*100:0.1f}%)",
+        "Latest version": latest_version,
+        "Run on latest version": f"{run_on_count} / {total} ({run_on_count / total * 100:0.1f}%)",
         "Passing `nwb2bids` Inspection": nwb2bids_inspection_summary_text,
-        "Passing BIDS Validation": f"{passing_bids_count} / {converted_count} ({passing_bids_count/total*100:0.1f}%)",
+        "Passing BIDS Validation": f"{passing_bids_count} / {run_on_count} ({passing_bids_count / total * 100:0.1f}%)",
     }
 
 summary_data = [summary_entry]

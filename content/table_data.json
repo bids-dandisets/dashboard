@@ -5782,5 +5782,13 @@
     "BIDS Validation": "[\u26a0\ufe0f6 Warnings](https://github.com/bids-dandisets//001613/blob/draft/derivatives/inspections/bids_validation.txt)",
     "NWB Inspection": "\u274c",
     "DANDI Validation": "[\u26a0\ufe0f](https://github.com/bids-dandisets//001613/blob/draft/derivatives/inspections/dandi_validation.txt)"
+  },
+  {
+    "Dandiset ID (BIDS)": "001614",
+    "`nwb2bids` Version": "\u274c",
+    "`nwb2bids` Inspection": "\u274c",
+    "BIDS Validation": "\u274c",
+    "NWB Inspection": "\u274c",
+    "DANDI Validation": "\u274c"
   }
 ]

@@ -34,15 +34,15 @@ repo_base_url = "https://github.com/bids-dandisets/"
 repo_api_base_url = "https://api.github.com/repos/bids-dandisets"
 raw_content_base_url = "https://raw.githubusercontent.com/bids-dandisets"
 
-nwb2bids_notifications_file_path = "draft/derivatives/inspections/nwb2bids_inspection.json"
-# nwb_inspection_file_path = "draft/derivatives/inspections/src-nwb-inspector_ver-0-6-5.txt"
-bids_validation_file_path = "draft/derivatives/inspections/bids_validation.txt"
-bids_validation_json_file_path = "draft/derivatives/inspections/bids_validation.json"
-# dandi_validation_file_path = "draft/derivatives/inspections/dandi_validation.txt"
+nwb2bids_notifications_file_path = "draft/derivatives/validations/nwb2bids_notifications.json"
+# nwb_inspection_file_path = "draft/derivatives/validations/src-nwb-inspector_ver-0-6-5.txt"
+bids_validation_file_path = "draft/derivatives/validations/bids_validation.txt"
+bids_validation_json_file_path = "draft/derivatives/validations/bids_validation.json"
+# dandi_validation_file_path = "draft/derivatives/validations/dandi_validation.txt"
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
-    iterable=dandisets[:10], total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
+    iterable=dandisets[:20], total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
 ):
     dandiset_id = dandiset.identifier
 
@@ -63,20 +63,27 @@ for dandiset in tqdm.tqdm(
         continue
     row["Dandiset ID<br>(BIDS)"] = f"[{dandiset_id}]({repo_base_url}/{dandiset_id})"
 
-    run_info_file_path = f"{raw_content_base_url}/{dandiset_id}/draft/.run_info.json"
+    run_info_file_path = f"{raw_content_base_url}/{dandiset_id}/draft/.nwb2bids/run_info.json"
     response = requests.get(url=run_info_file_path, headers=github_auth_header)
     if response.status_code != 200:
         row["`nwb2bids`<br>Version"] = "❗Missing"
+        row["Sessions<br>Converted<br>(Unsanitized)"] = "❗Missing"
     else:
         run_info = response.json()
 
-        nwb2bids_version = run_info["nwb2bids_version_tag"]
+        nwb2bids_version = run_info["nwb2bids_version"]
         row["`nwb2bids`<br>Version"] = f"`{nwb2bids_version}`"
 
-        # TODO: add count of session and subjects converted (including relative to total)
+        sessions_converted_text = "No<br>sessions<br>converted"
+        if run_info["total_sessions"] != 0:
+            row["Sessions<br>Converted<br>(Unsanitized)"] = (
+                f"{run_info["sessions_converted"]} / {run_info["total_sessions"]} "
+                f"({run_info["sessions_converted"]/run_info["total_sessions"]*100:0.1f}%)"
+            )
 
-    nwb2bids_inspection_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_notifications_file_path}"
-    response = requests.get(url=nwb2bids_inspection_content_url, headers=github_auth_header)
+    # Parse detailed nwb2bids notifications
+    nwb2bids_notifications_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_notifications_file_path}"
+    response = requests.get(url=nwb2bids_notifications_content_url, headers=github_auth_header)
     if response.status_code != 200:
         row["`nwb2bids`<br>Notifications"] = "❗Missing"
     else:
@@ -87,12 +94,10 @@ for dandiset in tqdm.tqdm(
         )
         if any(already_bids):
             row["Dandiset ID<br>(BIDS)"] = dandiset_id
-            row["`nwb2bids`<br>Notifications"] = "Skipped (already BIDS)"
+            row["`nwb2bids`<br>Version"] = "⏭️Skipped (already BIDS)"
             row["BIDS<br>Validation"] = ""
             # row["NWB Inspection"] = ""
             # row["DANDI Validation"] = ""
-            table_data.append(row)
-            continue
 
         nwb2bids_notifications_text = "✅"
         if len(nwb2bids_notifications) > 0:
@@ -179,7 +184,11 @@ for dandiset in tqdm.tqdm(
 readme_lines += ["### Summary"]
 total = len(table_data)
 latest_version = max(
-    packaging.version.Version(version=row["`nwb2bids`<br>Version"].split("-")[0].removeprefix("`v"))
+    (
+        packaging.version.Version(version=(row["`nwb2bids`<br>Version"].split("-")[0].removeprefix("`v")))
+        if "❗" not in row["`nwb2bids`<br>Version"]
+        else packaging.version.Version("0.0.0")
+    )
     for row in table_data
     if row["`nwb2bids`<br>Version"] != "❌"
 )
@@ -189,7 +198,11 @@ for row in table_data:
     if row["`nwb2bids`<br>Version"] == "❌":
         continue
 
-    version = packaging.version.Version(version=row["`nwb2bids`<br>Version"].split("-")[0].removeprefix("`v"))
+    version = (
+        packaging.version.Version(version=row["`nwb2bids`<br>Version"].split("-")[0].removeprefix("`v"))
+        if "❗" not in row["`nwb2bids`<br>Version"]
+        else packaging.version.Version("0.0.0")
+    )
     if version != latest_version:
         continue
 

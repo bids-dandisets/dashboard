@@ -5,6 +5,9 @@ on:
     - cron: "0 17 * * *"  # noon EST
   workflow_dispatch:
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   UpdateBidsDandisetsDashboard:
     runs-on: ubuntu-latest

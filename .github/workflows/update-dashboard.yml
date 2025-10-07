@@ -22,9 +22,16 @@ jobs:
         run: pip install dandi tabulate2 tqdm
 
       - name: Run dashboard update
-        id: run-dashboard-update
         run: python scripts/update_dashboard.py
 
+      - name: Upload changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git add content/table_data.json
+          git commit --message "update"
+          git push
 
   NotifyOnFailure:
     runs-on: ubuntu-latest

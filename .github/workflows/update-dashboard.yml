@@ -24,7 +24,7 @@ jobs:
         run: pip install dandi tabulate2 tqdm
 
       - name: Run dashboard update
-        run: python scripts/update_dashboard.py
+        run: python dashboard/scripts/update_dashboard.py
 
       - name: Upload changes
         run: |

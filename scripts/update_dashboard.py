@@ -42,7 +42,7 @@ bids_validation_json_file_path = "draft/derivatives/validations/bids_validation.
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
-    iterable=dandisets[:20], total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
+    iterable=dandisets, total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
 ):
     dandiset_id = dandiset.identifier
 

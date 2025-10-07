@@ -2,7 +2,7 @@ name: Update Dashboard
 
 on:
   schedule:
-    - cron: "0 17 * * *"  # noon EST
+    - cron: "0 12 * * *"  # noon EST
   workflow_dispatch:
 
 env:

@@ -42,7 +42,7 @@ bids_validation_json_file_path = "draft/derivatives/validations/bids_validation.
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
-    iterable=dandisets, total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
+    iterable=dandisets[50], total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
 ):
     dandiset_id = dandiset.identifier
 
@@ -54,11 +54,11 @@ for dandiset in tqdm.tqdm(
     repo_api_url = f"{repo_api_base_url}/{dandiset_id}"
     response = requests.get(url=repo_api_url, headers=github_auth_header)
     if response.status_code != 200:
-        row["`nwb2bids`<br>Version"] = "❌"
-        row["`nwb2bids`<br>Notifications"] = "❌"
-        row["BIDS<br>Validation"] = "❌"
-        # row["NWB Inspection"] = "❌"
-        # row["DANDI Validation"] = "❌"
+        row["`nwb2bids`<br>Version"] = "❗"
+        row["`nwb2bids`<br>Notifications"] = "❗"
+        row["BIDS<br>Validation"] = "❗"
+        # row["NWB Inspection"] = "❗"
+        # row["DANDI Validation"] = "❗"
         table_data.append(row)
         continue
     row["Dandiset ID<br>(BIDS)"] = f"[{dandiset_id}]({repo_base_url}/{dandiset_id})"
@@ -94,7 +94,7 @@ for dandiset in tqdm.tqdm(
         )
         if any(already_bids):
             row["Dandiset ID<br>(BIDS)"] = dandiset_id
-            row["`nwb2bids`<br>Version"] = "⏭️Skipped (already BIDS)"
+            row["Sessions<br>Converted<br>(Unsanitized)"] = "⏭️Skipped (already BIDS)"
             row["BIDS<br>Validation"] = ""
             # row["NWB Inspection"] = ""
             # row["DANDI Validation"] = ""

@@ -80,6 +80,8 @@ for dandiset in tqdm.tqdm(
                 f"{run_info["sessions_converted"]} / {run_info["total_sessions"]} "
                 f"({run_info["sessions_converted"]/run_info["total_sessions"]*100:0.1f}%)"
             )
+        elif run_info["total_sessions"] != "???":
+            row["Sessions<br>Converted<br>(Unsanitized)"] = f"{run_info["sessions_converted"]} / ???"
 
     # Parse detailed nwb2bids notifications
     nwb2bids_notifications_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_notifications_file_path}"

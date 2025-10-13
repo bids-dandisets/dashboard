@@ -86,7 +86,7 @@ for dandiset in tqdm.tqdm(
         elif run_info["total_sessions"] > 0:
             row["Sessions<br>Converted<br>(Unsanitized)"] = (
                 f"{run_info["sessions_converted"]} / {run_info["total_sessions"]} "
-                f"({run_info["sessions_converted"]/run_info["total_sessions"]*100:0.1f}%)"
+                f"({run_info["sessions_converted"]/int(run_info["total_sessions"])*100:0.1f}%)"
             )
 
     # Parse detailed nwb2bids notifications

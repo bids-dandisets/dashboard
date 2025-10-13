@@ -77,7 +77,7 @@ for dandiset in tqdm.tqdm(
         sessions_converted_text = "No<br>sessions<br>converted"
         if run_info["total_sessions"] == "???":
             row["Sessions<br>Converted<br>(Unsanitized)"] = f"{run_info["sessions_converted"]} / ???"
-        elif run_info["total_sessions"].endswith("+"):
+        elif str(run_info["total_sessions"]).endswith("+"):
             row["Sessions<br>Converted<br>(Unsanitized)"] = (
                 f"{run_info["sessions_converted"]} / {run_info["total_sessions"]} "
             )

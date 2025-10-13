@@ -75,10 +75,18 @@ for dandiset in tqdm.tqdm(
         row["`nwb2bids`<br>Version"] = f"`{nwb2bids_version}`"
 
         sessions_converted_text = "No<br>sessions<br>converted"
-        if run_info["total_sessions"] != 0:
+        if run_info["total_sessions"] == "???":
+            row["Sessions<br>Converted<br>(Unsanitized)"] = f"{run_info["sessions_converted"]} / ???"
+        elif run_info["total_sessions"].endswith("+"):
             row["Sessions<br>Converted<br>(Unsanitized)"] = (
                 f"{run_info["sessions_converted"]} / {run_info["total_sessions"]} "
-                f"({run_info["sessions_converted"]/run_info["total_sessions"]*100:0.1f}%)"
+            )
+        elif run_info["total_sessions"] == 0:
+            row["Sessions<br>Converted<br>(Unsanitized)"] = "0 / 0"
+        elif run_info["total_sessions"] > 0:
+            row["Sessions<br>Converted<br>(Unsanitized)"] = (
+                f"{run_info["sessions_converted"]} / {run_info["total_sessions"]} "
+                f"({run_info["sessions_converted"]/int(run_info["total_sessions"])*100:0.1f}%)"
             )
 
     # Parse detailed nwb2bids notifications

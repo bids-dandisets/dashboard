@@ -17,6 +17,7 @@ if GITHUB_TOKEN is None:
 dashboard_directory = pathlib.Path(__file__).parent.parent
 dandisets_directory = dashboard_directory / "dandisets"
 readme_file_path = dashboard_directory / "README.md"
+full_table_file_path = dashboard_directory / "full_table.md"
 content_directory = dashboard_directory / "content"
 content_directory.mkdir(exist_ok=True)
 table_data_file_path = content_directory / "table_data.json"
@@ -67,7 +68,7 @@ for dandiset in tqdm.tqdm(
     response = requests.get(url=run_info_file_path, headers=github_auth_header)
     if response.status_code != 200:
         row["`nwb2bids`<br>Version"] = "❗Missing"
-        row["Sessions<br>Converted<br>(Unsanitized)"] = "❗Missing"
+        row["Status<br>(Unsanitized)"] = "❗Missing"
     else:
         run_info = response.json()
 
@@ -76,18 +77,45 @@ for dandiset in tqdm.tqdm(
 
         sessions_converted_text = "No<br>sessions<br>converted"
         if run_info["total_sessions"] == "???":
-            row["Sessions<br>Converted<br>(Unsanitized)"] = f"{run_info["sessions_converted"]} / ???"
+            row["Status<br>(Unsanitized)"] = f"{run_info["sessions_converted"]} / ??? sessions"
         elif str(run_info["total_sessions"]).endswith("+"):
-            row["Sessions<br>Converted<br>(Unsanitized)"] = (
-                f"{run_info["sessions_converted"]} / {run_info["total_sessions"]} "
-            )
+            row["Status<br>(Unsanitized)"] = f"{run_info["sessions_converted"]} / {run_info["total_sessions"]} sessions"
         elif run_info["total_sessions"] == 0:
-            row["Sessions<br>Converted<br>(Unsanitized)"] = "0 / 0"
+            row["Status<br>(Unsanitized)"] = "0 / 0 sessions"
         elif run_info["total_sessions"] > 0:
-            row["Sessions<br>Converted<br>(Unsanitized)"] = (
+            row["Status<br>(Unsanitized)"] = (
                 f"{run_info["sessions_converted"]} / {run_info["total_sessions"]} "
-                f"({run_info["sessions_converted"]/int(run_info["total_sessions"])*100:0.1f}%)"
+                f"({run_info["sessions_converted"]/int(run_info["total_sessions"])*100:0.1f}%) sessions"
             )
+
+        manifest_file_path = f"{raw_content_base_url}/{dandiset_id}/draft/.nwb2bids/manifest.txt"
+        response = requests.get(url=manifest_file_path, headers=github_auth_header)
+        if response.status_code == 200:
+            manifest = response.content.decode(encoding="utf-8")
+            filenames = [line.strip() for line in manifest.splitlines() if line != "\n"]
+
+            filenames_by_type = dict()
+            for suffix in [".nwb", ".tsv", ".json"]:
+                if suffix == ".nwb":
+                    filenames_by_type[suffix] = [filename for filename in filenames if filename.endswith(suffix)]
+                    continue
+
+                for key in ["participant", "session", "probe", "electrode", "channel"]:
+                    key_files = [filename for filename in filenames if filename.endswith(suffix) and key in filename]
+                    filenames_by_type[f"{key}{suffix}"] = key_files
+
+            file_count_by_type = {key: len(value) for key, value in filenames_by_type.items()}
+
+            row["Status<br>(Unsanitized)"] += f'<br>{file_count_by_type[".nwb"]} NWB file(s)'
+            for key in ["participant", "session", "probe", "electrode", "channel"]:
+                tsv_count = file_count_by_type[f"{key}.tsv"]
+                json_count = file_count_by_type[f"{key}.json"]
+
+                if tsv_count == json_count and tsv_count == 0:
+                    continue
+
+                row["Status<br>(Unsanitized)"] += f"<br>{tsv_count} .tsv {json_count} .json {key}(s)"
+            a = 1
 
     # Parse detailed nwb2bids notifications
     nwb2bids_notifications_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_notifications_file_path}"
@@ -102,7 +130,7 @@ for dandiset in tqdm.tqdm(
         )
         if any(already_bids):
             row["Dandiset ID<br>(BIDS)"] = dandiset_id
-            row["Sessions<br>Converted<br>(Unsanitized)"] = "⏭️Skipped (already BIDS)"
+            row["Status<br>(Unsanitized)"] = "⏭️Skipped (already BIDS)"
             row["BIDS<br>Validation"] = ""
             # row["NWB Inspection"] = ""
             # row["DANDI Validation"] = ""
@@ -253,10 +281,15 @@ summary_table = tabulate2.tabulate(
 summary_table_lines = summary_table.splitlines()
 readme_lines += summary_table_lines
 
-readme_lines += ["### Dandisets"]
+readme_lines += ["### Full Table"]
+readme_lines += ["To see the results without any skips removed, go to the [Full Table](./full_table.md)."]
 full_table = tabulate2.tabulate(tabular_data=table_data, headers="keys", tablefmt="github", colglobalalign="center")
 full_table_lines = full_table.splitlines()
-readme_lines += full_table_lines
+full_table_file_path.write_text(data="\n".join(full_table_lines), encoding="utf-8")
+
+readme_lines += ["### Dandisets"]
+unskipped_lines = [line for line in full_table_lines if "Skipped" not in line and "0 sessions" not in line]
+readme_lines += unskipped_lines
 
 readme_file_path.write_text(data="\n".join(readme_lines), encoding="utf-8")
 with table_data_file_path.open(mode="w") as file_stream:

@@ -50,6 +50,14 @@ for dandiset in tqdm.tqdm(
     row = dict()
     row["Dandiset ID<br>(BIDS)"] = dandiset_id
 
+    raw_metadata = dandiset.get_raw_metadata()
+    row["Dandiset<br>Modalities"] = "<br>".join(
+        [
+            approach.get("name", "").removesuffix(" approach")
+            for approach in raw_metadata.get("assetsSummary", dict()).get("approach", [])
+        ]
+    )
+
     # TODO: skip update based on commit hash or other etag
 
     repo_api_url = f"{repo_api_base_url}/{dandiset_id}"
@@ -115,7 +123,6 @@ for dandiset in tqdm.tqdm(
                     continue
 
                 row["Status<br>(Unsanitized)"] += f"<br>{tsv_count} .tsv {json_count} .json {key}(s)"
-            a = 1
 
     # Parse detailed nwb2bids notifications
     nwb2bids_notifications_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_notifications_file_path}"
@@ -165,6 +172,11 @@ for dandiset in tqdm.tqdm(
         )
 
     # Parse detailed BIDS validation results
+    if "0 NWB" in row["Status<br>(Unsanitized)"]:
+        row["BIDS<br>Validation"] = "⏭️Skipped"
+        table_data.append(row)
+        continue
+
     bids_validation_content_url = f"{raw_content_base_url}/{dandiset_id}/{bids_validation_file_path}"
     content_response = requests.get(url=bids_validation_content_url, headers=github_auth_header)
     bids_validation_json_content_url = f"{raw_content_base_url}/{dandiset_id}/{bids_validation_json_file_path}"
@@ -288,7 +300,11 @@ full_table_lines = full_table.splitlines()
 full_table_file_path.write_text(data="\n".join(full_table_lines), encoding="utf-8")
 
 readme_lines += ["### Dandisets"]
-unskipped_lines = [line for line in full_table_lines if "Skipped" not in line and "0 sessions" not in line]
+unskipped_lines = [
+    line
+    for line in full_table_lines
+    if "Skipped" not in line and "0 sessions" not in line and line.count("Missing") < 3
+]
 readme_lines += unskipped_lines
 
 readme_file_path.write_text(data="\n".join(readme_lines), encoding="utf-8")

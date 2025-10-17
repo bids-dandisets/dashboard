@@ -98,8 +98,8 @@
   {
     "Dandiset ID<br>(BIDS)": "[000016](https://github.com/bids-dandisets//000016)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging<br>behavioral",
-    "`nwb2bids`<br>Version": "`v0.5.0-16-gf7f5496`",
-    "Status<br>(Unsanitized)": "135 / 135 (100.0%) sessions",
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "135 / 135 (100.0%) sessions<br>135 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>4 .tsv 4 .json session(s)",
     "`nwb2bids`<br>Notifications": "[\u274c540 Errors<br>\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//000016/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS<br>Validation": "[\u274c5 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//000016/blob/draft/derivatives/validations/bids_validation.txt)"
   },
@@ -810,7 +810,7 @@
   {
     "Dandiset ID<br>(BIDS)": "[000142](https://github.com/bids-dandisets//000142)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "`v0.5.0-25-g9a94d15`",
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
     "Status<br>(Unsanitized)": "717 / 717 (100.0%) sessions<br>717 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>68 .tsv 68 .json session(s)",
     "`nwb2bids`<br>Notifications": "[\u274c767 Errors](https://github.com/bids-dandisets//000142/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS<br>Validation": "[\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//000142/blob/draft/derivatives/validations/bids_validation.txt)"
@@ -1562,10 +1562,10 @@
   {
     "Dandiset ID<br>(BIDS)": "[000341](https://github.com/bids-dandisets//000341)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757Missing",
-    "Status<br>(Unsanitized)": "\u2757Missing",
-    "`nwb2bids`<br>Notifications": "\u2757Missing",
-    "BIDS<br>Validation": "\u2757Missing"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 769 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c337 Errors](https://github.com/bids-dandisets//000341/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "[000343](https://github.com/bids-dandisets//000343)",
@@ -1890,10 +1890,10 @@
   {
     "Dandiset ID<br>(BIDS)": "[000467](https://github.com/bids-dandisets//000467)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757Missing",
-    "Status<br>(Unsanitized)": "\u2757Missing",
-    "`nwb2bids`<br>Notifications": "\u2757Missing",
-    "BIDS<br>Validation": "\u2757Missing"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 14684 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c19193 Errors](https://github.com/bids-dandisets//000467/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "[000468](https://github.com/bids-dandisets//000468)",
@@ -2266,7 +2266,7 @@
   {
     "Dandiset ID<br>(BIDS)": "[000559](https://github.com/bids-dandisets//000559)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging<br>optogenetic<br>behavioral",
-    "`nwb2bids`<br>Version": "`v0.5.0-25-g9a94d15`",
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
     "Status<br>(Unsanitized)": "1942 / 1942 (100.0%) sessions<br>1942 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>69 .tsv 69 .json session(s)",
     "`nwb2bids`<br>Notifications": "[\u274c2982 Errors](https://github.com/bids-dandisets//000559/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS<br>Validation": "[\u274c3057 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//000559/blob/draft/derivatives/validations/bids_validation.txt)"
@@ -2538,7 +2538,7 @@
   {
     "Dandiset ID<br>(BIDS)": "[000636](https://github.com/bids-dandisets//000636)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "`v0.5.0-25-g9a94d15`",
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
     "Status<br>(Unsanitized)": "706 / 706 (100.0%) sessions<br>706 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>109 .tsv 109 .json session(s)",
     "`nwb2bids`<br>Notifications": "[\u274c623 Errors](https://github.com/bids-dandisets//000636/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS<br>Validation": "[\u274c33 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//000636/blob/draft/derivatives/validations/bids_validation.txt)"
@@ -2850,7 +2850,7 @@
   {
     "Dandiset ID<br>(BIDS)": "[000713](https://github.com/bids-dandisets//000713)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "`v0.5.0-25-g9a94d15`",
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
     "Status<br>(Unsanitized)": "0 / 1 (0.0%) sessions<br>0 NWB file(s)",
     "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//000713/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
@@ -2986,10 +2986,10 @@
   {
     "Dandiset ID<br>(BIDS)": "[000773](https://github.com/bids-dandisets//000773)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757Missing",
-    "Status<br>(Unsanitized)": "\u2757Missing",
-    "`nwb2bids`<br>Notifications": "\u2757Missing",
-    "BIDS<br>Validation": "\u2757Missing"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "15246 / 15246 (100.0%) sessions<br>15246 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>21 .tsv 21 .json session(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c30492 Errors](https://github.com/bids-dandisets//000773/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "[\u274c16003 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//000773/blob/draft/derivatives/validations/bids_validation.txt)"
   },
   {
     "Dandiset ID<br>(BIDS)": "[000774](https://github.com/bids-dandisets//000774)",
@@ -4002,10 +4002,10 @@
   {
     "Dandiset ID<br>(BIDS)": "[001169](https://github.com/bids-dandisets//001169)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757Missing",
-    "Status<br>(Unsanitized)": "\u2757Missing",
-    "`nwb2bids`<br>Notifications": "\u2757Missing",
-    "BIDS<br>Validation": "\u2757Missing"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 22703 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c310 Errors](https://github.com/bids-dandisets//001169/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "[001170](https://github.com/bids-dandisets//001170)",
@@ -4106,10 +4106,10 @@
   {
     "Dandiset ID<br>(BIDS)": "[001187](https://github.com/bids-dandisets//001187)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757Missing",
-    "Status<br>(Unsanitized)": "\u2757Missing",
-    "`nwb2bids`<br>Notifications": "\u2757Missing",
-    "BIDS<br>Validation": "\u2757Missing"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 3 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001187/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "[001188](https://github.com/bids-dandisets//001188)",
@@ -4466,7 +4466,7 @@
   {
     "Dandiset ID<br>(BIDS)": "[001280](https://github.com/bids-dandisets//001280)",
     "Dandiset<br>Modalities": "behavioral<br>electrophysiological",
-    "`nwb2bids`<br>Version": "`v0.5.0-50-g1b62350`",
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
     "Status<br>(Unsanitized)": "120 / 120 (100.0%) sessions<br>120 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>6 .tsv 6 .json session(s)<br>120 .tsv 120 .json probe(s)<br>120 .tsv 120 .json electrode(s)<br>120 .tsv 120 .json channel(s)",
     "`nwb2bids`<br>Notifications": "[\u274c120 Errors](https://github.com/bids-dandisets//001280/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
@@ -4474,10 +4474,10 @@
   {
     "Dandiset ID<br>(BIDS)": "[001281](https://github.com/bids-dandisets//001281)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757Missing",
-    "Status<br>(Unsanitized)": "\u2757Missing",
-    "`nwb2bids`<br>Notifications": "\u2757Missing",
-    "BIDS<br>Validation": "\u2757Missing"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "457 / 457 (100.0%) sessions<br>457 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>98 .tsv 98 .json session(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c457 Errors](https://github.com/bids-dandisets//001281/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "[\u274c555 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001281/blob/draft/derivatives/validations/bids_validation.txt)"
   },
   {
     "Dandiset ID<br>(BIDS)": "[001282](https://github.com/bids-dandisets//001282)",
@@ -4488,1054 +4488,1204 @@
     "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001283",
+    "Dandiset ID<br>(BIDS)": "[001283](https://github.com/bids-dandisets//001283)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001283/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001284",
+    "Dandiset ID<br>(BIDS)": "[001284](https://github.com/bids-dandisets//001284)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001284/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001285",
+    "Dandiset ID<br>(BIDS)": "[001285](https://github.com/bids-dandisets//001285)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001286",
+    "Dandiset ID<br>(BIDS)": "[001286](https://github.com/bids-dandisets//001286)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001286/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001287",
+    "Dandiset ID<br>(BIDS)": "[001287](https://github.com/bids-dandisets//001287)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001287/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "001289",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
+    "BIDS<br>Validation": "[\u274c5 Errors<br>\u26a0\ufe0f7 Warnings](https://github.com/bids-dandisets//001289/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001289/blob/draft/derivatives/validations/nwb2bids_notifications.json)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001290",
+    "Dandiset ID<br>(BIDS)": "[001290](https://github.com/bids-dandisets//001290)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001290/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001291",
+    "Dandiset ID<br>(BIDS)": "[001291](https://github.com/bids-dandisets//001291)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001291/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001292",
+    "Dandiset ID<br>(BIDS)": "[001292](https://github.com/bids-dandisets//001292)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//001292/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001325",
+    "Dandiset ID<br>(BIDS)": "[001325](https://github.com/bids-dandisets//001325)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001325/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001326",
+    "Dandiset ID<br>(BIDS)": "[001326](https://github.com/bids-dandisets//001326)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001327",
+    "Dandiset ID<br>(BIDS)": "[001327](https://github.com/bids-dandisets//001327)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001327/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001328",
+    "Dandiset ID<br>(BIDS)": "[001328](https://github.com/bids-dandisets//001328)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001328/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001330",
+    "Dandiset ID<br>(BIDS)": "[001330](https://github.com/bids-dandisets//001330)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001330/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001332",
+    "Dandiset ID<br>(BIDS)": "[001332](https://github.com/bids-dandisets//001332)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001332/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001333",
+    "Dandiset ID<br>(BIDS)": "[001333](https://github.com/bids-dandisets//001333)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001334",
+    "Dandiset ID<br>(BIDS)": "[001334](https://github.com/bids-dandisets//001334)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001334/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001335",
+    "Dandiset ID<br>(BIDS)": "[001335](https://github.com/bids-dandisets//001335)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001335/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001336",
+    "Dandiset ID<br>(BIDS)": "[001336](https://github.com/bids-dandisets//001336)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "31 / 31 (100.0%) sessions<br>31 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>3 .tsv 3 .json session(s)<br>31 .tsv 31 .json probe(s)<br>31 .tsv 31 .json electrode(s)<br>31 .tsv 31 .json channel(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c62 Errors](https://github.com/bids-dandisets//001336/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "[\u274c34 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001336/blob/draft/derivatives/validations/bids_validation.txt)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001337",
+    "Dandiset ID<br>(BIDS)": "[001337](https://github.com/bids-dandisets//001337)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001339",
+    "Dandiset ID<br>(BIDS)": "[001339](https://github.com/bids-dandisets//001339)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001340",
+    "Dandiset ID<br>(BIDS)": "[001340](https://github.com/bids-dandisets//001340)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 43 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001340/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001341",
+    "Dandiset ID<br>(BIDS)": "[001341](https://github.com/bids-dandisets//001341)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001342",
+    "Dandiset ID<br>(BIDS)": "[001342](https://github.com/bids-dandisets//001342)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001342/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "001344",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
+    "BIDS<br>Validation": "[\u274c4 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//001344/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001344/blob/draft/derivatives/validations/nwb2bids_notifications.json)"
   },
   {
     "Dandiset ID<br>(BIDS)": "001345",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
+    "BIDS<br>Validation": "[\u274c5 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//001345/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001345/blob/draft/derivatives/validations/nwb2bids_notifications.json)"
   },
   {
     "Dandiset ID<br>(BIDS)": "001346",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
+    "BIDS<br>Validation": "[\u274c5 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//001346/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001346/blob/draft/derivatives/validations/nwb2bids_notifications.json)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001347",
+    "Dandiset ID<br>(BIDS)": "[001347](https://github.com/bids-dandisets//001347)",
     "Dandiset<br>Modalities": "electrophysiological<br>behavioral",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001348",
+    "Dandiset ID<br>(BIDS)": "[001348](https://github.com/bids-dandisets//001348)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001348/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001349",
+    "Dandiset ID<br>(BIDS)": "[001349](https://github.com/bids-dandisets//001349)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 45 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001349/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "001350",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
+    "BIDS<br>Validation": "[\u274c2 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//001350/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001350/blob/draft/derivatives/validations/nwb2bids_notifications.json)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001351",
+    "Dandiset ID<br>(BIDS)": "[001351](https://github.com/bids-dandisets//001351)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001351/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "001353",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
+    "BIDS<br>Validation": "[\u274c5 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//001353/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001353/blob/draft/derivatives/validations/nwb2bids_notifications.json)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001354",
+    "Dandiset ID<br>(BIDS)": "[001354](https://github.com/bids-dandisets//001354)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001355",
+    "Dandiset ID<br>(BIDS)": "[001355](https://github.com/bids-dandisets//001355)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001355/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001356",
+    "Dandiset ID<br>(BIDS)": "[001356](https://github.com/bids-dandisets//001356)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001356/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001357",
+    "Dandiset ID<br>(BIDS)": "[001357](https://github.com/bids-dandisets//001357)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "159 / 159 (100.0%) sessions<br>159 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>2 .tsv 2 .json session(s)<br>159 .tsv 159 .json channel(s)",
+    "`nwb2bids`<br>Notifications": "[\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//001357/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "[\u26a0\ufe0f1507 Warnings](https://github.com/bids-dandisets//001357/blob/draft/derivatives/validations/bids_validation.txt)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001358",
+    "Dandiset ID<br>(BIDS)": "[001358](https://github.com/bids-dandisets//001358)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "131 / 131 (100.0%) sessions<br>131 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>2 .tsv 2 .json session(s)<br>131 .tsv 131 .json channel(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c131 Errors](https://github.com/bids-dandisets//001358/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "[\u274c133 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001358/blob/draft/derivatives/validations/bids_validation.txt)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001359",
+    "Dandiset ID<br>(BIDS)": "[001359](https://github.com/bids-dandisets//001359)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001359/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001360",
+    "Dandiset ID<br>(BIDS)": "[001360](https://github.com/bids-dandisets//001360)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//001360/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001361",
+    "Dandiset ID<br>(BIDS)": "[001361](https://github.com/bids-dandisets//001361)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging<br>behavioral",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 14 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001361/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "001362",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
+    "BIDS<br>Validation": "[\u274c2 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//001362/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001362/blob/draft/derivatives/validations/nwb2bids_notifications.json)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001363",
+    "Dandiset ID<br>(BIDS)": "[001363](https://github.com/bids-dandisets//001363)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001363/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001364",
+    "Dandiset ID<br>(BIDS)": "[001364](https://github.com/bids-dandisets//001364)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 1 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001364/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001366",
+    "Dandiset ID<br>(BIDS)": "[001366](https://github.com/bids-dandisets//001366)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "2 / 2 (100.0%) sessions<br>2 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>2 .tsv 2 .json session(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c3 Errors](https://github.com/bids-dandisets//001366/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "[\u274c4 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001366/blob/draft/derivatives/validations/bids_validation.txt)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001367",
+    "Dandiset ID<br>(BIDS)": "[001367](https://github.com/bids-dandisets//001367)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001367/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001369",
+    "Dandiset ID<br>(BIDS)": "[001369](https://github.com/bids-dandisets//001369)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//001369/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001370",
+    "Dandiset ID<br>(BIDS)": "[001370](https://github.com/bids-dandisets//001370)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001370/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001371",
+    "Dandiset ID<br>(BIDS)": "[001371](https://github.com/bids-dandisets//001371)",
     "Dandiset<br>Modalities": "electrophysiological<br>behavioral",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "66 / 66 (100.0%) sessions<br>66 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>7 .tsv 7 .json session(s)<br>66 .tsv 66 .json probe(s)<br>66 .tsv 66 .json electrode(s)<br>66 .tsv 66 .json channel(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c66 Errors](https://github.com/bids-dandisets//001371/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "[\u274c73 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001371/blob/draft/derivatives/validations/bids_validation.txt)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001373",
+    "Dandiset ID<br>(BIDS)": "[001373](https://github.com/bids-dandisets//001373)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001373/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001374",
+    "Dandiset ID<br>(BIDS)": "[001374](https://github.com/bids-dandisets//001374)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001374/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001375",
+    "Dandiset ID<br>(BIDS)": "[001375](https://github.com/bids-dandisets//001375)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001376",
+    "Dandiset ID<br>(BIDS)": "[001376](https://github.com/bids-dandisets//001376)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001376/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001409",
+    "Dandiset ID<br>(BIDS)": "[001409](https://github.com/bids-dandisets//001409)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001409/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001410",
+    "Dandiset ID<br>(BIDS)": "[001410](https://github.com/bids-dandisets//001410)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001410/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001413",
+    "Dandiset ID<br>(BIDS)": "[001413](https://github.com/bids-dandisets//001413)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001413/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001414",
+    "Dandiset ID<br>(BIDS)": "[001414](https://github.com/bids-dandisets//001414)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001414/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001415",
+    "Dandiset ID<br>(BIDS)": "[001415](https://github.com/bids-dandisets//001415)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001415/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001416",
+    "Dandiset ID<br>(BIDS)": "[001416](https://github.com/bids-dandisets//001416)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001416/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001419",
+    "Dandiset ID<br>(BIDS)": "[001419](https://github.com/bids-dandisets//001419)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 4 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001419/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001420",
+    "Dandiset ID<br>(BIDS)": "[001420](https://github.com/bids-dandisets//001420)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 2 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001420/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001421",
+    "Dandiset ID<br>(BIDS)": "[001421](https://github.com/bids-dandisets//001421)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 1 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001421/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001424",
+    "Dandiset ID<br>(BIDS)": "[001424](https://github.com/bids-dandisets//001424)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "5 / 5 (100.0%) sessions<br>5 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>4 .tsv 4 .json session(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001424/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "[\u274c9 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001424/blob/draft/derivatives/validations/bids_validation.txt)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001425",
+    "Dandiset ID<br>(BIDS)": "[001425](https://github.com/bids-dandisets//001425)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging<br>behavioral",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "\u2757Missing",
+    "Status<br>(Unsanitized)": "\u2757Missing",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u2757Missing"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001428",
+    "Dandiset ID<br>(BIDS)": "[001428](https://github.com/bids-dandisets//001428)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001428/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001429",
+    "Dandiset ID<br>(BIDS)": "[001429](https://github.com/bids-dandisets//001429)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001429/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001430",
+    "Dandiset ID<br>(BIDS)": "[001430](https://github.com/bids-dandisets//001430)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001430/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001431",
+    "Dandiset ID<br>(BIDS)": "[001431](https://github.com/bids-dandisets//001431)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001431/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001432",
+    "Dandiset ID<br>(BIDS)": "[001432](https://github.com/bids-dandisets//001432)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001433",
+    "Dandiset ID<br>(BIDS)": "[001433](https://github.com/bids-dandisets//001433)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001434",
+    "Dandiset ID<br>(BIDS)": "[001434](https://github.com/bids-dandisets//001434)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001434/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001435",
+    "Dandiset ID<br>(BIDS)": "[001435](https://github.com/bids-dandisets//001435)",
     "Dandiset<br>Modalities": "behavioral<br>electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 32 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001435/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "001436",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
+    "BIDS<br>Validation": "[\u274c1 Error<br>\u26a0\ufe0f3 Warnings](https://github.com/bids-dandisets//001436/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001436/blob/draft/derivatives/validations/nwb2bids_notifications.json)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001437",
+    "Dandiset ID<br>(BIDS)": "[001437](https://github.com/bids-dandisets//001437)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001437/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001438",
+    "Dandiset ID<br>(BIDS)": "[001438](https://github.com/bids-dandisets//001438)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001438/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001439",
+    "Dandiset ID<br>(BIDS)": "[001439](https://github.com/bids-dandisets//001439)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001439/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "001440",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
+    "BIDS<br>Validation": "[\u274c1 Error<br>\u26a0\ufe0f3 Warnings](https://github.com/bids-dandisets//001440/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001440/blob/draft/derivatives/validations/nwb2bids_notifications.json)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001441",
+    "Dandiset ID<br>(BIDS)": "[001441](https://github.com/bids-dandisets//001441)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001441/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "001442",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
+    "BIDS<br>Validation": "[\u274c1 Error<br>\u26a0\ufe0f3 Warnings](https://github.com/bids-dandisets//001442/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001442/blob/draft/derivatives/validations/nwb2bids_notifications.json)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001444",
+    "Dandiset ID<br>(BIDS)": "[001444](https://github.com/bids-dandisets//001444)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 16 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001444/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001445",
+    "Dandiset ID<br>(BIDS)": "[001445](https://github.com/bids-dandisets//001445)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001445/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001446",
+    "Dandiset ID<br>(BIDS)": "[001446](https://github.com/bids-dandisets//001446)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001446/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001447",
+    "Dandiset ID<br>(BIDS)": "[001447](https://github.com/bids-dandisets//001447)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001447/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001448",
+    "Dandiset ID<br>(BIDS)": "[001448](https://github.com/bids-dandisets//001448)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001448/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001449",
+    "Dandiset ID<br>(BIDS)": "[001449](https://github.com/bids-dandisets//001449)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001449/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001450",
+    "Dandiset ID<br>(BIDS)": "[001450](https://github.com/bids-dandisets//001450)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001450/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001451",
+    "Dandiset ID<br>(BIDS)": "[001451](https://github.com/bids-dandisets//001451)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001451/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "001452",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
+    "BIDS<br>Validation": "[\u274c1 Error<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//001452/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001452/blob/draft/derivatives/validations/nwb2bids_notifications.json)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001453",
+    "Dandiset ID<br>(BIDS)": "[001453](https://github.com/bids-dandisets//001453)",
     "Dandiset<br>Modalities": "behavioral",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001454",
+    "Dandiset ID<br>(BIDS)": "[001454](https://github.com/bids-dandisets//001454)",
     "Dandiset<br>Modalities": "behavioral<br>microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001454/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001455",
+    "Dandiset ID<br>(BIDS)": "[001455](https://github.com/bids-dandisets//001455)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001455/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001456",
+    "Dandiset ID<br>(BIDS)": "[001456](https://github.com/bids-dandisets//001456)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001456/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001458",
+    "Dandiset ID<br>(BIDS)": "[001458](https://github.com/bids-dandisets//001458)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001458/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001459",
+    "Dandiset ID<br>(BIDS)": "[001459](https://github.com/bids-dandisets//001459)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001459/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001460",
+    "Dandiset ID<br>(BIDS)": "[001460](https://github.com/bids-dandisets//001460)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001462",
+    "Dandiset ID<br>(BIDS)": "[001462](https://github.com/bids-dandisets//001462)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001463",
+    "Dandiset ID<br>(BIDS)": "[001463](https://github.com/bids-dandisets//001463)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001463/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001464",
+    "Dandiset ID<br>(BIDS)": "[001464](https://github.com/bids-dandisets//001464)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001464/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001465",
+    "Dandiset ID<br>(BIDS)": "[001465](https://github.com/bids-dandisets//001465)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001465/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001466",
+    "Dandiset ID<br>(BIDS)": "[001466](https://github.com/bids-dandisets//001466)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001466/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001467",
+    "Dandiset ID<br>(BIDS)": "[001467](https://github.com/bids-dandisets//001467)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001467/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001468",
+    "Dandiset ID<br>(BIDS)": "[001468](https://github.com/bids-dandisets//001468)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001468/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001469",
+    "Dandiset ID<br>(BIDS)": "[001469](https://github.com/bids-dandisets//001469)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 1 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001469/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "001470",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
+    "BIDS<br>Validation": "[\u274c2 Errors<br>\u26a0\ufe0f10 Warnings](https://github.com/bids-dandisets//001470/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001470/blob/draft/derivatives/validations/nwb2bids_notifications.json)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001472",
+    "Dandiset ID<br>(BIDS)": "[001472](https://github.com/bids-dandisets//001472)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001472/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001473",
+    "Dandiset ID<br>(BIDS)": "[001473](https://github.com/bids-dandisets//001473)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001474",
+    "Dandiset ID<br>(BIDS)": "[001474](https://github.com/bids-dandisets//001474)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001475",
+    "Dandiset ID<br>(BIDS)": "[001475](https://github.com/bids-dandisets//001475)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//001475/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001476",
+    "Dandiset ID<br>(BIDS)": "[001476](https://github.com/bids-dandisets//001476)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001476/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001509",
+    "Dandiset ID<br>(BIDS)": "[001509](https://github.com/bids-dandisets//001509)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001510",
+    "Dandiset ID<br>(BIDS)": "[001510](https://github.com/bids-dandisets//001510)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001510/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001511",
+    "Dandiset ID<br>(BIDS)": "[001511](https://github.com/bids-dandisets//001511)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001512",
+    "Dandiset ID<br>(BIDS)": "[001512](https://github.com/bids-dandisets//001512)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001513",
+    "Dandiset ID<br>(BIDS)": "[001513](https://github.com/bids-dandisets//001513)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001513/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001514",
+    "Dandiset ID<br>(BIDS)": "[001514](https://github.com/bids-dandisets//001514)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)<br>1 .tsv 1 .json participant(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001514/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001515",
+    "Dandiset ID<br>(BIDS)": "[001515](https://github.com/bids-dandisets//001515)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001515/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001516",
+    "Dandiset ID<br>(BIDS)": "[001516](https://github.com/bids-dandisets//001516)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001516/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001517",
+    "Dandiset ID<br>(BIDS)": "[001517](https://github.com/bids-dandisets//001517)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001517/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001518",
+    "Dandiset ID<br>(BIDS)": "[001518](https://github.com/bids-dandisets//001518)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001518/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001521",
+    "Dandiset ID<br>(BIDS)": "[001521](https://github.com/bids-dandisets//001521)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001521/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001523",
+    "Dandiset ID<br>(BIDS)": "[001523](https://github.com/bids-dandisets//001523)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001523/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001525",
+    "Dandiset ID<br>(BIDS)": "[001525](https://github.com/bids-dandisets//001525)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001525/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001526",
+    "Dandiset ID<br>(BIDS)": "[001526](https://github.com/bids-dandisets//001526)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001526/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001527",
+    "Dandiset ID<br>(BIDS)": "[001527](https://github.com/bids-dandisets//001527)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001527/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001529",
+    "Dandiset ID<br>(BIDS)": "[001529](https://github.com/bids-dandisets//001529)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//001529/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001530",
+    "Dandiset ID<br>(BIDS)": "[001530](https://github.com/bids-dandisets//001530)",
     "Dandiset<br>Modalities": "behavioral<br>electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "126 / 126 (100.0%) sessions<br>126 NWB file(s)<br>1 .tsv 1 .json participant(s)<br>21 .tsv 21 .json session(s)<br>35 .tsv 35 .json channel(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c126 Errors](https://github.com/bids-dandisets//001530/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "[\u274c150 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001530/blob/draft/derivatives/validations/bids_validation.txt)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001532",
+    "Dandiset ID<br>(BIDS)": "[001532](https://github.com/bids-dandisets//001532)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001532/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001533",
+    "Dandiset ID<br>(BIDS)": "[001533](https://github.com/bids-dandisets//001533)",
     "Dandiset<br>Modalities": "behavioral<br>electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "\u2757Missing",
+    "Status<br>(Unsanitized)": "\u2757Missing",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u2757Missing"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001534",
+    "Dandiset ID<br>(BIDS)": "[001534](https://github.com/bids-dandisets//001534)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001534/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001535",
+    "Dandiset ID<br>(BIDS)": "[001535](https://github.com/bids-dandisets//001535)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001537",
+    "Dandiset ID<br>(BIDS)": "[001537](https://github.com/bids-dandisets//001537)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001537/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001539",
+    "Dandiset ID<br>(BIDS)": "[001539](https://github.com/bids-dandisets//001539)",
     "Dandiset<br>Modalities": "behavioral<br>electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001539/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001540",
+    "Dandiset ID<br>(BIDS)": "[001540](https://github.com/bids-dandisets//001540)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001540/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001541",
+    "Dandiset ID<br>(BIDS)": "[001541](https://github.com/bids-dandisets//001541)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//001541/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001542",
+    "Dandiset ID<br>(BIDS)": "[001542](https://github.com/bids-dandisets//001542)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001542/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001543",
+    "Dandiset ID<br>(BIDS)": "[001543](https://github.com/bids-dandisets//001543)",
     "Dandiset<br>Modalities": "behavioral<br>microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001543/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001544",
+    "Dandiset ID<br>(BIDS)": "[001544](https://github.com/bids-dandisets//001544)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 22 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001544/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001545",
+    "Dandiset ID<br>(BIDS)": "[001545](https://github.com/bids-dandisets//001545)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 10 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001545/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001546",
+    "Dandiset ID<br>(BIDS)": "[001546](https://github.com/bids-dandisets//001546)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001549",
+    "Dandiset ID<br>(BIDS)": "[001549](https://github.com/bids-dandisets//001549)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001552",
+    "Dandiset ID<br>(BIDS)": "[001552](https://github.com/bids-dandisets//001552)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 33 (0.0%) sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//001552/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001553",
+    "Dandiset ID<br>(BIDS)": "[001553](https://github.com/bids-dandisets//001553)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001553/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001556",
+    "Dandiset ID<br>(BIDS)": "[001556](https://github.com/bids-dandisets//001556)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001556/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001557",
+    "Dandiset ID<br>(BIDS)": "[001557](https://github.com/bids-dandisets//001557)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001557/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001558",
+    "Dandiset ID<br>(BIDS)": "[001558](https://github.com/bids-dandisets//001558)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001558/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001559",
+    "Dandiset ID<br>(BIDS)": "[001559](https://github.com/bids-dandisets//001559)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001559/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001560",
+    "Dandiset ID<br>(BIDS)": "[001560](https://github.com/bids-dandisets//001560)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>88 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001560/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "[\u274c89 Errors](https://github.com/bids-dandisets//001560/blob/draft/derivatives/validations/bids_validation.txt)"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001563",
+    "Dandiset ID<br>(BIDS)": "[001563](https://github.com/bids-dandisets//001563)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001563/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001564",
+    "Dandiset ID<br>(BIDS)": "[001564](https://github.com/bids-dandisets//001564)",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//001564/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
-    "Dandiset ID<br>(BIDS)": "001565",
+    "Dandiset ID<br>(BIDS)": "[001565](https://github.com/bids-dandisets//001565)",
     "Dandiset<br>Modalities": "microscopy approach; cell population imaging",
-    "`nwb2bids`<br>Version": "\u2757",
-    "`nwb2bids`<br>Notifications": "\u2757",
-    "BIDS<br>Validation": "\u2757"
+    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "\u2757Missing",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   },
   {
     "Dandiset ID<br>(BIDS)": "001566",
@@ -5681,7 +5831,7 @@
   },
   {
     "Dandiset ID<br>(BIDS)": "001625",
-    "Dandiset<br>Modalities": "",
+    "Dandiset<br>Modalities": "electrophysiological",
     "`nwb2bids`<br>Version": "\u2757",
     "`nwb2bids`<br>Notifications": "\u2757",
     "BIDS<br>Validation": "\u2757"

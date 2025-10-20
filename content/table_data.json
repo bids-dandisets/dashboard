@@ -5787,7 +5787,7 @@
   },
   {
     "Dandiset ID<br>(BIDS)": "001619",
-    "Dandiset<br>Modalities": "electrophysiological<br>behavioral",
+    "Dandiset<br>Modalities": "",
     "`nwb2bids`<br>Version": "\u2757",
     "`nwb2bids`<br>Notifications": "\u2757",
     "BIDS<br>Validation": "\u2757"

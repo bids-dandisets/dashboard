@@ -266,17 +266,19 @@ passing_bids_count = sum(
     1 for row in table_data if "❌" not in row["BIDS<br>Validation"] and "❗" not in row["BIDS<br>Validation"]
 )
 
-nwb2bids_inspection_summary_text = (
-    f"{passing_nwb2bids_count} / {run_on_count} ({passing_nwb2bids_count / run_on_count * 100:0.1f}%)"
-)
-
 if run_on_count == 0:
+    nwb2bids_inspection_summary_text = (
+        f"{passing_nwb2bids_count} / {run_on_count} ({passing_nwb2bids_count / total * 100:0.1f}%)"
+    )
     summary_entry = {
         "Passing<br>BIDS<br>Validation": (
             f"{passing_bids_count} / {run_on_count} ({passing_bids_count / total * 100:0.1f}%)"
         ),
     }
 else:
+    nwb2bids_inspection_summary_text = (
+        f"{passing_nwb2bids_count} / {run_on_count} ({passing_nwb2bids_count / run_on_count * 100:0.1f}%)"
+    )
     summary_entry = {
         "Latest<br>version": latest_version,
         "Run on<br>latest<br>version": f"{run_on_count} / {total} ({run_on_count / total * 100:0.1f}%)",

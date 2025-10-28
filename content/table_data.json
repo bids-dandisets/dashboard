@@ -2850,7 +2850,7 @@
   {
     "Dandiset ID<br>(BIDS)": "[000713](https://github.com/bids-dandisets//000713)",
     "Dandiset<br>Modalities": "electrophysiological",
-    "`nwb2bids`<br>Version": "`v0.5.0-21-gdaf0af8`",
+    "`nwb2bids`<br>Version": "`v0.6.0-2-g9ad82d7`",
     "Status<br>(Unsanitized)": "0 / 1 (0.0%) sessions<br>0 NWB file(s)",
     "`nwb2bids`<br>Notifications": "[\u274c5 Errors](https://github.com/bids-dandisets//000713/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
@@ -5857,7 +5857,7 @@
   },
   {
     "Dandiset ID<br>(BIDS)": "[001626](https://github.com/bids-dandisets//001626)",
-    "Dandiset<br>Modalities": "",
+    "Dandiset<br>Modalities": "electrophysiological",
     "`nwb2bids`<br>Version": "`v0.6.0-2-g9ad82d7`",
     "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
     "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001626/blob/draft/derivatives/validations/nwb2bids_notifications.json)",

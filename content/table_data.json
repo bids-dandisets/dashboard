@@ -5862,5 +5862,13 @@
     "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
     "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001626/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
+  },
+  {
+    "Dandiset ID<br>(BIDS)": "[001630](https://github.com/bids-dandisets//001630)",
+    "Dandiset<br>Modalities": "",
+    "`nwb2bids`<br>Version": "`v0.6.0-6-g80df37e`",
+    "Status<br>(Unsanitized)": "0 / 0 sessions<br>0 NWB file(s)",
+    "`nwb2bids`<br>Notifications": "[\u274c1 Error](https://github.com/bids-dandisets//001630/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS<br>Validation": "\u23ed\ufe0fSkipped"
   }
 ]

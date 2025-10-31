@@ -3,7 +3,7 @@ A simple dashboard for displaying the successes or failures of running `nwb2bids
 ### Summary
 |  Latest<br>version  |  Run on<br>latest<br>version  |  Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)  |  Passing<br>BIDS<br>Validation<br>(Unsanitized)  |
 | :-----------------: | :---------------------------: | :-------------------------------------------------------: | :----------------------------------------------: |
-|        0.6.0        |       709 / 733 (96.7%)       |                     111 / 709 (15.7%)                     |                627 / 709 (85.5%)                 |
+|        0.6.0        |       710 / 734 (96.7%)       |                     111 / 710 (15.6%)                     |                628 / 710 (85.6%)                 |
 ### Full Table
 To see the results without any skips removed, go to the [Full Table](./full_table.md).
 ### Dandisets

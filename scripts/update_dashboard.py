@@ -319,9 +319,7 @@ full_table_file_path.write_text(data="\n".join(full_table_lines), encoding="utf-
 
 readme_lines += ["### Dandisets"]
 unskipped_lines = [
-    line
-    for line in full_table_lines
-    if "Skipped" not in line and "0 sessions" not in line and line.count("Missing") < 3
+    line for line in full_table_lines if "Skipped" not in line and "0/0 " not in line and line.count("Missing") < 3
 ]
 readme_lines += unskipped_lines
 

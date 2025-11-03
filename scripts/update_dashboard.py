@@ -41,6 +41,13 @@ bids_validation_file_path = "draft/derivatives/validations/bids_validation.txt"
 bids_validation_json_file_path = "draft/derivatives/validations/bids_validation.json"
 # dandi_validation_file_path = "draft/derivatives/validations/dandi_validation.txt"
 
+MODALITY_SHORT_MAP = {
+    "electrophysiological approach": "ephys",
+    "behavioral approach": "beh",
+    "microscopy approach; cell population imaging": "micr",
+    "optogenetic approach": "ogen",
+}
+
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
     iterable=dandisets, total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
@@ -48,12 +55,12 @@ for dandiset in tqdm.tqdm(
     dandiset_id = dandiset.identifier
 
     row = dict()
-    row["Dandiset ID<br>(BIDS)"] = dandiset_id
+    row["Dandiset ID"] = "1"
 
     raw_metadata = dandiset.get_raw_metadata()
     row["Dandiset<br>Modalities"] = "<br>".join(
         [
-            approach.get("name", "").removesuffix(" approach")
+            MODALITY_SHORT_MAP.get(approach_name := approach.get("name", ""), approach_name.removesuffix(" approach"))
             for approach in raw_metadata.get("assetsSummary", dict()).get("approach", [])
         ]
     )
@@ -70,7 +77,14 @@ for dandiset in tqdm.tqdm(
         # row["DANDI Validation"] = "❗"
         table_data.append(row)
         continue
-    row["Dandiset ID<br>(BIDS)"] = f"[{dandiset_id}]({repo_base_url}/{dandiset_id})"
+    row["Dandiset ID"] = (
+        f'<a href="https://dandiarchive.org/dandiset/{dandiset_id}">'
+        f'<img src="https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico" '
+        'width="16" height="16"/> '
+        f"{dandiset_id}</a>"
+        f"<br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/{dandiset_id})"
+        f"<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)]({repo_base_url}/{dandiset_id})"
+    )
 
     run_info_file_path = f"{raw_content_base_url}/{dandiset_id}/draft/.nwb2bids/run_info.json"
     response = requests.get(url=run_info_file_path, headers=github_auth_header)
@@ -85,15 +99,17 @@ for dandiset in tqdm.tqdm(
 
         sessions_converted_text = "No<br>sessions<br>converted"
         if run_info["total_sessions"] == "???":
-            row["Status<br>(Unsanitized)"] = f"{run_info["sessions_converted"]} / ??? sessions"
+            row["Status<br>(Unsanitized)"] = f"Session(s): {run_info["sessions_converted"]}/???"
         elif str(run_info["total_sessions"]).endswith("+"):
-            row["Status<br>(Unsanitized)"] = f"{run_info["sessions_converted"]} / {run_info["total_sessions"]} sessions"
+            row["Status<br>(Unsanitized)"] = (
+                f"Session(s): {run_info["sessions_converted"]}/{run_info["total_sessions"]}"
+            )
         elif run_info["total_sessions"] == 0:
-            row["Status<br>(Unsanitized)"] = "0 / 0 sessions"
+            row["Status<br>(Unsanitized)"] = "Session(s): 0/0"
         elif run_info["total_sessions"] > 0:
             row["Status<br>(Unsanitized)"] = (
-                f"{run_info["sessions_converted"]} / {run_info["total_sessions"]} "
-                f"({run_info["sessions_converted"]/int(run_info["total_sessions"])*100:0.1f}%) sessions"
+                f"Session(s): {run_info["sessions_converted"]}/{run_info["total_sessions"]} "
+                f"({run_info["sessions_converted"]/int(run_info["total_sessions"])*100:0.1f}%)"
             )
 
         manifest_file_path = f"{raw_content_base_url}/{dandiset_id}/draft/.nwb2bids/manifest.txt"
@@ -114,7 +130,7 @@ for dandiset in tqdm.tqdm(
 
             file_count_by_type = {key: len(value) for key, value in filenames_by_type.items()}
 
-            row["Status<br>(Unsanitized)"] += f'<br>{file_count_by_type[".nwb"]} NWB file(s)'
+            row["Status<br>(Unsanitized)"] += f'<br>NWB file(s): {file_count_by_type[".nwb"]}'
             for key in ["participant", "session", "probe", "electrode", "channel"]:
                 tsv_count = file_count_by_type[f"{key}.tsv"]
                 json_count = file_count_by_type[f"{key}.json"]
@@ -122,7 +138,7 @@ for dandiset in tqdm.tqdm(
                 if tsv_count == json_count and tsv_count == 0:
                     continue
 
-                row["Status<br>(Unsanitized)"] += f"<br>{tsv_count} .tsv {json_count} .json {key}(s)"
+                row["Status<br>(Unsanitized)"] += f"<br>{key.capitalize()} files: {tsv_count} .tsv {json_count} .json"
 
     # Parse detailed nwb2bids notifications
     nwb2bids_notifications_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_notifications_file_path}"
@@ -136,7 +152,7 @@ for dandiset in tqdm.tqdm(
             issue for issue in nwb2bids_notifications if issue.get("title", "") == "Dandiset is already BIDS"
         )
         if any(already_bids):
-            row["Dandiset ID<br>(BIDS)"] = dandiset_id
+            row["Dandiset ID"] = dandiset_id
             row["Status<br>(Unsanitized)"] = "⏭️Skipped (already BIDS)"
             row["BIDS<br>Validation"] = ""
             # row["NWB Inspection"] = ""
@@ -254,7 +270,7 @@ for row in table_data:
     if version != latest_version:
         continue
 
-    if row["`nwb2bids`<br>Notifications"] == "Skipped (already BIDS)" or row["Dandiset ID<br>(BIDS)"].startswith("["):
+    if row["`nwb2bids`<br>Notifications"] == "Skipped (already BIDS)" or row["Dandiset ID"].startswith("["):
         run_on_count += 1
 
 passing_nwb2bids_count = sum(
@@ -268,23 +284,23 @@ passing_bids_count = sum(
 
 if run_on_count == 0:
     nwb2bids_inspection_summary_text = (
-        f"{passing_nwb2bids_count} / {run_on_count} ({passing_nwb2bids_count / total * 100:0.1f}%)"
+        f"{passing_nwb2bids_count}/{run_on_count} ({passing_nwb2bids_count / total * 100:0.1f}%)"
     )
     summary_entry = {
         "Passing<br>BIDS<br>Validation": (
-            f"{passing_bids_count} / {run_on_count} ({passing_bids_count / total * 100:0.1f}%)"
+            f"{passing_bids_count}/{run_on_count} ({passing_bids_count / total * 100:0.1f}%)"
         ),
     }
 else:
     nwb2bids_inspection_summary_text = (
-        f"{passing_nwb2bids_count} / {run_on_count} ({passing_nwb2bids_count / run_on_count * 100:0.1f}%)"
+        f"{passing_nwb2bids_count}/{run_on_count} ({passing_nwb2bids_count / run_on_count * 100:0.1f}%)"
     )
     summary_entry = {
         "Latest<br>version": latest_version,
-        "Run on<br>latest<br>version": f"{run_on_count} / {total} ({run_on_count / total * 100:0.1f}%)",
+        "Run on<br>latest<br>version": f"{run_on_count}/{total} ({run_on_count / total * 100:0.1f}%)",
         "Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)": nwb2bids_inspection_summary_text,
         "Passing<br>BIDS<br>Validation<br>(Unsanitized)": (
-            f"{passing_bids_count} / {run_on_count} ({passing_bids_count / total * 100:0.1f}%)"
+            f"{passing_bids_count}/{run_on_count} ({passing_bids_count / total * 100:0.1f}%)"
         ),
     }
 

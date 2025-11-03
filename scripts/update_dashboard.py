@@ -78,10 +78,9 @@ for dandiset in tqdm.tqdm(
         table_data.append(row)
         continue
     row["Dandiset ID"] = (
-        f'<a href="https://dandiarchive.org/dandiset/{dandiset_id}">'
-        f'<img src="https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico" '
-        'width="16" height="16"/> '
-        f"{dandiset_id}</a>"
+        f"{dandiset_id}"
+        f'<a href="https://dandiarchive.org/dandiset/{dandiset_id}"><img src="https://raw.githubusercontent.com/'
+        f'dandi/dandi-archive/master/web/public/favicon.ico" width="16" height="16"/></a>'
         f"<br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/{dandiset_id})"
         f"<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)]({repo_base_url}/{dandiset_id})"
     )

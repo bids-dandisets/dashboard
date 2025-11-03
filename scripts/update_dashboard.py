@@ -83,7 +83,7 @@ for dandiset in tqdm.tqdm(
         continue
     row["Dandiset ID"] = (
         f"{dandiset_id}"
-        f'<a href="https://dandiarchive.org/dandiset/{dandiset_id}"><img src="https://raw.githubusercontent.com/'
+        f'<br><a href="https://dandiarchive.org/dandiset/{dandiset_id}"><img src="https://raw.githubusercontent.com/'
         f'dandi/dandi-archive/master/web/public/favicon.ico" width="16" height="16"/></a>'
         f"<br>[{SOURCE_SHIELD_MD}](https://github.com/dandisets/{dandiset_id})"
     )

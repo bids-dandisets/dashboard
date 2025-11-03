@@ -47,10 +47,14 @@ MODALITY_SHORT_MAP = {
     "microscopy approach; cell population imaging": "micr",
     "optogenetic approach": "ogen",
 }
+SOURCE_SHIELD_URL = "https://img.shields.io/badge/Source-blue?logo=github"
+SOURCE_SHIELD_MD = "![](https://img.shields.io/badge/Source-blue?logo=github)"
+BIDS_SHIELD_URL = "https://img.shields.io/badge/BIDS-blue?logo=github"
+BIDS_SHIELD_MD = "![](https://img.shields.io/badge/BIDS-blue?logo=github)"
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
-    iterable=dandisets, total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
+    iterable=dandisets[:5], total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
 ):
     dandiset_id = dandiset.identifier
 
@@ -81,8 +85,7 @@ for dandiset in tqdm.tqdm(
         f"{dandiset_id}"
         f'<a href="https://dandiarchive.org/dandiset/{dandiset_id}"><img src="https://raw.githubusercontent.com/'
         f'dandi/dandi-archive/master/web/public/favicon.ico" width="16" height="16"/></a>'
-        f"<br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/{dandiset_id})"
-        f"<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)]({repo_base_url}/{dandiset_id})"
+        f"<br>[{SOURCE_SHIELD_MD}](https://github.com/dandisets/{dandiset_id})"
     )
 
     run_info_file_path = f"{raw_content_base_url}/{dandiset_id}/draft/.nwb2bids/run_info.json"
@@ -91,6 +94,8 @@ for dandiset in tqdm.tqdm(
         row["`nwb2bids`<br>Version"] = "❗Missing"
         row["Status<br>(Unsanitized)"] = "❗Missing"
     else:
+        row["Dandiset ID"] += f"<br>[{BIDS_SHIELD_MD}]({repo_base_url}/{dandiset_id})"
+
         run_info = response.json()
 
         nwb2bids_version = run_info["nwb2bids_version"]
@@ -269,7 +274,7 @@ for row in table_data:
     if version != latest_version:
         continue
 
-    if row["`nwb2bids`<br>Notifications"] == "Skipped (already BIDS)" or row["Dandiset ID"].startswith("["):
+    if row["`nwb2bids`<br>Notifications"] == "Skipped (already BIDS)" or "BIDS" in row["Dandiset ID"]:
         run_on_count += 1
 
 passing_nwb2bids_count = sum(

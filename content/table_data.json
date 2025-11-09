@@ -386,7 +386,7 @@
   {
     "Dandiset ID": "000052",
     "Dandiset<br>Modalities": "",
-    "`nwb2bids`<br>Version": "`v0.6.0-53-g2908b2d`",
+    "`nwb2bids`<br>Version": "\u2757Missing",
     "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
     "BIDS<br>Validation": "[\u274c1 Error<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000052/blob/draft/derivatives/validations/bids_validation.txt)",
     "`nwb2bids`<br>Notifications": "[\u274c1 Error<br>\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//000052/blob/draft/derivatives/validations/nwb2bids_notifications.json)"

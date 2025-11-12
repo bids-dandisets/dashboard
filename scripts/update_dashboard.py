@@ -251,7 +251,7 @@ for dandiset in tqdm.tqdm(
     response = requests.get(url=basic_sanitization_run_info_file_path, headers=github_auth_header)
     if response.status_code != 200:
         row["`nwb2bids`<br>Notifications<br>(Basic Sanitization)"] = "❗Missing"
-        row["BIDS Validation<br>(Basic Sanitization)"] = "❗Missing"
+        row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY] = "❗Missing"
     else:
         row["Dandiset ID"] += (
             f"<br>[{BASIC_SANITIZATION_SHIELD_MD}]({repo_base_url}/{dandiset_id}/tree/basic_sanitization)"

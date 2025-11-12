@@ -443,7 +443,7 @@ else:
         _key1: nwb2bids_inspection_basic_sanitization_summary_text,
         f"Passing<br>{BIDS_VALIDATION_BASIC_SANITIZATION_KEY}": (
             f"{passing_bids_basic_sanitization_count}/{run_on_count} "
-            f"({passing_bids_unsanitized_count / run_on_count * 100:0.1f}%)"
+            f"({passing_bids_basic_sanitization_count / run_on_count * 100:0.1f}%)"
         ),
     }
 

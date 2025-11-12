@@ -66,7 +66,7 @@ BIDS_VALIDATION_BASIC_SANITIZATION_KEY = (
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
-    iterable=dandisets, total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
+    iterable=dandisets[:30], total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
 ):
     dandiset_id = dandiset.identifier
 
@@ -89,6 +89,8 @@ for dandiset in tqdm.tqdm(
         row["`nwb2bids`<br>Version"] = "❗"
         row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] = "❗"
         row[BIDS_VALIDATION_UNSANITIZED_KEY] = "❗"
+        row["`nwb2bids`<br>Notifications<br>(Basic Sanitization)"] = "❗"
+        row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY] = "❗"
         # row["NWB Inspection"] = "❗"  # NWB Inspections may not make sense for this repo (on existing Dandisets)
         # row["DANDI Validation"] = "❗"  # DANDI Validation requires integration of BEP32 and others
         table_data.append(row)
@@ -206,6 +208,8 @@ for dandiset in tqdm.tqdm(
     # Parse detailed BIDS validation results (unsanitized)
     if "0 NWB" in row["Status<br>(Unsanitized)"]:
         row[BIDS_VALIDATION_UNSANITIZED_KEY] = "⏭️Skipped"
+        row["`nwb2bids`<br>Notifications<br>(Basic Sanitization)"] = "️⏭️"
+        row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY] = "⏭️Skipped"
         table_data.append(row)
         continue
 
@@ -239,7 +243,6 @@ for dandiset in tqdm.tqdm(
                 bids_validation_lines.append(f"⚠️{count} Warning{plural}")
             bids_validation_text = "<br>".join(bids_validation_lines)
 
-
         row[BIDS_VALIDATION_UNSANITIZED_KEY] = (
             f"[{bids_validation_text}]({repo_base_url}/{dandiset_id}/blob/{bids_validation_file_path})"
         )
@@ -253,9 +256,9 @@ for dandiset in tqdm.tqdm(
         row["`nwb2bids`<br>Notifications<br>(Basic Sanitization)"] = "❗Missing"
         row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY] = "❗Missing"
     else:
-        row["Dandiset ID"] += (
-            f"<br>[{BASIC_SANITIZATION_SHIELD_MD}]({repo_base_url}/{dandiset_id}/tree/basic_sanitization)"
-        )
+        row[
+            "Dandiset ID"
+        ] += f"<br>[{BASIC_SANITIZATION_SHIELD_MD}]({repo_base_url}/{dandiset_id}/tree/basic_sanitization)"
 
     basic_sanitization_nwb2bids_notifications_content_url = (
         f"{raw_content_base_url}/{dandiset_id}/{basic_sanitization_nwb2bids_notifications_file_path}"
@@ -268,6 +271,8 @@ for dandiset in tqdm.tqdm(
             issue for issue in nwb2bids_notifications if issue.get("title", "") == "Dandiset is already BIDS"
         )
         if any(already_bids):
+            row["`nwb2bids`<br>Notifications<br>(Basic Sanitization)"] = "⏭️"
+            row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY] = "⏭️"
             table_data.append(row)
             continue
 
@@ -308,7 +313,9 @@ for dandiset in tqdm.tqdm(
         f"{raw_content_base_url}/{dandiset_id}/{basic_sanitization_bids_validation_json_file_path}"
     )
     json_response = requests.get(url=bids_validation_json_content_url, headers=github_auth_header)
-    if content_response.status_code == 200 and json_response.status_code == 200:
+    if content_response.status_code != 200 or json_response.status_code != 200:
+        row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY] = "❗Missing"
+    else:
         bids_validation = json_response.json()
         issues = bids_validation.get("issues", dict()).get("issues", [])
 
@@ -384,26 +391,31 @@ for row in table_data:
 passing_nwb2bids_unsanitized_count = sum(
     1
     for row in table_data
-    if "❌" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] and "❗" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
+    if "❌" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
+    and "❗" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
 )
 passing_nwb2bids_basic_sanitization_count = sum(
     1
     for row in table_data
-    if "❌" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] and "❗" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
+    if "❌" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
+    and "❗" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
 )
 passing_bids_unsanitized_count = sum(
-    1 for row in table_data
+    1
+    for row in table_data
     if "❌" not in row[BIDS_VALIDATION_UNSANITIZED_KEY] and "❗" not in row[BIDS_VALIDATION_UNSANITIZED_KEY]
 )
 passing_bids_basic_sanitization_count = sum(
-    1 for row in table_data
+    1
+    for row in table_data
     if "❌" not in row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY]
     and "❗" not in row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY]
 )
 
 if run_on_count == 0:
     nwb2bids_inspection_unsanitized_summary_text = (
-        f"{passing_nwb2bids_unsanitized_count}/{run_on_count} ({passing_nwb2bids_unsanitized_count / total * 100:0.1f}%)"
+        f"{passing_nwb2bids_unsanitized_count}/{run_on_count} "
+        f"({passing_nwb2bids_unsanitized_count / total * 100:0.1f}%)"
     )
     summary_entry = {
         BIDS_VALIDATION_UNSANITIZED_KEY: (
@@ -412,7 +424,8 @@ if run_on_count == 0:
     }
 else:
     nwb2bids_inspection_unsanitized_summary_text = (
-        f"{passing_nwb2bids_unsanitized_count}/{run_on_count} ({passing_nwb2bids_unsanitized_count / run_on_count * 100:0.1f}%)"
+        f"{passing_nwb2bids_unsanitized_count}/{run_on_count} "
+        f"({passing_nwb2bids_unsanitized_count / run_on_count * 100:0.1f}%)"
     )
     nwb2bids_inspection_basic_sanitization_summary_text = (
         f"{passing_nwb2bids_basic_sanitization_count}/{run_on_count} "

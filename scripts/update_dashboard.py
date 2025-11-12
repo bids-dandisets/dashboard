@@ -66,7 +66,7 @@ BIDS_VALIDATION_BASIC_SANITIZATION_KEY = (
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
-    iterable=dandisets, total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
+    iterable=dandisets[:5], total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
 ):
     dandiset_id = dandiset.identifier
 
@@ -268,6 +268,7 @@ for dandiset in tqdm.tqdm(
             issue for issue in nwb2bids_notifications if issue.get("title", "") == "Dandiset is already BIDS"
         )
         if any(already_bids):
+            table_data.append(row)
             continue
 
         nwb2bids_notifications_text = "✅"
@@ -380,35 +381,56 @@ for row in table_data:
     if row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] == "Skipped (already BIDS)" or "BIDS" in row["Dandiset ID"]:
         run_on_count += 1
 
-passing_nwb2bids_count = sum(
+passing_nwb2bids_unsanitized_count = sum(
     1
     for row in table_data
     if "❌" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] and "❗" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
 )
-passing_bids_count = sum(
+passing_nwb2bids_basic_sanitization_count = sum(
+    1
+    for row in table_data
+    if "❌" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] and "❗" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
+)
+passing_bids_unsanitized_count = sum(
     1 for row in table_data
     if "❌" not in row[BIDS_VALIDATION_UNSANITIZED_KEY] and "❗" not in row[BIDS_VALIDATION_UNSANITIZED_KEY]
 )
+passing_bids_basic_sanitization_count = sum(
+    1 for row in table_data
+    if "❌" not in row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY]
+    and "❗" not in row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY]
+)
 
 if run_on_count == 0:
-    nwb2bids_inspection_summary_text = (
-        f"{passing_nwb2bids_count}/{run_on_count} ({passing_nwb2bids_count / total * 100:0.1f}%)"
+    nwb2bids_inspection_unsanitized_summary_text = (
+        f"{passing_nwb2bids_unsanitized_count}/{run_on_count} ({passing_nwb2bids_unsanitized_count / total * 100:0.1f}%)"
     )
     summary_entry = {
         BIDS_VALIDATION_UNSANITIZED_KEY: (
-            f"{passing_bids_count}/{run_on_count} ({passing_bids_count / total * 100:0.1f}%)"
+            f"{passing_bids_unsanitized_count}/{run_on_count} ({passing_bids_unsanitized_count / total * 100:0.1f}%)"
         ),
     }
 else:
-    nwb2bids_inspection_summary_text = (
-        f"{passing_nwb2bids_count}/{run_on_count} ({passing_nwb2bids_count / run_on_count * 100:0.1f}%)"
+    nwb2bids_inspection_unsanitized_summary_text = (
+        f"{passing_nwb2bids_unsanitized_count}/{run_on_count} ({passing_nwb2bids_unsanitized_count / run_on_count * 100:0.1f}%)"
     )
+    nwb2bids_inspection_basic_sanitization_summary_text = (
+        f"{passing_nwb2bids_basic_sanitization_count}/{run_on_count} "
+        f"({passing_nwb2bids_basic_sanitization_count / run_on_count * 100:0.1f}%)"
+    )
+    _key1 = "Passing<br>`nwb2bids`<br>Notifications<br>(Basic sanitization)"
     summary_entry = {
         "Latest<br>version": latest_version,
         "Run on<br>latest<br>version": f"{run_on_count}/{total} ({run_on_count / total * 100:0.1f}%)",
-        "Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)": nwb2bids_inspection_summary_text,
+        "Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)": nwb2bids_inspection_unsanitized_summary_text,
         f"Passing<br>{BIDS_VALIDATION_UNSANITIZED_KEY}": (
-            f"{passing_bids_count}/{run_on_count} ({passing_bids_count / total * 100:0.1f}%)"
+            f"{passing_bids_unsanitized_count}/{run_on_count} "
+            f"({passing_bids_unsanitized_count / run_on_count * 100:0.1f}%)"
+        ),
+        _key1: nwb2bids_inspection_basic_sanitization_summary_text,
+        f"Passing<br>{BIDS_VALIDATION_BASIC_SANITIZATION_KEY}": (
+            f"{passing_bids_basic_sanitization_count}/{run_on_count} "
+            f"({passing_bids_unsanitized_count / run_on_count * 100:0.1f}%)"
         ),
     }
 

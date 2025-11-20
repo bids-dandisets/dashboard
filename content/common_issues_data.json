@@ -2,61 +2,61 @@
   "nwb2bids_notifications": {
     "unsanitized": {
       "SCHEMA_INVALIDATION (CRITICAL)": {
-        " Missing participant sex": 10
+        "Missing participant sex": 101
       },
       "SCHEMA_INVALIDATION (ERROR)": {
-        " Invalid species": 10
+        "Invalid species": 1
       },
       "STYLE_SUGGESTION (ERROR)": {
-        " Invalid session ID": 10
+        "Invalid session ID": 93
       },
       "INTERNAL_ERROR (INFO)": {
-        " INFO: invalid Dandiset metadata": 10
+        "INFO: invalid Dandiset metadata": 3
       }
     },
     "basic_sanitization": {
       "SCHEMA_INVALIDATION (CRITICAL)": {
-        " Missing participant sex": 10
+        "Missing participant sex": 101
       },
       "SCHEMA_INVALIDATION (ERROR)": {
-        " Invalid species": 10
+        "Invalid species": 1
       },
       "STYLE_SUGGESTION (ERROR)": {
-        " Invalid session ID": 10
+        "Invalid session ID": 93
       },
       "INTERNAL_ERROR (INFO)": {
-        " INFO: invalid Dandiset metadata": 10
+        "INFO: invalid Dandiset metadata": 3
       }
     }
   },
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        " JSON_KEY_RECOMMENDED": 6,
-        " SIDECAR_KEY_RECOMMENDED": 6,
-        " TSV_ADDITIONAL_COLUMNS_UNDEFINED": 5,
-        " SUBJECT_FOLDERS": 4
+        "JSON_KEY_RECOMMENDED": 10,
+        "SIDECAR_KEY_RECOMMENDED": 63,
+        "TSV_ADDITIONAL_COLUMNS_UNDEFINED": 234,
+        "SUBJECT_FOLDERS": 4
       },
       "ERROR": {
-        " PARTICIPANT_ID_MISMATCH": 4,
-        " TSV_INDEX_VALUE_NOT_UNIQUE": 5,
-        " TSV_VALUE_INCORRECT_TYPE": 7,
-        " INVALID_ENTITY_LABEL": 4,
-        " REQUIRED_COORDSYSTEM": 4
+        "PARTICIPANT_ID_MISMATCH": 1,
+        "TSV_INDEX_VALUE_NOT_UNIQUE": 1,
+        "TSV_VALUE_INCORRECT_TYPE": 18,
+        "INVALID_ENTITY_LABEL": 769,
+        "REQUIRED_COORDSYSTEM": 101
       }
     },
     "basic_sanitization": {
       "ERROR": {
-        " PARTICIPANT_ID_MISMATCH": 4,
-        " TSV_INDEX_VALUE_NOT_UNIQUE": 5,
-        " REQUIRED_COORDSYSTEM": 4,
-        " TSV_VALUE_INCORRECT_TYPE": 7
+        "PARTICIPANT_ID_MISMATCH": 1,
+        "TSV_INDEX_VALUE_NOT_UNIQUE": 1,
+        "REQUIRED_COORDSYSTEM": 101,
+        "TSV_VALUE_INCORRECT_TYPE": 2
       },
       "WARNING": {
-        " JSON_KEY_RECOMMENDED": 6,
-        " SIDECAR_KEY_RECOMMENDED": 6,
-        " TSV_ADDITIONAL_COLUMNS_UNDEFINED": 5,
-        " SUBJECT_FOLDERS": 4
+        "JSON_KEY_RECOMMENDED": 5,
+        "SIDECAR_KEY_RECOMMENDED": 63,
+        "TSV_ADDITIONAL_COLUMNS_UNDEFINED": 234,
+        "SUBJECT_FOLDERS": 4
       }
     }
   }

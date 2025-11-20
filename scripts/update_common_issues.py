@@ -38,7 +38,7 @@ all_issues_per_source = {
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
-    iterable=dandisets, total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
+    iterable=dandisets[:5], total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
 ):
     dandiset_id = dandiset.identifier
 
@@ -56,6 +56,11 @@ for dandiset in tqdm.tqdm(
     run_info_file_path = f"{draft_content_url}/.nwb2bids/run_info.json"
     response = requests.get(url=run_info_file_path, headers=GITHUB_AUTH_HEADER)
     if response.status_code != 200:
+        # Ignore 404 errors for now
+        # Corresponds to other problems as seen on main dashboard
+        if response.status_code == 404:
+            continue
+
         message = f"Failed to access URL: {run_info_file_path} with status code {response.status_code}"
         warnings.warn(message=message)
         continue
@@ -95,29 +100,64 @@ for dandiset in tqdm.tqdm(
                 )
                 warnings.warn(message=message)
             else:
-                response_json = response.json()
+                response_lines = response.text.splitlines()
 
-                if source == "nwb2bids_notifications":
-                    all_issues_per_source[source][branch].extend(response_json)
+                if source == "bids_invalidations":
+                    human_readable_lines = requests.get(
+                        url=url.replace(".json", ".txt"), headers=GITHUB_AUTH_HEADER
+                    ).text.splitlines()
                 else:
-                    all_issues_per_source[source][branch].extend(response_json["issues"]["issues"])
+                    human_readable_lines = response_lines
+
+                response_json = (
+                    response.json() if source == "nwb2bids_notifications" else response.json()["issues"]["issues"]
+                )
+
+                # Mutate issue objects in place to add source urls
+                for issue in response_json:
+                    if issue.get("severity", "") == "ignore":
+                        issue["source_url"] = ""
+                        continue
+
+                    source_url = url.replace(raw_content_base_url, repo_base_url + "/").replace(
+                        "/draft/", "/blob/draft/"
+                    )
+
+                    if source == "bids_invalidations":
+                        source_url = source_url.replace(".json", ".txt")
+                        matching_index = (
+                            next(index for index, line in enumerate(human_readable_lines) if issue["code"] in line) + 1
+                        )
+                    else:
+                        matching_index = (
+                            next(index for index, line in enumerate(human_readable_lines) if issue["title"] in line) + 1
+                        )
+                    issue["source_url"] = f"{source_url}#{matching_index}"
+
+                all_issues_per_source[source][branch].extend(response_json)
 
 # Aggregate by type
 all_issues_by_type = {
-    "nwb2bids_notifications": {"unsanitized": dict(), "basic_sanitization": dict()},
-    "bids_invalidations": {"unsanitized": dict(), "basic_sanitization": dict()},
+    "nwb2bids_notifications": {
+        "unsanitized": collections.defaultdict(list),
+        "basic_sanitization": collections.defaultdict(list),
+    },
+    "bids_invalidations": {
+        "unsanitized": collections.defaultdict(list),
+        "basic_sanitization": collections.defaultdict(list),
+    },
 }
 for source in ["nwb2bids_notifications", "bids_invalidations"]:
     for branch in ["unsanitized", "basic_sanitization"]:
         for issue in all_issues_per_source[source][branch]:
             if source == "nwb2bids_notifications":
                 issue_string = f'{issue["category"]} ({issue["severity"]}): {issue["title"]}'
-                all_issues_by_type[source][branch][issue_string] = issue
+                all_issues_by_type[source][branch][issue_string].append(issue)
             elif source == "bids_invalidations" and issue["severity"] != "ignore":
                 issue_string = f'{issue["severity"].upper()}: {issue["code"]}'
-                all_issues_by_type[source][branch][issue_string] = issue
+                all_issues_by_type[source][branch][issue_string].append(issue)
 
-# Count by category and message
+# Count by category and title
 issue_counts = {
     "nwb2bids_notifications": {
         "unsanitized": collections.defaultdict(dict),
@@ -131,8 +171,8 @@ issue_counts = {
 for source in ["nwb2bids_notifications", "bids_invalidations"]:
     for branch in ["unsanitized", "basic_sanitization"]:
         for issue_string in all_issues_by_type[source][branch]:
-            category, message = issue_string.split(":", maxsplit=1)
-            issue_counts[source][branch][category][message] = len(all_issues_by_type[source][branch][issue_string])
+            category, title = issue_string.split(": ", maxsplit=1)
+            issue_counts[source][branch][category][title] = len(all_issues_by_type[source][branch][issue_string])
 
 # Save data to JSON
 with common_issues_data_file_path.open(mode="w") as file_stream:
@@ -142,30 +182,41 @@ with common_issues_data_file_path.open(mode="w") as file_stream:
 unique_categories = {
     category for source in issue_counts for branch in issue_counts[source] for category in issue_counts[source][branch]
 }
+title_key = {"nwb2bids_notifications": "title", "bids_invalidations": "code"}
+unique_titles = {
+    issue[title_key[source]]
+    for source in all_issues_per_source
+    for branch in all_issues_per_source[source]
+    for issue in all_issues_per_source[source][branch]
+}
+example_links_per_title = {
+    title: next(
+        f'[{title}]({issue["source_url"]})'
+        for source in all_issues_per_source
+        for branch in all_issues_per_source[source]
+        for issue in all_issues_per_source[source][branch]
+        if issue[title_key[source]] == title
+    )
+    for title in unique_titles
+}
 flat_issues_by_source = {
     source: [
         {
             "Severity": category,
-            "Message": message,
-            "Count (Unsanitized)": issue_counts[source]["unsanitized"].get(category, {}).get(message, 0),
-            "Count (Basic sanitization)": issue_counts[source]["basic_sanitization"].get(category, {}).get(message, 0),
+            "Title": example_links_per_title.get(title, title),
+            "Count<br>(Unsanitized)": issue_counts[source]["unsanitized"].get(category, {}).get(title, 0),
+            "Count<br>(Basic sanitization)": issue_counts[source]["basic_sanitization"].get(category, {}).get(title, 0),
         }
         for category in unique_categories
-        for message in issue_counts[source]["unsanitized"].get(category, {})
+        for title in issue_counts[source][branch].get(category, {})
     ]
     for source in issue_counts
     for branch in issue_counts[source]
 }
 
-# Sort the lists by descending category (ERROR > WARNING > INFO) and descending total count
-for source, flat_issues in flat_issues_by_source.items():
-    flat_issues.sort(
-        key=lambda issue: (
-            {"ERROR": 3, "CRITICAL": 2, "WARNING": 1, "INFO": 0}.get(issue["Severity"].split()[0], -1),
-            issue["Count (Unsanitized)"] + issue["Count (Basic sanitization)"],
-        ),
-        reverse=True,
-    )
+# Sort lists by number of sanitized errors
+for source in flat_issues_by_source:
+    flat_issues_by_source[source].sort(key=lambda issue: issue["Count<br>(Basic sanitization)"], reverse=True)
 
 markdown_table_by_source = {
     source: tabulate2.tabulate(tabular_data=flat_issues, headers="keys", tablefmt="github", colglobalalign="center")

@@ -454,15 +454,19 @@ summary_table = tabulate2.tabulate(
 summary_table_lines = summary_table.splitlines()
 readme_lines += summary_table_lines
 
+# README - Common Issues
+readme_lines += ["### Common Issues"]
+readme_lines += [
+    "To see a table summarizing current issues by commonality of occurrence, "
+    "go to the [Common Issues Table](./common_issues_table.md)."
+]
+
 # README - Full Table
 readme_lines += ["### Full Table"]
 readme_lines += ["To see the results without any skips removed, go to the [Full Table](./full_table.md)."]
 full_table = tabulate2.tabulate(tabular_data=table_data, headers="keys", tablefmt="github", colglobalalign="center")
 full_table_lines = full_table.splitlines()
 full_table_file_path.write_text(data="\n".join(full_table_lines), encoding="utf-8")
-
-# README - Common Issues
-
 
 # README - Filtered Table
 readme_lines += ["### Dandisets"]

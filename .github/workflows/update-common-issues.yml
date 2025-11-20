@@ -2,7 +2,7 @@ name: Update common issues
 
 on:
   schedule:
-    - cron: "0 11 * * *"  # 7am eastern time
+    - cron: "0 15 * * *"  # ~10am eastern time
   workflow_dispatch:
 
 env:

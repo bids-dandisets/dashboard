@@ -343,7 +343,7 @@ for dandiset in tqdm.tqdm(
         row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY] = f"[{bids_validation_text}]({blob_url})"
 
     # nwb_inspection_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb_inspection_file_path}"
-    # response = requests.get(url=nwb_inspection_content_url, headers=github_auth_header)
+    # response = requests.get(url=nwb_inspection_content_url, headers=GITHUB_AUTH_HEADER)
     # if response.status_code != 200:
     #     row["NWB Inspection"] = "❌"
     # else:
@@ -351,7 +351,7 @@ for dandiset in tqdm.tqdm(
     # TODO: look at content to determine pass[green]/warning
 
     # dandi_validation_content_url = f"{raw_content_base_url}/{dandiset_id}/{dandi_validation_file_path}"
-    # response = requests.get(url=dandi_validation_content_url, headers=github_auth_header)
+    # response = requests.get(url=dandi_validation_content_url, headers=GITHUB_AUTH_HEADER)
     # if response.status_code != 200:
     #     row["DANDI Validation"] = "❌"
     # else:
@@ -360,6 +360,7 @@ for dandiset in tqdm.tqdm(
 
     table_data.append(row)
 
+# README - Summary
 readme_lines += ["### Summary"]
 total = len(table_data)
 latest_version = max(
@@ -454,12 +455,17 @@ summary_table = tabulate2.tabulate(
 summary_table_lines = summary_table.splitlines()
 readme_lines += summary_table_lines
 
+# README - Full Table
 readme_lines += ["### Full Table"]
 readme_lines += ["To see the results without any skips removed, go to the [Full Table](./full_table.md)."]
 full_table = tabulate2.tabulate(tabular_data=table_data, headers="keys", tablefmt="github", colglobalalign="center")
 full_table_lines = full_table.splitlines()
 full_table_file_path.write_text(data="\n".join(full_table_lines), encoding="utf-8")
 
+# README - Common Issues
+
+
+# README - Filtered Table
 readme_lines += ["### Dandisets"]
 unskipped_lines = [
     line for line in full_table_lines if "Skipped" not in line and "0/0" not in line and line.count("Missing") < 3

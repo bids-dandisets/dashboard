@@ -15,7 +15,6 @@ if GITHUB_TOKEN is None:
     raise ValueError(message)
 
 dashboard_directory = pathlib.Path(__file__).parent.parent
-dandisets_directory = dashboard_directory / "dandisets"
 readme_file_path = dashboard_directory / "README.md"
 full_table_file_path = dashboard_directory / "full_table.md"
 content_directory = dashboard_directory / "content"

@@ -4,6 +4,8 @@ A simple dashboard for displaying the successes or failures of running `nwb2bids
 |  Latest<br>version  |  Run on<br>latest<br>version  |  Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)  |  Passing<br>BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)  |  Passing<br>`nwb2bids`<br>Notifications<br>(Basic sanitization)  |  Passing<br>BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)  |
 | :-----------------: | :---------------------------: | :-------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
 |        0.6.0        |        710/744 (95.4%)        |                      111/710 (15.6%)                      |                                                    269/710 (37.9%)                                                    |                         111/710 (15.6%)                          |                                                       332/710 (46.8%)                                                        |
+### Common Issues
+To see a table summarizing current issues by commonality of occurrence, go to the [Common Issues Table](./common_issues_table.md).
 ### Full Table
 To see the results without any skips removed, go to the [Full Table](./full_table.md).
 ### Dandisets

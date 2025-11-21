@@ -38,7 +38,7 @@ all_issues_per_source = {
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
-    iterable=dandisets, total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
+    iterable=dandisets[:5], total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
 ):
     dandiset_id = dandiset.identifier
 
@@ -199,20 +199,23 @@ example_links_per_title = {
     )
     for title in unique_titles
 }
+
 flat_issues_by_source = {
-    source: [
-        {
-            "Severity": category,
-            "Title": example_links_per_title.get(title, title),
-            "Count<br>(Unsanitized)": issue_counts[source]["unsanitized"].get(category, {}).get(title, 0),
-            "Count<br>(Basic sanitization)": issue_counts[source]["basic_sanitization"].get(category, {}).get(title, 0),
-        }
-        for category in unique_categories
-        for title in issue_counts[source][branch].get(category, {})
-    ]
+    source: []
     for source in issue_counts
-    for branch in issue_counts[source]
 }
+for source in issue_counts:
+    for branch in issue_counts[source]:
+        for category in unique_categories:
+            for title in issue_counts[source][branch].get(category, {}):
+                flat_issues_by_source[source].append(
+                    {
+                        "Severity": category,
+                        "Title": example_links_per_title.get(title, title),
+                        "Count<br>(Unsanitized)": issue_counts[source]["unsanitized"].get(category, {}).get(title, 0),
+                        "Count<br>(Basic sanitization)": issue_counts[source]["basic_sanitization"].get(category, {}).get(title, 0),
+                    }
+                )
 
 # Sort lists by number of sanitized errors
 for source in flat_issues_by_source:

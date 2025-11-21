@@ -38,7 +38,7 @@ all_issues_per_source = {
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
-    iterable=dandisets[:5], total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
+    iterable=dandisets, total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
 ):
     dandiset_id = dandiset.identifier
 
@@ -132,7 +132,7 @@ for dandiset in tqdm.tqdm(
                         matching_index = (
                             next(index for index, line in enumerate(human_readable_lines) if issue["title"] in line) + 1
                         )
-                    issue["source_url"] = f"{source_url}#{matching_index}"
+                    issue["source_url"] = f"{source_url}#L{matching_index}"
 
                 all_issues_per_source[source][branch].extend(response_json)
 

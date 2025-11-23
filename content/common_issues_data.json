@@ -36,8 +36,8 @@
         "Invalid species": 2831
       },
       "STYLE_SUGGESTION (ERROR)": {
-        "Invalid session ID": 38145,
-        "Invalid participant ID": 29836,
+        "Invalid session ID": 43125,
+        "Invalid participant ID": 34927,
         "Invalid participant sex (BIDS)": 407,
         "Invalid participant sex (archives)": 345
       },
@@ -84,9 +84,9 @@
     },
     "basic_sanitization": {
       "ERROR": {
-        "PARTICIPANT_ID_MISMATCH": 22,
+        "PARTICIPANT_ID_MISMATCH": 21,
         "TSV_INDEX_VALUE_NOT_UNIQUE": 49,
-        "REQUIRED_COORDSYSTEM": 2370,
+        "REQUIRED_COORDSYSTEM": 2250,
         "TSV_VALUE_INCORRECT_TYPE": 212,
         "JSON_SCHEMA_VALIDATION_ERROR": 249,
         "JSON_KEY_REQUIRED": 259,
@@ -96,12 +96,12 @@
       },
       "WARNING": {
         "JSON_KEY_RECOMMENDED": 1260,
-        "SIDECAR_KEY_RECOMMENDED": 5286,
-        "TSV_ADDITIONAL_COLUMNS_UNDEFINED": 31759,
+        "SIDECAR_KEY_RECOMMENDED": 5166,
+        "TSV_ADDITIONAL_COLUMNS_UNDEFINED": 31639,
         "SUBJECT_FOLDERS": 621,
         "EVENT_ONSET_ORDER": 542,
         "NO_AUTHORS": 267,
-        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 352,
+        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 232,
         "EMPTY_DATASET_NAME": 1
       }
     }

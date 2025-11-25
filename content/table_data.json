@@ -7031,7 +7031,7 @@
   },
   {
     "Dandiset ID": "001610<br><a href=\"https://dandiarchive.org/dandiset/001610\"><img src=\"https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico\" width=\"16\" height=\"16\"/></a><br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/001610)<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)](https://github.com/bids-dandisets//001610)<br>[![](https://img.shields.io/badge/Sanitized-blue?logo=github)](https://github.com/bids-dandisets//001610/tree/basic_sanitization)",
-    "Dandiset<br>Modalities": "",
+    "Dandiset<br>Modalities": "ephys",
     "`nwb2bids`<br>Version": "`v0.6.0-53-g2908b2d`",
     "Status<br>(Unsanitized)": "Session(s): 0/0<br>NWB file(s): 0",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c1 Error](https://github.com/bids-dandisets//001610/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
@@ -7109,13 +7109,13 @@
   },
   {
     "Dandiset ID": "001621<br><a href=\"https://dandiarchive.org/dandiset/001621\"><img src=\"https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico\" width=\"16\" height=\"16\"/></a><br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/001621)<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)](https://github.com/bids-dandisets//001621)<br>[![](https://img.shields.io/badge/Sanitized-blue?logo=github)](https://github.com/bids-dandisets//001621/tree/basic_sanitization)",
-    "Dandiset<br>Modalities": "",
+    "Dandiset<br>Modalities": "micr",
     "`nwb2bids`<br>Version": "`v0.6.0-53-g2908b2d`",
     "Status<br>(Unsanitized)": "Session(s): 0/0<br>NWB file(s): 0",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c1 Error](https://github.com/bids-dandisets//001621/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c1 Error<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//001621/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c1 Error](https://github.com/bids-dandisets//001621/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
-    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "[\u274c1 Error<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//001621/blob/basic_sanitization/derivatives/validations/bids_validation.txt)"
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c6 Errors](https://github.com/bids-dandisets//001621/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "[\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001621/blob/basic_sanitization/derivatives/validations/bids_validation.txt)"
   },
   {
     "Dandiset ID": "001622<br><a href=\"https://dandiarchive.org/dandiset/001622\"><img src=\"https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico\" width=\"16\" height=\"16\"/></a><br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/001622)<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)](https://github.com/bids-dandisets//001622)<br>[![](https://img.shields.io/badge/Sanitized-blue?logo=github)](https://github.com/bids-dandisets//001622/tree/basic_sanitization)",
@@ -7242,8 +7242,8 @@
     "Status<br>(Unsanitized)": "\u2757Missing",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "\u2757Missing",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "\u2757Missing",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c5 Errors](https://github.com/bids-dandisets//001637/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
-    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "[\u274c5 Errors<br>\u26a0\ufe0f1 Warning](https://github.com/bids-dandisets//001637/blob/basic_sanitization/derivatives/validations/bids_validation.txt)"
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c6 Errors](https://github.com/bids-dandisets//001637/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "[\u274c6 Errors<br>\u26a0\ufe0f1 Warning](https://github.com/bids-dandisets//001637/blob/basic_sanitization/derivatives/validations/bids_validation.txt)"
   },
   {
     "Dandiset ID": "001638<br><a href=\"https://dandiarchive.org/dandiset/001638\"><img src=\"https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico\" width=\"16\" height=\"16\"/></a><br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/001638)<br>[![](https://img.shields.io/badge/Sanitized-blue?logo=github)](https://github.com/bids-dandisets//001638/tree/basic_sanitization)",

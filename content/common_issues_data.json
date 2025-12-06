@@ -36,8 +36,8 @@
         "Invalid species": 2831
       },
       "STYLE_SUGGESTION (ERROR)": {
-        "Invalid session ID": 38931,
-        "Invalid participant ID": 30361,
+        "Invalid session ID": 43497,
+        "Invalid participant ID": 34927,
         "Invalid participant sex (BIDS)": 407,
         "Invalid participant sex (archives)": 345
       },
@@ -45,8 +45,8 @@
         "INFO: invalid Dandiset metadata": 137
       },
       "INTERNAL_ERROR (ERROR)": {
-        "Failed to convert to BIDS dataset": 96,
-        "Failed to extract metadata for one or more sessions": 96,
+        "Failed to convert to BIDS dataset": 95,
+        "Failed to extract metadata for one or more sessions": 95,
         "Dandiset is already BIDS": 22,
         "Failed to initialize converter on remote Dandiset": 252
       },

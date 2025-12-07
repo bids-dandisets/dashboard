@@ -8,14 +8,6 @@ This table summarizes common issues found in BIDS dandisets processed with nwb2b
 
 |  Severity  |                                                                   Title                                                                   |  Count<br>(Unsanitized)  |  Count<br>(Basic sanitization)  |
 | :--------: | :---------------------------------------------------------------------------------------------------------------------------------------: | :----------------------: | :-----------------------------: |
-|  WARNING   |       [JSON_KEY_RECOMMENDED](https://github.com/bids-dandisets///000003/blob/draft/derivatives/validations/bids_validation.txt#L1)        |           1712           |                0                |
-|  WARNING   |     [SIDECAR_KEY_RECOMMENDED](https://github.com/bids-dandisets///000003/blob/draft/derivatives/validations/bids_validation.txt#L17)      |           1789           |                0                |
-|  WARNING   | [TSV_ADDITIONAL_COLUMNS_UNDEFINED](https://github.com/bids-dandisets///000003/blob/draft/derivatives/validations/bids_validation.txt#L30) |          10031           |                0                |
-|  WARNING   |          [SUBJECT_FOLDERS](https://github.com/bids-dandisets///000004/blob/draft/derivatives/validations/bids_validation.txt#L1)          |           622            |                0                |
-|  WARNING   |            [NO_AUTHORS](https://github.com/bids-dandisets///000034/blob/draft/derivatives/validations/bids_validation.txt#L31)            |           267            |                0                |
-|  WARNING   | [SUSPICIOUS_POSITIVE_EVENT_ONSET](https://github.com/bids-dandisets///000061/blob/draft/derivatives/validations/bids_validation.txt#L17)  |            39            |                0                |
-|  WARNING   |        [EVENT_ONSET_ORDER](https://github.com/bids-dandisets///000070/blob/draft/derivatives/validations/bids_validation.txt#L17)         |           414            |                0                |
-|  WARNING   |        [EMPTY_DATASET_NAME](https://github.com/bids-dandisets///000724/blob/draft/derivatives/validations/bids_validation.txt#L7)         |            1             |                0                |
 |   ERROR    |     [PARTICIPANT_ID_MISMATCH](https://github.com/bids-dandisets///000003/blob/draft/derivatives/validations/bids_validation.txt#L66)      |            26            |                0                |
 |   ERROR    |    [TSV_INDEX_VALUE_NOT_UNIQUE](https://github.com/bids-dandisets///000003/blob/draft/derivatives/validations/bids_validation.txt#L73)    |           126            |                0                |
 |   ERROR    |     [TSV_VALUE_INCORRECT_TYPE](https://github.com/bids-dandisets///000003/blob/draft/derivatives/validations/bids_validation.txt#L78)     |           1026           |                0                |
@@ -27,6 +19,14 @@ This table summarizes common issues found in BIDS dandisets processed with nwb2b
 |   ERROR    |        [JSON_KEY_REQUIRED](https://github.com/bids-dandisets///000034/blob/draft/derivatives/validations/bids_validation.txt#L41)         |           259            |                0                |
 |   ERROR    |     [SIDECAR_WITHOUT_DATAFILE](https://github.com/bids-dandisets///000043/blob/draft/derivatives/validations/bids_validation.txt#L37)     |           163            |                0                |
 |   ERROR    |          [TSV_EQUAL_ROWS](https://github.com/bids-dandisets///000070/blob/draft/derivatives/validations/bids_validation.txt#L31)          |           414            |                0                |
+|  WARNING   |       [JSON_KEY_RECOMMENDED](https://github.com/bids-dandisets///000003/blob/draft/derivatives/validations/bids_validation.txt#L1)        |           1712           |                0                |
+|  WARNING   |     [SIDECAR_KEY_RECOMMENDED](https://github.com/bids-dandisets///000003/blob/draft/derivatives/validations/bids_validation.txt#L17)      |           1789           |                0                |
+|  WARNING   | [TSV_ADDITIONAL_COLUMNS_UNDEFINED](https://github.com/bids-dandisets///000003/blob/draft/derivatives/validations/bids_validation.txt#L30) |          10031           |                0                |
+|  WARNING   |          [SUBJECT_FOLDERS](https://github.com/bids-dandisets///000004/blob/draft/derivatives/validations/bids_validation.txt#L1)          |           622            |                0                |
+|  WARNING   |            [NO_AUTHORS](https://github.com/bids-dandisets///000034/blob/draft/derivatives/validations/bids_validation.txt#L31)            |           267            |                0                |
+|  WARNING   | [SUSPICIOUS_POSITIVE_EVENT_ONSET](https://github.com/bids-dandisets///000061/blob/draft/derivatives/validations/bids_validation.txt#L17)  |            39            |                0                |
+|  WARNING   |        [EVENT_ONSET_ORDER](https://github.com/bids-dandisets///000070/blob/draft/derivatives/validations/bids_validation.txt#L17)         |           414            |                0                |
+|  WARNING   |        [EMPTY_DATASET_NAME](https://github.com/bids-dandisets///000724/blob/draft/derivatives/validations/bids_validation.txt#L7)         |            1             |                0                |
 
 
 ## `nwb2bids` Notifications

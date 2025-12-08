@@ -6,7 +6,7 @@
     "Status<br>(Unsanitized)": "Session(s): 101/101 (100.0%)<br>NWB file(s): 101<br>Participant files: 1 .tsv 1 .json<br>Session files: 16 .tsv 16 .json<br>Probe files: 101 .tsv 101 .json<br>Electrode files: 101 .tsv 101 .json<br>Channel files: 101 .tsv 101 .json",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c94 Errors<br>\ud83d\udd36101 Criticals](https://github.com/bids-dandisets//000003/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c789 Errors<br>\u26a0\ufe0f299 Warnings](https://github.com/bids-dandisets//000003/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c94 Errors<br>\ud83d\udd36101 Criticals](https://github.com/bids-dandisets//000003/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c94 Errors<br>\ud83d\udd36101 Criticals<br>\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//000003/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -155,7 +155,7 @@
     "Status<br>(Unsanitized)": "Session(s): 31/31 (100.0%)<br>NWB file(s): 31<br>Participant files: 1 .tsv 1 .json<br>Session files: 4 .tsv 4 .json<br>Probe files: 31 .tsv 31 .json<br>Electrode files: 31 .tsv 31 .json<br>Channel files: 31 .tsv 31 .json",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c31 Errors<br>\ud83d\udd3631 Criticals](https://github.com/bids-dandisets//000019/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c35 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//000019/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c31 Errors<br>\ud83d\udd3631 Criticals](https://github.com/bids-dandisets//000019/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c31 Errors<br>\ud83d\udd3631 Criticals<br>\u26a0\ufe0f31 Suggestions](https://github.com/bids-dandisets//000019/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -748,7 +748,7 @@
     "Status<br>(Unsanitized)": "Session(s): 57/57 (100.0%)<br>NWB file(s): 57<br>Participant files: 1 .tsv 1 .json<br>Session files: 4 .tsv 4 .json<br>Probe files: 57 .tsv 57 .json<br>Electrode files: 57 .tsv 57 .json<br>Channel files: 57 .tsv 57 .json",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c171 Errors](https://github.com/bids-dandisets//000115/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c61 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//000115/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c171 Errors](https://github.com/bids-dandisets//000115/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c171 Errors<br>\u26a0\ufe0f57 Suggestions](https://github.com/bids-dandisets//000115/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -2146,7 +2146,7 @@
     "Status<br>(Unsanitized)": "Session(s): 22/22 (100.0%)<br>NWB file(s): 22<br>Participant files: 1 .tsv 1 .json<br>Session files: 5 .tsv 5 .json<br>Probe files: 22 .tsv 22 .json<br>Electrode files: 22 .tsv 22 .json<br>Channel files: 22 .tsv 22 .json",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c22 Errors](https://github.com/bids-dandisets//000410/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c27 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//000410/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c22 Errors](https://github.com/bids-dandisets//000410/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c22 Errors<br>\u26a0\ufe0f24 Suggestions](https://github.com/bids-dandisets//000410/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -3039,7 +3039,7 @@
     "Status<br>(Unsanitized)": "Session(s): 114/114 (100.0%)<br>NWB file(s): 114<br>Participant files: 1 .tsv 1 .json<br>Session files: 4 .tsv 4 .json<br>Probe files: 114 .tsv 114 .json<br>Electrode files: 114 .tsv 114 .json<br>Channel files: 114 .tsv 114 .json",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c114 Errors](https://github.com/bids-dandisets//000629/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c118 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//000629/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c114 Errors](https://github.com/bids-dandisets//000629/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c114 Errors<br>\u26a0\ufe0f114 Suggestions](https://github.com/bids-dandisets//000629/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -3108,7 +3108,7 @@
     "Status<br>(Unsanitized)": "Session(s): 706/706 (100.0%)<br>NWB file(s): 706<br>Participant files: 1 .tsv 1 .json<br>Session files: 109 .tsv 109 .json",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c623 Errors](https://github.com/bids-dandisets//000636/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c33 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//000636/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c623 Errors](https://github.com/bids-dandisets//000636/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c292 Errors](https://github.com/bids-dandisets//000636/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -3643,7 +3643,7 @@
     "Status<br>(Unsanitized)": "Session(s): 15246/15246 (100.0%)<br>NWB file(s): 15246<br>Participant files: 1 .tsv 1 .json<br>Session files: 21 .tsv 21 .json",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c30492 Errors](https://github.com/bids-dandisets//000773/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c16003 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//000773/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c30492 Errors](https://github.com/bids-dandisets//000773/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c30493 Errors](https://github.com/bids-dandisets//000773/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -3820,7 +3820,7 @@
     "Status<br>(Unsanitized)": "Session(s): 0/129 (0.0%)<br>NWB file(s): 0",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c2 Errors<br>\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//000894/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c3 Errors<br>\u26a0\ufe0f3 Warnings](https://github.com/bids-dandisets//000894/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c2 Errors<br>\u26a0\ufe0f1 Suggestion](https://github.com/bids-dandisets//000894/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c2 Errors<br>\u26a0\ufe0f53 Suggestions](https://github.com/bids-dandisets//000894/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -5352,7 +5352,7 @@
     "Status<br>(Unsanitized)": "Session(s): 1160/1160 (100.0%)<br>NWB file(s): 1160<br>Participant files: 1 .tsv 1 .json<br>Session files: 104 .tsv 104 .json",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c1160 Errors](https://github.com/bids-dandisets//001262/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c1264 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001262/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c1160 Errors](https://github.com/bids-dandisets//001262/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c1161 Errors](https://github.com/bids-dandisets//001262/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -5452,7 +5452,7 @@
     "Status<br>(Unsanitized)": "Session(s): 120/120 (100.0%)<br>NWB file(s): 120<br>Participant files: 1 .tsv 1 .json<br>Session files: 6 .tsv 6 .json<br>Probe files: 120 .tsv 120 .json<br>Electrode files: 120 .tsv 120 .json<br>Channel files: 120 .tsv 120 .json",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c120 Errors](https://github.com/bids-dandisets//001280/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c128 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001280/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c120 Errors](https://github.com/bids-dandisets//001280/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c120 Errors<br>\u26a0\ufe0f183 Suggestions](https://github.com/bids-dandisets//001280/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -5462,7 +5462,7 @@
     "Status<br>(Unsanitized)": "Session(s): 457/457 (100.0%)<br>NWB file(s): 457<br>Participant files: 1 .tsv 1 .json<br>Session files: 98 .tsv 98 .json",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c457 Errors](https://github.com/bids-dandisets//001281/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c555 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001281/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c457 Errors](https://github.com/bids-dandisets//001281/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c458 Errors](https://github.com/bids-dandisets//001281/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -5658,7 +5658,7 @@
     "Status<br>(Unsanitized)": "Session(s): 31/31 (100.0%)<br>NWB file(s): 31<br>Participant files: 1 .tsv 1 .json<br>Session files: 3 .tsv 3 .json<br>Probe files: 31 .tsv 31 .json<br>Electrode files: 31 .tsv 31 .json<br>Channel files: 31 .tsv 31 .json",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c62 Errors](https://github.com/bids-dandisets//001336/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c34 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001336/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c62 Errors](https://github.com/bids-dandisets//001336/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c62 Errors<br>\u26a0\ufe0f31 Suggestions](https://github.com/bids-dandisets//001336/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -7036,7 +7036,7 @@
     "Status<br>(Unsanitized)": "Session(s): 0/0<br>NWB file(s): 0",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c1 Error](https://github.com/bids-dandisets//001610/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c1 Error<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//001610/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c261 Errors](https://github.com/bids-dandisets//001610/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c261 Errors<br>\u26a0\ufe0f261 Suggestions](https://github.com/bids-dandisets//001610/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {
@@ -7114,7 +7114,7 @@
     "Status<br>(Unsanitized)": "Session(s): 0/0<br>NWB file(s): 0",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c1 Error](https://github.com/bids-dandisets//001621/blob/draft/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c1 Error<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//001621/blob/draft/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c2 Errors](https://github.com/bids-dandisets//001621/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c3 Errors](https://github.com/bids-dandisets//001621/blob/basic_sanitization/derivatives/validations/nwb2bids_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing"
   },
   {

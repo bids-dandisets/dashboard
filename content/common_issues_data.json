@@ -83,21 +83,21 @@
     },
     "basic_sanitization": {
       "WARNING": {
-        "SUBJECT_FOLDERS": 368,
-        "JSON_KEY_RECOMMENDED": 944,
-        "NO_AUTHORS": 263,
-        "SIDECAR_KEY_RECOMMENDED": 3589,
-        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 149,
-        "EVENT_ONSET_ORDER": 10,
-        "TSV_COLUMN_TYPE_REDEFINED": 525
+        "JSON_KEY_RECOMMENDED": 1520,
+        "SIDECAR_KEY_RECOMMENDED": 6080,
+        "SUBJECT_FOLDERS": 625,
+        "EVENT_ONSET_ORDER": 128,
+        "NO_AUTHORS": 384,
+        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 381,
+        "TSV_COLUMN_TYPE_REDEFINED": 596
       },
       "ERROR": {
-        "JSON_KEY_REQUIRED": 263,
-        "JSON_SCHEMA_VALIDATION_ERROR": 40,
-        "HED_ERROR": 25,
-        "TSV_VALUE_INCORRECT_TYPE": 2,
-        "TSV_EQUAL_ROWS": 10,
-        "TSV_COLUMN_MISSING": 20
+        "HED_ERROR": 59,
+        "TSV_VALUE_INCORRECT_TYPE": 192,
+        "JSON_SCHEMA_VALIDATION_ERROR": 236,
+        "JSON_KEY_REQUIRED": 384,
+        "TSV_EQUAL_ROWS": 91,
+        "TSV_COLUMN_MISSING": 70
       }
     }
   }

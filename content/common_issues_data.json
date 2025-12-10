@@ -9,8 +9,8 @@
         "Invalid species": 2831
       },
       "STYLE_SUGGESTION (ERROR)": {
-        "Invalid session ID": 37499,
-        "Invalid participant ID": 29032,
+        "Invalid session ID": 38663,
+        "Invalid participant ID": 29926,
         "Invalid participant sex (BIDS)": 496,
         "Invalid participant sex (archives)": 346
       },
@@ -21,8 +21,8 @@
         "INFO: invalid Dandiset metadata": 140
       },
       "INTERNAL_ERROR (ERROR)": {
-        "Failed to convert to BIDS dataset": 102,
-        "Failed to extract metadata for one or more sessions": 102,
+        "Failed to convert to BIDS dataset": 99,
+        "Failed to extract metadata for one or more sessions": 99,
         "Dandiset is already BIDS": 24,
         "Failed to initialize converter on remote Dandiset": 261
       },
@@ -64,40 +64,34 @@
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 1520,
-        "SIDECAR_KEY_RECOMMENDED": 2152,
-        "SUBJECT_FOLDERS": 626,
-        "NO_AUTHORS": 384,
-        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 68,
-        "TSV_COLUMN_TYPE_REDEFINED": 308
+        "JSON_KEY_RECOMMENDED": 1465,
+        "SIDECAR_KEY_RECOMMENDED": 1391,
+        "SUBJECT_FOLDERS": 620,
+        "NO_AUTHORS": 372,
+        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39,
+        "TSV_COLUMN_TYPE_REDEFINED": 29
       },
       "ERROR": {
-        "TSV_VALUE_INCORRECT_TYPE": 942,
-        "HED_ERROR": 28,
-        "INVALID_ENTITY_LABEL": 15166,
-        "NOT_INCLUDED": 30632,
+        "TSV_VALUE_INCORRECT_TYPE": 607,
+        "HED_ERROR": 24,
+        "INVALID_ENTITY_LABEL": 6965,
         "JSON_SCHEMA_VALIDATION_ERROR": 236,
-        "JSON_KEY_REQUIRED": 384,
+        "NOT_INCLUDED": 5070,
+        "JSON_KEY_REQUIRED": 372,
         "SIDECAR_WITHOUT_DATAFILE": 162
       }
     },
     "basic_sanitization": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 1520,
-        "SIDECAR_KEY_RECOMMENDED": 6080,
-        "SUBJECT_FOLDERS": 625,
-        "EVENT_ONSET_ORDER": 128,
-        "NO_AUTHORS": 384,
-        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 381,
-        "TSV_COLUMN_TYPE_REDEFINED": 596
+        "JSON_KEY_RECOMMENDED": 18,
+        "EVENT_ONSET_ORDER": 85,
+        "SIDECAR_KEY_RECOMMENDED": 619,
+        "NO_AUTHORS": 5
       },
       "ERROR": {
-        "HED_ERROR": 59,
-        "TSV_VALUE_INCORRECT_TYPE": 192,
-        "JSON_SCHEMA_VALIDATION_ERROR": 236,
-        "JSON_KEY_REQUIRED": 384,
-        "TSV_EQUAL_ROWS": 91,
-        "TSV_COLUMN_MISSING": 70
+        "TSV_VALUE_INCORRECT_TYPE": 172,
+        "HED_ERROR": 3,
+        "JSON_KEY_REQUIRED": 5
       }
     }
   }

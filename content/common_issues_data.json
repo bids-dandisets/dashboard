@@ -82,6 +82,25 @@
         "SIDECAR_WITHOUT_DATAFILE": 162
       }
     },
-    "basic_sanitization": {}
+    "basic_sanitization": {
+      "WARNING": {
+        "JSON_KEY_RECOMMENDED": 1515,
+        "SIDECAR_KEY_RECOMMENDED": 6080,
+        "SUBJECT_FOLDERS": 626,
+        "EVENT_ONSET_ORDER": 128,
+        "NO_AUTHORS": 381,
+        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 381,
+        "TSV_COLUMN_TYPE_REDEFINED": 596
+      },
+      "ERROR": {
+        "HED_ERROR": 59,
+        "TSV_VALUE_INCORRECT_TYPE": 192,
+        "JSON_SCHEMA_VALIDATION_ERROR": 236,
+        "PARTICIPANT_ID_MISMATCH": 1,
+        "JSON_KEY_REQUIRED": 381,
+        "TSV_EQUAL_ROWS": 91,
+        "TSV_COLUMN_MISSING": 70
+      }
+    }
   }
 }

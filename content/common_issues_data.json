@@ -24,7 +24,7 @@
         "Failed to convert to BIDS dataset": 99,
         "Failed to extract metadata for one or more sessions": 99,
         "Dandiset is already BIDS": 24,
-        "Failed to initialize converter on remote Dandiset": 262
+        "Failed to initialize converter on remote Dandiset": 263
       },
       "SCHEMA_INVALIDATION (WARNING)": {
         "WARNING: multiple licenses not supported": 4
@@ -54,7 +54,7 @@
         "Failed to convert to BIDS dataset": 98,
         "Failed to extract metadata for one or more sessions": 98,
         "Dandiset is already BIDS": 24,
-        "Failed to initialize converter on remote Dandiset": 262
+        "Failed to initialize converter on remote Dandiset": 263
       },
       "SCHEMA_INVALIDATION (WARNING)": {
         "WARNING: multiple licenses not supported": 4
@@ -64,10 +64,10 @@
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 1517,
+        "JSON_KEY_RECOMMENDED": 1520,
         "SIDECAR_KEY_RECOMMENDED": 2152,
-        "SUBJECT_FOLDERS": 627,
-        "NO_AUTHORS": 382,
+        "SUBJECT_FOLDERS": 628,
+        "NO_AUTHORS": 383,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 68,
         "TSV_COLUMN_TYPE_REDEFINED": 308
       },
@@ -78,17 +78,17 @@
         "NOT_INCLUDED": 31829,
         "JSON_SCHEMA_VALIDATION_ERROR": 236,
         "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 382,
+        "JSON_KEY_REQUIRED": 383,
         "SIDECAR_WITHOUT_DATAFILE": 162
       }
     },
     "basic_sanitization": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 1515,
+        "JSON_KEY_RECOMMENDED": 1518,
         "SIDECAR_KEY_RECOMMENDED": 6080,
-        "SUBJECT_FOLDERS": 626,
+        "SUBJECT_FOLDERS": 627,
         "EVENT_ONSET_ORDER": 128,
-        "NO_AUTHORS": 381,
+        "NO_AUTHORS": 382,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 381,
         "TSV_COLUMN_TYPE_REDEFINED": 596
       },
@@ -97,7 +97,7 @@
         "TSV_VALUE_INCORRECT_TYPE": 192,
         "JSON_SCHEMA_VALIDATION_ERROR": 236,
         "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 381,
+        "JSON_KEY_REQUIRED": 382,
         "TSV_EQUAL_ROWS": 91,
         "TSV_COLUMN_MISSING": 70
       }

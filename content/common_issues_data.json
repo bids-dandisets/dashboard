@@ -9,39 +9,9 @@
         "Invalid species": 2831
       },
       "STYLE_SUGGESTION (ERROR)": {
-        "Invalid session ID": 38663,
-        "Invalid participant ID": 29926,
-        "Invalid participant sex (BIDS)": 496,
-        "Invalid participant sex (archives)": 346
-      },
-      "STYLE_SUGGESTION (INFO)": {
-        "Missing description": 754
-      },
-      "INTERNAL_ERROR (INFO)": {
-        "INFO: invalid Dandiset metadata": 140
-      },
-      "INTERNAL_ERROR (ERROR)": {
-        "Failed to convert to BIDS dataset": 99,
-        "Failed to extract metadata for one or more sessions": 99,
-        "Dandiset is already BIDS": 24,
-        "Failed to initialize converter on remote Dandiset": 263
-      },
-      "SCHEMA_INVALIDATION (WARNING)": {
-        "WARNING: multiple licenses not supported": 4
-      }
-    },
-    "basic_sanitization": {
-      "SCHEMA_INVALIDATION (CRITICAL)": {
-        "Missing participant sex": 1170,
-        "Missing participant species": 4
-      },
-      "SCHEMA_INVALIDATION (ERROR)": {
-        "Invalid species": 2831
-      },
-      "STYLE_SUGGESTION (ERROR)": {
-        "Invalid session ID": 43754,
-        "Invalid participant ID": 35017,
-        "Invalid participant sex (BIDS)": 496,
+        "Invalid session ID": 38662,
+        "Invalid participant ID": 29925,
+        "Invalid participant sex (BIDS)": 495,
         "Invalid participant sex (archives)": 346
       },
       "STYLE_SUGGESTION (INFO)": {
@@ -59,15 +29,45 @@
       "SCHEMA_INVALIDATION (WARNING)": {
         "WARNING: multiple licenses not supported": 4
       }
+    },
+    "basic_sanitization": {
+      "SCHEMA_INVALIDATION (CRITICAL)": {
+        "Missing participant sex": 1170,
+        "Missing participant species": 4
+      },
+      "SCHEMA_INVALIDATION (ERROR)": {
+        "Invalid species": 2831
+      },
+      "STYLE_SUGGESTION (ERROR)": {
+        "Invalid session ID": 43753,
+        "Invalid participant ID": 35016,
+        "Invalid participant sex (BIDS)": 495,
+        "Invalid participant sex (archives)": 346
+      },
+      "STYLE_SUGGESTION (INFO)": {
+        "Missing description": 754
+      },
+      "INTERNAL_ERROR (INFO)": {
+        "INFO: invalid Dandiset metadata": 140
+      },
+      "INTERNAL_ERROR (ERROR)": {
+        "Failed to convert to BIDS dataset": 97,
+        "Failed to extract metadata for one or more sessions": 97,
+        "Dandiset is already BIDS": 24,
+        "Failed to initialize converter on remote Dandiset": 263
+      },
+      "SCHEMA_INVALIDATION (WARNING)": {
+        "WARNING: multiple licenses not supported": 4
+      }
     }
   },
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 1520,
+        "JSON_KEY_RECOMMENDED": 1517,
         "SIDECAR_KEY_RECOMMENDED": 2152,
         "SUBJECT_FOLDERS": 628,
-        "NO_AUTHORS": 383,
+        "NO_AUTHORS": 382,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 68,
         "TSV_COLUMN_TYPE_REDEFINED": 308
       },
@@ -75,20 +75,20 @@
         "TSV_VALUE_INCORRECT_TYPE": 1068,
         "HED_ERROR": 28,
         "INVALID_ENTITY_LABEL": 15142,
-        "NOT_INCLUDED": 31829,
+        "NOT_INCLUDED": 31828,
         "JSON_SCHEMA_VALIDATION_ERROR": 236,
         "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 383,
+        "JSON_KEY_REQUIRED": 382,
         "SIDECAR_WITHOUT_DATAFILE": 162
       }
     },
     "basic_sanitization": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 1518,
+        "JSON_KEY_RECOMMENDED": 1515,
         "SIDECAR_KEY_RECOMMENDED": 6080,
         "SUBJECT_FOLDERS": 627,
         "EVENT_ONSET_ORDER": 128,
-        "NO_AUTHORS": 382,
+        "NO_AUTHORS": 381,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 381,
         "TSV_COLUMN_TYPE_REDEFINED": 596
       },
@@ -97,7 +97,7 @@
         "TSV_VALUE_INCORRECT_TYPE": 192,
         "JSON_SCHEMA_VALIDATION_ERROR": 236,
         "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 382,
+        "JSON_KEY_REQUIRED": 381,
         "TSV_EQUAL_ROWS": 91,
         "TSV_COLUMN_MISSING": 70
       }

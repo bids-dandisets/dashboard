@@ -3,15 +3,15 @@
     "unsanitized": {
       "SCHEMA_INVALIDATION (CRITICAL)": {
         "Missing participant sex": 1170,
-        "Missing participant species": 4
+        "Missing participant species": 5
       },
       "SCHEMA_INVALIDATION (ERROR)": {
         "Invalid species": 2831
       },
       "STYLE_SUGGESTION (ERROR)": {
-        "Invalid session ID": 38662,
-        "Invalid participant ID": 29925,
-        "Invalid participant sex (BIDS)": 495,
+        "Invalid session ID": 43256,
+        "Invalid participant ID": 34524,
+        "Invalid participant sex (BIDS)": 496,
         "Invalid participant sex (archives)": 346
       },
       "STYLE_SUGGESTION (INFO)": {
@@ -21,10 +21,9 @@
         "INFO: invalid Dandiset metadata": 140
       },
       "INTERNAL_ERROR (ERROR)": {
-        "Failed to convert to BIDS dataset": 98,
-        "Failed to extract metadata for one or more sessions": 98,
+        "Failed to extract metadata for one or more sessions": 101,
         "Dandiset is already BIDS": 24,
-        "Failed to initialize converter on remote Dandiset": 263
+        "Failed to initialize converter on remote Dandiset": 264
       },
       "SCHEMA_INVALIDATION (WARNING)": {
         "WARNING: multiple licenses not supported": 4
@@ -33,15 +32,15 @@
     "basic_sanitization": {
       "SCHEMA_INVALIDATION (CRITICAL)": {
         "Missing participant sex": 1170,
-        "Missing participant species": 4
+        "Missing participant species": 5
       },
       "SCHEMA_INVALIDATION (ERROR)": {
         "Invalid species": 2831
       },
       "STYLE_SUGGESTION (ERROR)": {
-        "Invalid session ID": 43753,
-        "Invalid participant ID": 35016,
-        "Invalid participant sex (BIDS)": 495,
+        "Invalid session ID": 43256,
+        "Invalid participant ID": 34524,
+        "Invalid participant sex (BIDS)": 496,
         "Invalid participant sex (archives)": 346
       },
       "STYLE_SUGGESTION (INFO)": {
@@ -51,10 +50,10 @@
         "INFO: invalid Dandiset metadata": 140
       },
       "INTERNAL_ERROR (ERROR)": {
-        "Failed to convert to BIDS dataset": 97,
-        "Failed to extract metadata for one or more sessions": 97,
+        "Failed to extract metadata for one or more sessions": 101,
         "Dandiset is already BIDS": 24,
-        "Failed to initialize converter on remote Dandiset": 263
+        "Failed to initialize converter on remote Dandiset": 264,
+        "Failed to convert to BIDS dataset": 1
       },
       "SCHEMA_INVALIDATION (WARNING)": {
         "WARNING: multiple licenses not supported": 4
@@ -64,42 +63,26 @@
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 1517,
-        "SIDECAR_KEY_RECOMMENDED": 2152,
-        "SUBJECT_FOLDERS": 628,
-        "NO_AUTHORS": 382,
-        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 68,
-        "TSV_COLUMN_TYPE_REDEFINED": 308
+        "SUBJECT_FOLDERS": 731,
+        "JSON_KEY_RECOMMENDED": 2193,
+        "NO_AUTHORS": 731
       },
       "ERROR": {
-        "TSV_VALUE_INCORRECT_TYPE": 1068,
-        "HED_ERROR": 28,
-        "INVALID_ENTITY_LABEL": 15142,
-        "NOT_INCLUDED": 31828,
-        "JSON_SCHEMA_VALIDATION_ERROR": 236,
-        "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 382,
-        "SIDECAR_WITHOUT_DATAFILE": 162
+        "JSON_KEY_REQUIRED": 731
       }
     },
     "basic_sanitization": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 1515,
-        "SIDECAR_KEY_RECOMMENDED": 6080,
-        "SUBJECT_FOLDERS": 627,
-        "EVENT_ONSET_ORDER": 128,
-        "NO_AUTHORS": 381,
-        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 381,
-        "TSV_COLUMN_TYPE_REDEFINED": 596
+        "JSON_KEY_RECOMMENDED": 8,
+        "EVENT_ONSET_ORDER": 85,
+        "SIDECAR_KEY_RECOMMENDED": 135,
+        "NO_AUTHORS": 1
       },
       "ERROR": {
-        "HED_ERROR": 59,
-        "TSV_VALUE_INCORRECT_TYPE": 192,
-        "JSON_SCHEMA_VALIDATION_ERROR": 236,
+        "TSV_VALUE_INCORRECT_TYPE": 172,
+        "HED_ERROR": 1,
         "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 381,
-        "TSV_EQUAL_ROWS": 91,
-        "TSV_COLUMN_MISSING": 70
+        "JSON_KEY_REQUIRED": 1
       }
     }
   }

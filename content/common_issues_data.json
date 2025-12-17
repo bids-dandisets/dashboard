@@ -23,7 +23,7 @@
       "INTERNAL_ERROR (ERROR)": {
         "Failed to extract metadata for one or more sessions": 101,
         "Dandiset is already BIDS": 24,
-        "Failed to initialize converter on remote Dandiset": 264
+        "Failed to initialize converter on remote Dandiset": 265
       },
       "SCHEMA_INVALIDATION (WARNING)": {
         "WARNING: multiple licenses not supported": 4
@@ -52,8 +52,7 @@
       "INTERNAL_ERROR (ERROR)": {
         "Failed to extract metadata for one or more sessions": 101,
         "Dandiset is already BIDS": 24,
-        "Failed to initialize converter on remote Dandiset": 264,
-        "Failed to convert to BIDS dataset": 1
+        "Failed to initialize converter on remote Dandiset": 264
       },
       "SCHEMA_INVALIDATION (WARNING)": {
         "WARNING: multiple licenses not supported": 4
@@ -63,26 +62,22 @@
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        "SUBJECT_FOLDERS": 731,
-        "JSON_KEY_RECOMMENDED": 2193,
-        "NO_AUTHORS": 731
+        "SUBJECT_FOLDERS": 755,
+        "JSON_KEY_RECOMMENDED": 2265,
+        "NO_AUTHORS": 755
       },
       "ERROR": {
-        "JSON_KEY_REQUIRED": 731
+        "JSON_KEY_REQUIRED": 755
       }
     },
     "basic_sanitization": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 8,
-        "EVENT_ONSET_ORDER": 85,
-        "SIDECAR_KEY_RECOMMENDED": 135,
-        "NO_AUTHORS": 1
+        "SUBJECT_FOLDERS": 756,
+        "JSON_KEY_RECOMMENDED": 2268,
+        "NO_AUTHORS": 756
       },
       "ERROR": {
-        "TSV_VALUE_INCORRECT_TYPE": 172,
-        "HED_ERROR": 1,
-        "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 1
+        "JSON_KEY_REQUIRED": 756
       }
     }
   }

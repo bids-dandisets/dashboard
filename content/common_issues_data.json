@@ -6,10 +6,10 @@
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 955,
+        "JSON_KEY_RECOMMENDED": 959,
         "SIDECAR_KEY_RECOMMENDED": 2317,
-        "SUBJECT_FOLDERS": 631,
-        "NO_AUTHORS": 100,
+        "SUBJECT_FOLDERS": 632,
+        "NO_AUTHORS": 101,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39,
         "TSV_COLUMN_TYPE_REDEFINED": 327,
         "EVENT_ONSET_ORDER": 305
@@ -17,10 +17,10 @@
       "ERROR": {
         "TSV_VALUE_INCORRECT_TYPE": 1301,
         "INVALID_ENTITY_LABEL": 16395,
-        "HED_ERROR": 456,
         "NOT_INCLUDED": 36025,
         "JSON_SCHEMA_VALIDATION_ERROR": 1376,
-        "JSON_KEY_REQUIRED": 100,
+        "PARTICIPANT_ID_MISMATCH": 1,
+        "JSON_KEY_REQUIRED": 101,
         "SIDECAR_WITHOUT_DATAFILE": 162,
         "TSV_EQUAL_ROWS": 305,
         "TSV_COLUMN_MISSING": 610
@@ -38,7 +38,6 @@
       },
       "ERROR": {
         "TSV_VALUE_INCORRECT_TYPE": 638,
-        "HED_ERROR": 1569,
         "JSON_SCHEMA_VALIDATION_ERROR": 1376,
         "JSON_KEY_REQUIRED": 102,
         "TSV_EQUAL_ROWS": 396,

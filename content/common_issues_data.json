@@ -1,83 +1,47 @@
 {
   "nwb2bids_notifications": {
-    "unsanitized": {
-      "SCHEMA_INVALIDATION (CRITICAL)": {
-        "Missing participant sex": 1170,
-        "Missing participant species": 5
-      },
-      "SCHEMA_INVALIDATION (ERROR)": {
-        "Invalid species": 2831
-      },
-      "STYLE_SUGGESTION (ERROR)": {
-        "Invalid session ID": 43256,
-        "Invalid participant ID": 34524,
-        "Invalid participant sex (BIDS)": 496,
-        "Invalid participant sex (archives)": 346
-      },
-      "STYLE_SUGGESTION (INFO)": {
-        "Missing description": 754
-      },
-      "INTERNAL_ERROR (INFO)": {
-        "INFO: invalid Dandiset metadata": 140
-      },
-      "INTERNAL_ERROR (ERROR)": {
-        "Failed to extract metadata for one or more sessions": 101,
-        "Dandiset is already BIDS": 24,
-        "Failed to initialize converter on remote Dandiset": 265
-      },
-      "SCHEMA_INVALIDATION (WARNING)": {
-        "WARNING: multiple licenses not supported": 4
-      }
-    },
+    "unsanitized": {},
     "basic_sanitization": {
-      "SCHEMA_INVALIDATION (CRITICAL)": {
-        "Missing participant sex": 1170,
-        "Missing participant species": 5
-      },
-      "SCHEMA_INVALIDATION (ERROR)": {
-        "Invalid species": 2831
+      "INTERNAL_ERROR (ERROR)": {
+        "Failed to extract metadata for one or more sessions": 1
       },
       "STYLE_SUGGESTION (ERROR)": {
-        "Invalid session ID": 43256,
-        "Invalid participant ID": 34524,
-        "Invalid participant sex (BIDS)": 496,
-        "Invalid participant sex (archives)": 346
-      },
-      "STYLE_SUGGESTION (INFO)": {
-        "Missing description": 754
-      },
-      "INTERNAL_ERROR (INFO)": {
-        "INFO: invalid Dandiset metadata": 140
-      },
-      "INTERNAL_ERROR (ERROR)": {
-        "Failed to extract metadata for one or more sessions": 101,
-        "Dandiset is already BIDS": 24,
-        "Failed to initialize converter on remote Dandiset": 264
-      },
-      "SCHEMA_INVALIDATION (WARNING)": {
-        "WARNING: multiple licenses not supported": 4
+        "Invalid participant sex (BIDS)": 6,
+        "Invalid session ID": 326
       }
     }
   },
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        "SUBJECT_FOLDERS": 755,
-        "JSON_KEY_RECOMMENDED": 2265,
-        "NO_AUTHORS": 755
+        "JSON_KEY_RECOMMENDED": 955,
+        "SIDECAR_KEY_RECOMMENDED": 2317,
+        "SUBJECT_FOLDERS": 631,
+        "NO_AUTHORS": 100,
+        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39,
+        "TSV_COLUMN_TYPE_REDEFINED": 327,
+        "EVENT_ONSET_ORDER": 305
       },
       "ERROR": {
-        "JSON_KEY_REQUIRED": 755
+        "TSV_VALUE_INCORRECT_TYPE": 1301,
+        "INVALID_ENTITY_LABEL": 16395,
+        "HED_ERROR": 456,
+        "NOT_INCLUDED": 36025,
+        "JSON_SCHEMA_VALIDATION_ERROR": 1376,
+        "JSON_KEY_REQUIRED": 100,
+        "SIDECAR_WITHOUT_DATAFILE": 162,
+        "TSV_EQUAL_ROWS": 305,
+        "TSV_COLUMN_MISSING": 610
       }
     },
     "basic_sanitization": {
       "WARNING": {
-        "SUBJECT_FOLDERS": 756,
-        "JSON_KEY_RECOMMENDED": 2268,
-        "NO_AUTHORS": 756
+        "SUBJECT_FOLDERS": 2,
+        "JSON_KEY_RECOMMENDED": 6,
+        "NO_AUTHORS": 2
       },
       "ERROR": {
-        "JSON_KEY_REQUIRED": 756
+        "JSON_KEY_REQUIRED": 2
       }
     }
   }

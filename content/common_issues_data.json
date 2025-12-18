@@ -1,15 +1,7 @@
 {
   "nwb2bids_notifications": {
     "unsanitized": {},
-    "basic_sanitization": {
-      "INTERNAL_ERROR (ERROR)": {
-        "Failed to extract metadata for one or more sessions": 1
-      },
-      "STYLE_SUGGESTION (ERROR)": {
-        "Invalid participant sex (BIDS)": 6,
-        "Invalid session ID": 326
-      }
-    }
+    "basic_sanitization": {}
   },
   "bids_invalidations": {
     "unsanitized": {
@@ -36,12 +28,21 @@
     },
     "basic_sanitization": {
       "WARNING": {
-        "SUBJECT_FOLDERS": 2,
-        "JSON_KEY_RECOMMENDED": 6,
-        "NO_AUTHORS": 2
+        "JSON_KEY_RECOMMENDED": 961,
+        "SIDECAR_KEY_RECOMMENDED": 5975,
+        "SUBJECT_FOLDERS": 632,
+        "EVENT_ONSET_ORDER": 425,
+        "NO_AUTHORS": 102,
+        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 352,
+        "TSV_COLUMN_TYPE_REDEFINED": 624
       },
       "ERROR": {
-        "JSON_KEY_REQUIRED": 2
+        "TSV_VALUE_INCORRECT_TYPE": 638,
+        "HED_ERROR": 1569,
+        "JSON_SCHEMA_VALIDATION_ERROR": 1376,
+        "JSON_KEY_REQUIRED": 102,
+        "TSV_EQUAL_ROWS": 396,
+        "TSV_COLUMN_MISSING": 680
       }
     }
   }

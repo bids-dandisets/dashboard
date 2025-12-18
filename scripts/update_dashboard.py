@@ -156,24 +156,22 @@ for dandiset in tqdm.tqdm(
     # Parse detailed nwb2bids notifications
     nwb2bids_info_url = f"https://api.github.com/repos/bids-dandisets/{dandiset_id}/contents/.nwb2bids"
     nwb2bids_info_response = requests.get(url=nwb2bids_info_url, headers=github_auth_header)
+    notifications_filename = ""
     if nwb2bids_info_response.status_code != 200:
         row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] = "❗Missing"
     else:
         nwb2bids_info = nwb2bids_info_response.json()
 
-        iterator = (
+        notifications_filenames = [
             file_info["name"]
             for file_info in nwb2bids_info
             if (filename := file_info.get("name", "")).endswith("_notifications.json")
-        )
-        notifications_filename = next(iterator)
-
-        try:
-            next(iterator)
+        ]
+        if len(notifications_filenames) > 1:
             message = f"Multiple nwb2bids notifications files found for Dandiset {dandiset_id}!"
             raise ValueError(message)
-        except StopIteration:
-            pass
+        if len(notifications_filenames) == 1:
+            notifications_filename = notifications_filenames[0]
 
     nwb2bids_notifications_content_url = (
         f"{raw_content_base_url}/{dandiset_id}/draft/.nwb2bids/{notifications_filename}"
@@ -282,24 +280,22 @@ for dandiset in tqdm.tqdm(
     nwb2bids_info_response = requests.get(
         url=nwb2bids_info_url, headers=github_auth_header, params={"ref": "basic_sanitization"}
     )
+    notifications_filename = ""
     if nwb2bids_info_response.status_code != 200:
         row["`nwb2bids`<br>Notifications<br>(Basic Sanitization)"] = "❗Missing"
     else:
         nwb2bids_info = nwb2bids_info_response.json()
 
-        iterator = (
+        notifications_filenames = [
             file_info["name"]
             for file_info in nwb2bids_info
             if (filename := file_info.get("name", "")).endswith("_notifications.json")
-        )
-        notifications_filename = next(iterator)
-
-        try:
-            next(iterator)
+        ]
+        if len(notifications_filenames) > 1:
             message = f"Multiple nwb2bids notifications files found for Dandiset {dandiset_id}!"
             raise ValueError(message)
-        except StopIteration:
-            pass
+        if len(notifications_filenames) == 1:
+            notifications_filename = notifications_filenames[0]
 
     nwb2bids_notifications_content_url = (
         f"{raw_content_base_url}/{dandiset_id}/draft/.nwb2bids/{notifications_filename}"

@@ -34,10 +34,6 @@ repo_base_url = "https://github.com/bids-dandisets/"
 repo_api_base_url = "https://api.github.com/repos/bids-dandisets"
 raw_content_base_url = "https://raw.githubusercontent.com/bids-dandisets"
 
-nwb2bids_notifications_file_path = "draft/derivatives/validations/nwb2bids_notifications.json"
-basic_sanitization_nwb2bids_notifications_file_path = (
-    "basic_sanitization/derivatives/validations/nwb2bids_notifications.json"
-)
 # nwb_inspection_file_path = "draft/derivatives/validations/src-nwb-inspector_ver-0-6-5.txt"
 bids_validation_file_path = "draft/derivatives/validations/bids_validation.txt"
 bids_validation_json_file_path = "draft/derivatives/validations/bids_validation.json"
@@ -158,7 +154,30 @@ for dandiset in tqdm.tqdm(
                 row["Status<br>(Unsanitized)"] += f"<br>{key.capitalize()} files: {tsv_count} .tsv {json_count} .json"
 
     # Parse detailed nwb2bids notifications
-    nwb2bids_notifications_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb2bids_notifications_file_path}"
+    nwb2bids_info_url = f"https://api.github.com/repos/bids-dandisets/{dandiset_id}/contents/.nwb2bids"
+    nwb2bids_info_response = requests.get(url=nwb2bids_info_url, headers=github_auth_header)
+    if nwb2bids_info_response.status_code != 200:
+        row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] = "❗Missing"
+    else:
+        nwb2bids_info = nwb2bids_info_response.json()
+
+        iterator = (
+            file_info["name"]
+            for file_info in nwb2bids_info
+            if (filename := file_info.get("name", "")).endswith("_notifications.json")
+        )
+        notifications_filename = next(iterator)
+
+        try:
+            next(iterator)
+            message = f"Multiple nwb2bids notifications files found for Dandiset {dandiset_id}!"
+            raise ValueError(message)
+        except StopIteration:
+            pass
+
+    nwb2bids_notifications_content_url = (
+        f"{raw_content_base_url}/{dandiset_id}/draft/.nwb2bids/{notifications_filename}"
+    )
     response = requests.get(url=nwb2bids_notifications_content_url, headers=github_auth_header)
     if response.status_code != 200:
         row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] = "❗Missing"
@@ -201,7 +220,7 @@ for dandiset in tqdm.tqdm(
             nwb2bids_notifications_text = "<br>".join(nwb2bids_notifications_lines)
 
         row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] = (
-            f"[{nwb2bids_notifications_text}]({repo_base_url}/{dandiset_id}/blob/{nwb2bids_notifications_file_path})"
+            f"[{nwb2bids_notifications_text}]({repo_base_url}/{dandiset_id}/blob/draft/.nwb2bids/{notifications_filename})"
         )
 
     # Parse detailed BIDS validation results (unsanitized)
@@ -259,8 +278,35 @@ for dandiset in tqdm.tqdm(
             "Dandiset ID"
         ] += f"<br>[{BASIC_SANITIZATION_SHIELD_MD}]({repo_base_url}/{dandiset_id}/tree/basic_sanitization)"
 
+    nwb2bids_info_url = f"https://api.github.com/repos/bids-dandisets/{dandiset_id}/contents/.nwb2bids"
+    nwb2bids_info_response = requests.get(
+        url=nwb2bids_info_url, headers=github_auth_header, params={"ref": "basic_sanitization"}
+    )
+    if nwb2bids_info_response.status_code != 200:
+        row["`nwb2bids`<br>Notifications<br>(Basic Sanitization)"] = "❗Missing"
+    else:
+        nwb2bids_info = nwb2bids_info_response.json()
+
+        iterator = (
+            file_info["name"]
+            for file_info in nwb2bids_info
+            if (filename := file_info.get("name", "")).endswith("_notifications.json")
+        )
+        notifications_filename = next(iterator)
+
+        try:
+            next(iterator)
+            message = f"Multiple nwb2bids notifications files found for Dandiset {dandiset_id}!"
+            raise ValueError(message)
+        except StopIteration:
+            pass
+
+    nwb2bids_notifications_content_url = (
+        f"{raw_content_base_url}/{dandiset_id}/draft/.nwb2bids/{notifications_filename}"
+    )
+
     basic_sanitization_nwb2bids_notifications_content_url = (
-        f"{raw_content_base_url}/{dandiset_id}/{basic_sanitization_nwb2bids_notifications_file_path}"
+        f"{raw_content_base_url}/{dandiset_id}/basic_sanitization/.nwb2bids/{notifications_filename}"
     )
     response = requests.get(url=basic_sanitization_nwb2bids_notifications_content_url, headers=github_auth_header)
     if response.status_code == 200:
@@ -300,7 +346,7 @@ for dandiset in tqdm.tqdm(
                 nwb2bids_notifications_lines.append(f"⚠️{count} Suggestion{plural}")
             nwb2bids_notifications_text = "<br>".join(nwb2bids_notifications_lines)
 
-        blob_url = f"{repo_base_url}/{dandiset_id}/blob/{basic_sanitization_nwb2bids_notifications_file_path}"
+        blob_url = f"{repo_base_url}/{dandiset_id}/blob/basic_sanitization/.nwb2bids/{notifications_filename}"
         row["`nwb2bids`<br>Notifications<br>(Basic Sanitization)"] = f"[{nwb2bids_notifications_text}]({blob_url})"
 
     # Parse detailed BIDS validation results (basic sanitization)

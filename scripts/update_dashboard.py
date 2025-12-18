@@ -1,7 +1,9 @@
 import collections
+import datetime
 import json
 import os
 import pathlib
+import re
 
 import dandi.dandiapi
 import packaging.version
@@ -13,6 +15,14 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", None)
 if GITHUB_TOKEN is None:
     message = "GITHUB_TOKEN environment variable not set"
     raise ValueError(message)
+
+
+def extract_datetime(filename):
+    match = re.search(r"datetime-(\d{8})", filename)
+    if match:
+        return datetime.datetime.strptime(match.group(1), "%Y%m%d")
+    return datetime.min
+
 
 dashboard_directory = pathlib.Path(__file__).parent.parent
 readme_file_path = dashboard_directory / "README.md"
@@ -58,6 +68,7 @@ BIDS_VALIDATION_UNSANITIZED_KEY = (
 BIDS_VALIDATION_BASIC_SANITIZATION_KEY = (
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)"
 )
+
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
@@ -168,8 +179,7 @@ for dandiset in tqdm.tqdm(
             if (filename := file_info.get("name", "")).endswith("_notifications.json")
         ]
         if len(notifications_filenames) > 1:
-            message = f"Multiple nwb2bids notifications files found for Dandiset {dandiset_id}!"
-            raise ValueError(message)
+            notifications_filename = max(notifications_filenames, key=extract_datetime)
         if len(notifications_filenames) == 1:
             notifications_filename = notifications_filenames[0]
 
@@ -292,8 +302,7 @@ for dandiset in tqdm.tqdm(
             if (filename := file_info.get("name", "")).endswith("_notifications.json")
         ]
         if len(notifications_filenames) > 1:
-            message = f"Multiple nwb2bids notifications files found for Dandiset {dandiset_id}!"
-            raise ValueError(message)
+            notifications_filename = max(notifications_filenames, key=extract_datetime)
         if len(notifications_filenames) == 1:
             notifications_filename = notifications_filenames[0]
 

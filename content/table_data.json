@@ -7567,5 +7567,15 @@
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c4 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001686/blob/draft/derivatives/validations/bids_validation.txt)",
     "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c1 Error](https://github.com/bids-dandisets//001686/blob/basic_sanitization/.nwb2bids/datetime-20251218084151_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "[\u274c4 Errors<br>\u26a0\ufe0f2 Warnings](https://github.com/bids-dandisets//001686/blob/basic_sanitization/derivatives/validations/bids_validation.txt)"
+  },
+  {
+    "Dandiset ID": "001688<br><a href=\"https://dandiarchive.org/dandiset/001688\"><img src=\"https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico\" width=\"16\" height=\"16\"/></a><br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/001688)<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)](https://github.com/bids-dandisets//001688)<br>[![](https://img.shields.io/badge/Sanitized-blue?logo=github)](https://github.com/bids-dandisets//001688/tree/basic_sanitization)",
+    "Dandiset<br>Modalities": "ephys<br>beh",
+    "`nwb2bids`<br>Version": "`v0.8.0-83-g9699f75`",
+    "Status<br>(Unsanitized)": "Session(s): 3/3 (100.0%)<br>NWB file(s): 3<br>Participant files: 1 .tsv 1 .json<br>Session files: 1 .tsv 1 .json<br>Probe files: 3 .tsv 3 .json<br>Electrode files: 3 .tsv 3 .json<br>Channel files: 3 .tsv 3 .json",
+    "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c3 Errors](https://github.com/bids-dandisets//001688/blob/draft/.nwb2bids/datetime-20251219230048_notifications.json)",
+    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c4 Errors<br>\u26a0\ufe0f1 Warning](https://github.com/bids-dandisets//001688/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c3 Errors](https://github.com/bids-dandisets//001688/blob/basic_sanitization/.nwb2bids/datetime-20251219230110_notifications.json)",
+    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "[\u26a0\ufe0f1 Warning](https://github.com/bids-dandisets//001688/blob/basic_sanitization/derivatives/validations/bids_validation.txt)"
   }
 ]

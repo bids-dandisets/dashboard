@@ -4,7 +4,56 @@
     "basic_sanitization": {}
   },
   "bids_invalidations": {
-    "unsanitized": {},
-    "basic_sanitization": {}
+    "unsanitized": {
+      "WARNING": {
+        "JSON_KEY_RECOMMENDED": 667,
+        "SIDECAR_KEY_RECOMMENDED": 368709,
+        "SUBJECT_FOLDERS": 344,
+        "NO_AUTHORS": 99,
+        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39,
+        "TSV_COLUMN_TYPE_REDEFINED": 327,
+        "EVENT_ONSET_ORDER": 305
+      },
+      "ERROR": {
+        "TSV_VALUE_INCORRECT_TYPE": 6486,
+        "TSV_COLUMN_MISSING": 3979,
+        "TSV_ADDITIONAL_COLUMNS_MUST_DEFINE": 3706,
+        "SIDECAR_KEY_REQUIRED": 42276,
+        "TSV_COLUMN_ORDER_INCORRECT": 3369,
+        "INVALID_ENTITY_LABEL": 16395,
+        "NOT_INCLUDED": 36027,
+        "PARTICIPANT_ID_MISMATCH": 1,
+        "JSON_KEY_REQUIRED": 99,
+        "JSON_SCHEMA_VALIDATION_ERROR": 372,
+        "SIDECAR_WITHOUT_DATAFILE": 162,
+        "TSV_INDEX_VALUE_NOT_UNIQUE": 14784,
+        "TSV_EQUAL_ROWS": 305
+      }
+    },
+    "basic_sanitization": {
+      "WARNING": {
+        "JSON_KEY_RECOMMENDED": 663,
+        "SIDECAR_KEY_RECOMMENDED": 513199,
+        "SUBJECT_FOLDERS": 345,
+        "NO_AUTHORS": 98,
+        "EVENT_ONSET_ORDER": 425,
+        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 352,
+        "TSV_COLUMN_TYPE_REDEFINED": 402
+      },
+      "ERROR": {
+        "TSV_COLUMN_MISSING": 8487,
+        "TSV_VALUE_INCORRECT_TYPE": 11477,
+        "TSV_ADDITIONAL_COLUMNS_MUST_DEFINE": 8461,
+        "SIDECAR_KEY_REQUIRED": 58653,
+        "TSV_COLUMN_ORDER_INCORRECT": 7695,
+        "JSON_KEY_REQUIRED": 98,
+        "PARTICIPANT_ID_MISMATCH": 1,
+        "JSON_SCHEMA_VALIDATION_ERROR": 392,
+        "TSV_EQUAL_ROWS": 396,
+        "TSV_INDEX_VALUE_NOT_UNIQUE": 14784,
+        "NOT_INCLUDED": 941,
+        "INVALID_ENTITY_LABEL": 1010
+      }
+    }
   }
 }

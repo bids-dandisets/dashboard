@@ -7334,5 +7334,14 @@
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "\u2757",
     "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "\u2757",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757"
+  },
+  {
+    "Dandiset ID": "1",
+    "Dandiset<br>Modalities": "",
+    "`nwb2bids`<br>Version": "\u2757",
+    "`nwb2bids`<br>Notifications<br>(Unsanitized)": "\u2757",
+    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "\u2757",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "\u2757",
+    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757"
   }
 ]

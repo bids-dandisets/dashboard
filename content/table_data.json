@@ -7178,7 +7178,7 @@
   },
   {
     "Dandiset ID": "001675<br><a href=\"https://dandiarchive.org/dandiset/001675\"><img src=\"https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico\" width=\"16\" height=\"16\"/></a><br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/001675)<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)](https://github.com/bids-dandisets//001675)<br>[![](https://img.shields.io/badge/Sanitized-blue?logo=github)](https://github.com/bids-dandisets//001675/tree/basic_sanitization)",
-    "Dandiset<br>Modalities": "ephys",
+    "Dandiset<br>Modalities": "",
     "`nwb2bids`<br>Version": "`v0.8.0-12-g6e647df`",
     "Status<br>(Unsanitized)": "Session(s): 1/1 (100.0%)<br>NWB file(s): 1<br>Participant files: 1 .tsv 1 .json<br>Session files: 1 .tsv 1 .json<br>Probe files: 1 .tsv 1 .json<br>Electrode files: 1 .tsv 1 .json<br>Channel files: 1 .tsv 1 .json",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c1 Error<br>\ud83d\udd361 Critical](https://github.com/bids-dandisets//001675/blob/draft/.nwb2bids/datetime-20260108153201_notifications.json)",

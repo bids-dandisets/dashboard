@@ -7110,7 +7110,7 @@
   },
   {
     "Dandiset ID": "001636<br><a href=\"https://dandiarchive.org/dandiset/001636\"><img src=\"https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico\" width=\"16\" height=\"16\"/></a><br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/001636)<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)](https://github.com/bids-dandisets//001636)<br>[![](https://img.shields.io/badge/Sanitized-blue?logo=github)](https://github.com/bids-dandisets//001636/tree/basic_sanitization)",
-    "Dandiset<br>Modalities": "beh<br>ephys",
+    "Dandiset<br>Modalities": "ephys<br>beh",
     "`nwb2bids`<br>Version": "`v0.8.0-12-g6e647df`",
     "Status<br>(Unsanitized)": "Session(s): 0/0<br>NWB file(s): 0",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c1 Error](https://github.com/bids-dandisets//001636/blob/draft/.nwb2bids/datetime-20260108152831_notifications.json)",

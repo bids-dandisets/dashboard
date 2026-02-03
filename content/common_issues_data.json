@@ -6,11 +6,11 @@
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 674,
+        "JSON_KEY_RECOMMENDED": 677,
         "TSV_COLUMN_TYPE_REDEFINED": 33547,
         "SIDECAR_KEY_RECOMMENDED": 374377,
-        "SUBJECT_FOLDERS": 349,
-        "NO_AUTHORS": 100,
+        "SUBJECT_FOLDERS": 350,
+        "NO_AUTHORS": 101,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39,
         "EVENT_ONSET_ORDER": 305
       },
@@ -20,7 +20,7 @@
         "INVALID_ENTITY_LABEL": 19793,
         "NOT_INCLUDED": 36219,
         "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 100,
+        "JSON_KEY_REQUIRED": 101,
         "JSON_SCHEMA_VALIDATION_ERROR": 380,
         "SIDECAR_WITHOUT_DATAFILE": 264,
         "TSV_INDEX_VALUE_NOT_UNIQUE": 29568,
@@ -32,19 +32,19 @@
     },
     "basic_sanitization": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 672,
+        "JSON_KEY_RECOMMENDED": 675,
         "TSV_COLUMN_TYPE_REDEFINED": 60209,
         "SIDECAR_KEY_RECOMMENDED": 586242,
-        "SUBJECT_FOLDERS": 348,
+        "SUBJECT_FOLDERS": 349,
         "EVENT_ONSET_ORDER": 425,
-        "NO_AUTHORS": 100,
+        "NO_AUTHORS": 101,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 352
       },
       "ERROR": {
         "SIDECAR_KEY_REQUIRED": 66954,
         "TSV_VALUE_INCORRECT_TYPE": 648,
         "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 100,
+        "JSON_KEY_REQUIRED": 101,
         "JSON_SCHEMA_VALIDATION_ERROR": 380,
         "TSV_EQUAL_ROWS": 396,
         "TSV_COLUMN_MISSING": 795,

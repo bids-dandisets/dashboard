@@ -32,19 +32,19 @@
     },
     "basic_sanitization": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 696,
+        "JSON_KEY_RECOMMENDED": 699,
         "TSV_COLUMN_TYPE_REDEFINED": 61031,
         "SIDECAR_KEY_RECOMMENDED": 594315,
-        "SUBJECT_FOLDERS": 355,
+        "SUBJECT_FOLDERS": 356,
         "EVENT_ONSET_ORDER": 425,
-        "NO_AUTHORS": 107,
+        "NO_AUTHORS": 108,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 352
       },
       "ERROR": {
         "SIDECAR_KEY_REQUIRED": 67851,
         "TSV_VALUE_INCORRECT_TYPE": 648,
         "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 107,
+        "JSON_KEY_REQUIRED": 108,
         "JSON_SCHEMA_VALIDATION_ERROR": 378,
         "TSV_EQUAL_ROWS": 396,
         "TSV_COLUMN_MISSING": 795,

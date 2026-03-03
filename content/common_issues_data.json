@@ -6,11 +6,11 @@
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 702,
+        "JSON_KEY_RECOMMENDED": 705,
         "SIDECAR_KEY_RECOMMENDED": 377777,
         "TSV_COLUMN_TYPE_REDEFINED": 33883,
-        "SUBJECT_FOLDERS": 360,
-        "NO_AUTHORS": 107,
+        "SUBJECT_FOLDERS": 361,
+        "NO_AUTHORS": 108,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39,
         "EVENT_ONSET_ORDER": 316
       },
@@ -20,7 +20,7 @@
         "SIDECAR_KEY_REQUIRED": 43308,
         "NOT_INCLUDED": 36219,
         "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 107,
+        "JSON_KEY_REQUIRED": 108,
         "JSON_SCHEMA_VALIDATION_ERROR": 380,
         "SIDECAR_WITHOUT_DATAFILE": 264,
         "TSV_INDEX_VALUE_NOT_UNIQUE": 29568,

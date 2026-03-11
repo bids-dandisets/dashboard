@@ -6,10 +6,10 @@
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 705,
+        "JSON_KEY_RECOMMENDED": 706,
         "SIDECAR_KEY_RECOMMENDED": 377777,
         "TSV_COLUMN_TYPE_REDEFINED": 33883,
-        "SUBJECT_FOLDERS": 361,
+        "SUBJECT_FOLDERS": 362,
         "NO_AUTHORS": 108,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39,
         "EVENT_ONSET_ORDER": 316
@@ -32,10 +32,10 @@
     },
     "basic_sanitization": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 703,
+        "JSON_KEY_RECOMMENDED": 704,
         "SIDECAR_KEY_RECOMMENDED": 589642,
         "TSV_COLUMN_TYPE_REDEFINED": 60545,
-        "SUBJECT_FOLDERS": 360,
+        "SUBJECT_FOLDERS": 361,
         "EVENT_ONSET_ORDER": 436,
         "NO_AUTHORS": 108,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 352

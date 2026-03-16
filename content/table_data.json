@@ -549,7 +549,7 @@
     "Dandiset ID": "000061<br><a href=\"https://dandiarchive.org/dandiset/000061\"><img src=\"https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico\" width=\"16\" height=\"16\"/></a><br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/000061)<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)](https://github.com/bids-dandisets//000061)<br>[![](https://img.shields.io/badge/Sanitized-blue?logo=github)](https://github.com/bids-dandisets//000061/tree/basic_sanitization)",
     "Dandiset<br>Modalities": "ephys",
     "`nwb2bids`<br>Version": "`v0.11.1-10-gc1896d8`",
-    "Status<br>(Unsanitized)": "Session(s): 40/40 (100.0%)<br>NWB file(s): 40<br>Participant files: 1 .tsv 1 .json<br>Session files: 4 .tsv 4 .json<br>Probe files: 40 .tsv 40 .json<br>Electrode files: 40 .tsv 40 .json<br>Channel files: 40 .tsv 40 .json",
+    "Status<br>(Unsanitized)": "Session(s): 40/40 (100.0%)",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c80 Errors](https://github.com/bids-dandisets//000061/blob/draft/.nwb2bids/datetime-20260227230130_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c484 Errors<br>\u26a0\ufe0f1288 Warnings](https://github.com/bids-dandisets//000061/blob/draft/derivatives/validations/bids_validation.txt)",
     "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c80 Errors](https://github.com/bids-dandisets//000061/blob/basic_sanitization/.nwb2bids/datetime-20260228081147_notifications.json)",

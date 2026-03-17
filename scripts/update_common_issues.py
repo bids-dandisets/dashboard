@@ -125,9 +125,15 @@ for dandiset in tqdm.tqdm(
 
                     if source == "bids_invalidations":
                         source_url = source_url.replace(".json", ".txt")
-                        matching_index = (
-                            next(index for index, line in enumerate(human_readable_lines) if issue["code"] in line) + 1
-                        )
+                        try:
+                            matching_index = (
+                                next(index for index, line in enumerate(human_readable_lines) if issue["code"] in line)
+                                + 1
+                            )
+                        except StopIteration:
+                            # Fall back to the top of the file if no match is found
+                            # This was observed in some strangely mismatching JSON vs. TXT BIDS invalidation files
+                            matching_index = 0
                     else:
                         matching_index = (
                             next(index for index, line in enumerate(human_readable_lines) if issue["title"] in line) + 1
@@ -200,10 +206,7 @@ example_links_per_title = {
     for title in unique_titles
 }
 
-flat_issues_by_source = {
-    source: []
-    for source in issue_counts
-}
+flat_issues_by_source = {source: [] for source in issue_counts}
 processed_titles = []
 for source in issue_counts:
     for branch in issue_counts[source]:
@@ -214,8 +217,12 @@ for source in issue_counts:
                         {
                             "Severity": category,
                             "Title": example_links_per_title.get(title, title),
-                            "Count<br>(Unsanitized)": issue_counts[source]["unsanitized"].get(category, {}).get(title, 0),
-                            "Count<br>(Basic sanitization)": issue_counts[source]["basic_sanitization"].get(category, {}).get(title, 0),
+                            "Count<br>(Unsanitized)": issue_counts[source]["unsanitized"]
+                            .get(category, {})
+                            .get(title, 0),
+                            "Count<br>(Basic sanitization)": issue_counts[source]["basic_sanitization"]
+                            .get(category, {})
+                            .get(title, 0),
                         }
                     )
                     processed_titles.append(title)

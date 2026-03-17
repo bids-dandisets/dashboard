@@ -125,15 +125,9 @@ for dandiset in tqdm.tqdm(
 
                     if source == "bids_invalidations":
                         source_url = source_url.replace(".json", ".txt")
-                        try:
-                            matching_index = (
-                                next(index for index, line in enumerate(human_readable_lines) if issue["code"] in line)
-                                + 1
-                            )
-                        except StopIteration:
-                            # Fall back to the top of the file if no match is found
-                            # This was observed in some strangely mismatching JSON vs. TXT BIDS invalidation files
-                            matching_index = 0
+                        matching_index = (
+                            next(index for index, line in enumerate(human_readable_lines) if issue["code"] in line) + 1
+                        )
                     else:
                         matching_index = (
                             next(index for index, line in enumerate(human_readable_lines) if issue["title"] in line) + 1

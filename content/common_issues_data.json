@@ -24,22 +24,6 @@
         "TSV_INDEX_VALUE_NOT_UNIQUE": 3584
       }
     },
-    "basic_sanitization": {
-      "WARNING": {
-        "JSON_KEY_RECOMMENDED": 12,
-        "SIDECAR_KEY_RECOMMENDED": 267551,
-        "TSV_COLUMN_TYPE_REDEFINED": 33068,
-        "EVENT_ONSET_ORDER": 85,
-        "NO_AUTHORS": 1
-      },
-      "ERROR": {
-        "JSON_SCHEMA_VALIDATION_ERROR": 7512,
-        "SIDECAR_KEY_REQUIRED": 96024,
-        "TSV_VALUE_INCORRECT_TYPE": 176,
-        "PARTICIPANT_ID_MISMATCH": 1,
-        "TSV_COLUMN_MISSING": 4113,
-        "JSON_KEY_REQUIRED": 1
-      }
-    }
+    "basic_sanitization": {}
   }
 }

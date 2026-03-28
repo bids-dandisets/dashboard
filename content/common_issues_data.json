@@ -4,26 +4,7 @@
     "basic_sanitization": {}
   },
   "bids_invalidations": {
-    "unsanitized": {
-      "WARNING": {
-        "JSON_KEY_RECOMMENDED": 531,
-        "SIDECAR_KEY_RECOMMENDED": 7668,
-        "TSV_COLUMN_TYPE_REDEFINED": 4225,
-        "SUBJECT_FOLDERS": 284,
-        "NO_AUTHORS": 86,
-        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39
-      },
-      "ERROR": {
-        "TSV_VALUE_INCORRECT_TYPE": 350,
-        "INVALID_ENTITY_LABEL": 3906,
-        "JSON_KEY_REQUIRED": 86,
-        "NOT_INCLUDED": 2759,
-        "JSON_SCHEMA_VALIDATION_ERROR": 270,
-        "SIDECAR_KEY_REQUIRED": 1023,
-        "SIDECAR_WITHOUT_DATAFILE": 330,
-        "TSV_INDEX_VALUE_NOT_UNIQUE": 3584
-      }
-    },
+    "unsanitized": {},
     "basic_sanitization": {}
   }
 }

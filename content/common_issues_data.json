@@ -6,21 +6,48 @@
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        "SUBJECT_FOLDERS": 27,
-        "JSON_KEY_RECOMMENDED": 56,
-        "NO_AUTHORS": 11,
-        "TSV_COLUMN_TYPE_REDEFINED": 1450,
-        "SIDECAR_KEY_RECOMMENDED": 1800
+        "JSON_KEY_RECOMMENDED": 728,
+        "TSV_COLUMN_TYPE_REDEFINED": 39839,
+        "SIDECAR_KEY_RECOMMENDED": 82110,
+        "SUBJECT_FOLDERS": 371,
+        "NO_AUTHORS": 118,
+        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39,
+        "EVENT_ONSET_ORDER": 316
       },
       "ERROR": {
-        "JSON_SCHEMA_VALIDATION_ERROR": 16,
-        "JSON_KEY_REQUIRED": 11,
-        "TSV_VALUE_INCORRECT_TYPE": 33,
-        "NOT_INCLUDED": 160,
-        "INVALID_ENTITY_LABEL": 1792,
-        "SIDECAR_KEY_REQUIRED": 6
+        "TSV_VALUE_INCORRECT_TYPE": 1225,
+        "INVALID_ENTITY_LABEL": 20657,
+        "NOT_INCLUDED": 35921,
+        "JSON_KEY_REQUIRED": 118,
+        "PARTICIPANT_ID_MISMATCH": 1,
+        "JSON_SCHEMA_VALIDATION_ERROR": 384,
+        "SIDECAR_KEY_REQUIRED": 14187,
+        "SIDECAR_WITHOUT_DATAFILE": 346,
+        "TSV_INDEX_VALUE_NOT_UNIQUE": 3584,
+        "TSV_EQUAL_ROWS": 316,
+        "TSV_COLUMN_MISSING": 632
       }
     },
-    "basic_sanitization": {}
+    "basic_sanitization": {
+      "WARNING": {
+        "JSON_KEY_RECOMMENDED": 725,
+        "SIDECAR_KEY_RECOMMENDED": 334879,
+        "TSV_COLUMN_TYPE_REDEFINED": 66366,
+        "SUBJECT_FOLDERS": 369,
+        "EVENT_ONSET_ORDER": 436,
+        "NO_AUTHORS": 117,
+        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39
+      },
+      "ERROR": {
+        "TSV_VALUE_INCORRECT_TYPE": 642,
+        "SIDECAR_KEY_REQUIRED": 109917,
+        "JSON_KEY_REQUIRED": 117,
+        "PARTICIPANT_ID_MISMATCH": 1,
+        "JSON_SCHEMA_VALIDATION_ERROR": 384,
+        "TSV_EQUAL_ROWS": 407,
+        "TSV_COLUMN_MISSING": 814,
+        "TSV_INDEX_VALUE_NOT_UNIQUE": 13334
+      }
+    }
   }
 }

@@ -4,7 +4,23 @@
     "basic_sanitization": {}
   },
   "bids_invalidations": {
-    "unsanitized": {},
+    "unsanitized": {
+      "WARNING": {
+        "SUBJECT_FOLDERS": 27,
+        "JSON_KEY_RECOMMENDED": 56,
+        "NO_AUTHORS": 11,
+        "TSV_COLUMN_TYPE_REDEFINED": 1450,
+        "SIDECAR_KEY_RECOMMENDED": 1800
+      },
+      "ERROR": {
+        "JSON_SCHEMA_VALIDATION_ERROR": 16,
+        "JSON_KEY_REQUIRED": 11,
+        "TSV_VALUE_INCORRECT_TYPE": 33,
+        "NOT_INCLUDED": 160,
+        "INVALID_ENTITY_LABEL": 1792,
+        "SIDECAR_KEY_REQUIRED": 6
+      }
+    },
     "basic_sanitization": {}
   }
 }

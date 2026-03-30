@@ -92,14 +92,6 @@ for dandiset in tqdm.tqdm(
     repo_api_url = f"{repo_api_base_url}/{dandiset_id}"
     response = requests.get(url=repo_api_url, headers=github_auth_header)
     if response.status_code != 200:
-        row["`nwb2bids`<br>Version"] = "❗"
-        row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] = "❗"
-        row[BIDS_VALIDATION_UNSANITIZED_KEY] = "❗"
-        row["`nwb2bids`<br>Notifications<br>(Basic Sanitization)"] = "❗"
-        row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY] = "❗"
-        # row["NWB Inspection"] = "❗"  # NWB Inspections may not make sense for this repo (on existing Dandisets)
-        # row["DANDI Validation"] = "❗"  # DANDI Validation requires integration of BEP32 and others
-        table_data.append(row)
         continue
     row["Dandiset ID"] = (
         f"{dandiset_id}"

@@ -9,9 +9,6 @@ on:
         description: "Branch to clone and push updates to"
         required: false
         default: "main"
-  push:
-    branches:
-      - "copilot/**"
 
 concurrency:
   group: update-common-issues-${{ github.ref_name }}

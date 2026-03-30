@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: "Branch to clone and push updates to"
+        description: "Branch to clone and push updates to (use this instead of the default GitHub branch dropdown, which does not list copilot/** branches)"
         required: false
         default: "main"
 

@@ -13,6 +13,10 @@ on:
     branches:
       - "copilot/**"
 
+concurrency:
+  group: update-dashboard-${{ github.ref_name }}
+  cancel-in-progress: true
+
 env:
   GITHUB_TOKEN: ${{ secrets._GITHUB_API_KEY }}
 

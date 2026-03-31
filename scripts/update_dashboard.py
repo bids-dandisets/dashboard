@@ -27,6 +27,7 @@ def extract_datetime(filename):
 dashboard_directory = pathlib.Path(__file__).parent.parent
 readme_file_path = dashboard_directory / "README.md"
 full_table_file_path = dashboard_directory / "full_table.md"
+conversion_failures_file_path = dashboard_directory / "conversion_failures_table.md"
 content_directory = dashboard_directory / "content"
 content_directory.mkdir(exist_ok=True)
 table_data_file_path = content_directory / "table_data.json"
@@ -404,7 +405,7 @@ for dandiset in tqdm.tqdm(
 
 # README - Summary
 readme_lines += ["### Summary"]
-total = len(table_data)
+total = sum(1 for row in table_data if "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", ""))
 latest_version = max(
     (
         packaging.version.Version(version=(row["`nwb2bids`<br>Version"].split("-")[0].removeprefix("`v")))
@@ -418,6 +419,9 @@ latest_version = max(
 run_on_count = 0
 for row in table_data:
     if row["`nwb2bids`<br>Version"] == "❌":
+        continue
+
+    if "Session(s): 0/" in row.get("Status<br>(Unsanitized)", ""):
         continue
 
     version = (
@@ -436,23 +440,28 @@ passing_nwb2bids_unsanitized_count = sum(
     for row in table_data
     if "❌" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
     and "❗" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
+    and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 passing_nwb2bids_basic_sanitization_count = sum(
     1
     for row in table_data
     if "❌" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
     and "❗" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
+    and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 passing_bids_unsanitized_count = sum(
     1
     for row in table_data
-    if "❌" not in row[BIDS_VALIDATION_UNSANITIZED_KEY] and "❗" not in row[BIDS_VALIDATION_UNSANITIZED_KEY]
+    if "❌" not in row[BIDS_VALIDATION_UNSANITIZED_KEY]
+    and "❗" not in row[BIDS_VALIDATION_UNSANITIZED_KEY]
+    and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 passing_bids_basic_sanitization_count = sum(
     1
     for row in table_data
     if "❌" not in row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY]
     and "❗" not in row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY]
+    and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 
 if run_on_count == 0:
@@ -510,6 +519,17 @@ readme_lines += ["To see the results without any skips removed, go to the [Full 
 full_table = tabulate2.tabulate(tabular_data=table_data, headers="keys", tablefmt="github", colglobalalign="center")
 full_table_lines = full_table.splitlines()
 full_table_file_path.write_text(data="\n".join(full_table_lines), encoding="utf-8")
+
+# Conversion Failures Table
+readme_lines += ["### Conversion Failures"]
+readme_lines += [
+    "To see the datasets that failed to convert any sessions, "
+    "go to the [Conversion Failures Table](./conversion_failures_table.md)."
+]
+# full_table_lines[0] is the header row, full_table_lines[1] is the separator row
+table_header_lines = full_table_lines[:2]
+conversion_failure_lines = table_header_lines + [line for line in full_table_lines[2:] if "Session(s): 0/" in line]
+conversion_failures_file_path.write_text(data="\n".join(conversion_failure_lines), encoding="utf-8")
 
 # README - Filtered Table
 readme_lines += ["### Dandisets"]

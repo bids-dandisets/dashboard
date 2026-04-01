@@ -1,5 +1,3 @@
-❌2 Errors
-⚠️1 Suggestion
 ### Summary
 |  Latest<br>version  |  Non-failing<br>datasets  |  Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)  |  Passing<br>`nwb2bids`<br>Notifications<br>(Basic sanitization)  |
 | :-----------------: | :-----------------------: | :-------------------------------------------------------: | :--------------------------------------------------------------: |

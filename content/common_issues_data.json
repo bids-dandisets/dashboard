@@ -30,18 +30,18 @@
     },
     "basic_sanitization": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 722,
+        "JSON_KEY_RECOMMENDED": 725,
         "SIDECAR_KEY_RECOMMENDED": 334879,
         "TSV_COLUMN_TYPE_REDEFINED": 66366,
-        "SUBJECT_FOLDERS": 368,
+        "SUBJECT_FOLDERS": 369,
         "EVENT_ONSET_ORDER": 436,
-        "NO_AUTHORS": 116,
+        "NO_AUTHORS": 117,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39
       },
       "ERROR": {
         "TSV_VALUE_INCORRECT_TYPE": 642,
         "SIDECAR_KEY_REQUIRED": 109917,
-        "JSON_KEY_REQUIRED": 116,
+        "JSON_KEY_REQUIRED": 117,
         "PARTICIPANT_ID_MISMATCH": 1,
         "JSON_SCHEMA_VALIDATION_ERROR": 384,
         "TSV_EQUAL_ROWS": 407,

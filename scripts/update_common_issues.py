@@ -119,8 +119,10 @@ for dandiset in tqdm.tqdm(
                         issue["source_url"] = ""
                         continue
 
-                    source_url = url.replace(raw_content_base_url, repo_base_url + "/").replace(
-                        "/draft/", "/blob/draft/"
+                    source_url = (
+                        url.replace(raw_content_base_url, repo_base_url)
+                        .replace("/draft/", "/blob/draft/")
+                        .replace("/basic_sanitization/", "/blob/basic_sanitization/")
                     )
 
                     if source == "bids_invalidations":
@@ -189,16 +191,13 @@ unique_titles = {
     for branch in all_issues_per_source[source]
     for issue in all_issues_per_source[source][branch]
 }
-example_links_per_title = {
-    title: next(
-        f'[{title}]({issue["source_url"]})'
-        for source in all_issues_per_source
-        for branch in all_issues_per_source[source]
-        for issue in all_issues_per_source[source][branch]
-        if issue[title_key[source]] == title
-    )
-    for title in unique_titles
-}
+example_source_urls_per_title_per_branch = {branch: {} for branch in ["unsanitized", "basic_sanitization"]}
+for branch in ["unsanitized", "basic_sanitization"]:
+    for source in all_issues_per_source:
+        for issue in all_issues_per_source[source][branch]:
+            title = issue[title_key[source]]
+            if title not in example_source_urls_per_title_per_branch[branch] and issue.get("source_url"):
+                example_source_urls_per_title_per_branch[branch][title] = issue["source_url"]
 
 flat_issues_by_source = {source: [] for source in issue_counts}
 processed_titles = []
@@ -207,23 +206,47 @@ for source in issue_counts:
         for category in unique_categories:
             for title in issue_counts[source][branch].get(category, {}):
                 if title not in processed_titles:
+                    unsanitized_count = issue_counts[source]["unsanitized"].get(category, {}).get(title, 0)
+                    sanitized_count = issue_counts[source]["basic_sanitization"].get(category, {}).get(title, 0)
+                    unsanitized_url = example_source_urls_per_title_per_branch["unsanitized"].get(title)
+                    sanitized_url = example_source_urls_per_title_per_branch["basic_sanitization"].get(title)
                     flat_issues_by_source[source].append(
                         {
                             "Severity": category,
-                            "Title": example_links_per_title.get(title, title),
-                            "Count<br>(Unsanitized)": issue_counts[source]["unsanitized"]
-                            .get(category, {})
-                            .get(title, 0),
-                            "Count<br>(Basic sanitization)": issue_counts[source]["basic_sanitization"]
-                            .get(category, {})
-                            .get(title, 0),
+                            "Title": title,
+                            "Count<br>(Unsanitized)": (
+                                f"[{unsanitized_count}]({unsanitized_url})"
+                                if unsanitized_count and unsanitized_url
+                                else unsanitized_count
+                            ),
+                            "Count<br>(Basic sanitization)": (
+                                f"[{sanitized_count}]({sanitized_url})"
+                                if sanitized_count and sanitized_url
+                                else sanitized_count
+                            ),
                         }
                     )
                     processed_titles.append(title)
 
+
 # Sort lists by number of sanitized errors
+def _get_count(cell):
+    """Extract integer count from either a plain int or a Markdown link like '[334879](url)'."""
+    if isinstance(cell, str):
+        closing_bracket = cell.find("]")
+        if closing_bracket > 1:
+            try:
+                return int(cell[1:closing_bracket])
+            except ValueError:
+                return 0
+        return 0
+    return cell
+
+
 for source in flat_issues_by_source:
-    flat_issues_by_source[source].sort(key=lambda issue: issue["Count<br>(Basic sanitization)"], reverse=True)
+    flat_issues_by_source[source].sort(
+        key=lambda issue: _get_count(issue["Count<br>(Basic sanitization)"]), reverse=True
+    )
 
 markdown_table_by_source = {
     source: tabulate2.tabulate(tabular_data=flat_issues, headers="keys", tablefmt="github", colglobalalign="center")

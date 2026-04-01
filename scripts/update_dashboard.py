@@ -235,17 +235,17 @@ for dandiset in tqdm.tqdm(
                     case "WARNING" | "INFO" | "DEBUG":
                         notifications_by_severity["SUGGESTION"].append(notification)
 
-            nwb2bids_notifications_lines = []
+            _notification_parts = []
             if len(errors := notifications_by_severity["ERROR"]) > 0:
                 plural = "s" if (count := len(errors)) > 1 else ""
-                nwb2bids_notifications_lines.append(f"❌{count} Error{plural}")
+                _notification_parts.append(f"❌{count} Error{plural}")
             if len(criticals := notifications_by_severity["CRITICAL"]) > 0:
                 plural = "s" if (count := len(criticals)) > 1 else ""
-                nwb2bids_notifications_lines.append(f"🔶{count} Critical{plural}")
+                _notification_parts.append(f"🔶{count} Critical{plural}")
             if len(suggestions := notifications_by_severity["SUGGESTION"]) > 0:
                 plural = "s" if (count := len(suggestions)) > 1 else ""
-                nwb2bids_notifications_lines.append(f"⚠️{count} Suggestion{plural}")
-            nwb2bids_notifications_text = "<br>".join(nwb2bids_notifications_lines)
+                _notification_parts.append(f"⚠️{count} Suggestion{plural}")
+            nwb2bids_notifications_text = "<br>".join(_notification_parts)
 
         row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] = (
             f"[{nwb2bids_notifications_text}]({repo_base_url}/{dandiset_id}/blob/draft/.nwb2bids/{notifications_filename})"
@@ -359,17 +359,17 @@ for dandiset in tqdm.tqdm(
                     case "WARNING" | "INFO" | "DEBUG":
                         notifications_by_severity["SUGGESTION"].append(notification)
 
-            nwb2bids_notifications_lines = []
+            _notification_parts = []
             if len(errors := notifications_by_severity["ERROR"]) > 0:
                 plural = "s" if (count := len(errors)) > 1 else ""
-                nwb2bids_notifications_lines.append(f"❌{count} Error{plural}")
+                _notification_parts.append(f"❌{count} Error{plural}")
             if len(criticals := notifications_by_severity["CRITICAL"]) > 0:
                 plural = "s" if (count := len(criticals)) > 1 else ""
-                nwb2bids_notifications_lines.append(f"🔶{count} Critical{plural}")
+                _notification_parts.append(f"🔶{count} Critical{plural}")
             if len(suggestions := notifications_by_severity["SUGGESTION"]) > 0:
                 plural = "s" if (count := len(suggestions)) > 1 else ""
-                nwb2bids_notifications_lines.append(f"⚠️{count} Suggestion{plural}")
-            nwb2bids_notifications_text = "<br>".join(nwb2bids_notifications_lines)
+                _notification_parts.append(f"⚠️{count} Suggestion{plural}")
+            nwb2bids_notifications_text = "<br>".join(_notification_parts)
 
         blob_url = f"{repo_base_url}/{dandiset_id}/blob/basic_sanitization/.nwb2bids/{notifications_filename}"
         row["`nwb2bids`<br>Notifications<br>(Basic Sanitization)"] = f"[{nwb2bids_notifications_text}]({blob_url})"

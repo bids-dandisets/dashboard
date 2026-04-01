@@ -27,7 +27,7 @@ def extract_datetime(filename):
 dashboard_directory = pathlib.Path(__file__).parent.parent
 readme_file_path = dashboard_directory / "README.md"
 full_table_file_path = dashboard_directory / "full_table.md"
-conversion_failures_file_path = dashboard_directory / "conversion_failures_table.md"
+conversion_failures_file_path = dashboard_directory / "failing_sessions_table.md"
 content_directory = dashboard_directory / "content"
 content_directory.mkdir(exist_ok=True)
 table_data_file_path = content_directory / "table_data.json"
@@ -521,15 +521,32 @@ full_table_lines = full_table.splitlines()
 full_table_file_path.write_text(data="\n".join(full_table_lines), encoding="utf-8")
 
 # Conversion Failures Table
-readme_lines += ["### Conversion Failures"]
+readme_lines += ["### Failing Sessions"]
 readme_lines += [
     "To see the datasets that failed to convert any sessions, "
-    "go to the [Conversion Failures Table](./conversion_failures_table.md)."
+    "go to the [Failing Sessions Table](./failing_sessions_table.md)."
 ]
 # full_table_lines[0] is the header row, full_table_lines[1] is the separator row
 table_header_lines = full_table_lines[:2]
+failing_session_rows = [row for row in table_data if "Session(s): 0/" in row.get("Status<br>(Unsanitized)", "")]
 conversion_failure_lines = table_header_lines + [line for line in full_table_lines[2:] if "Session(s): 0/" in line]
-conversion_failures_file_path.write_text(data="\n".join(conversion_failure_lines), encoding="utf-8")
+
+# Build summary table for failing sessions
+failing_total = len(failing_session_rows)
+failing_ephys_count = sum(1 for row in failing_session_rows if "ephys" in row.get("Dandiset<br>Modalities", ""))
+failing_sessions_summary = [
+    {
+        "Total<br>Failing<br>Sessions": failing_total,
+        "Failing<br>ephys<br>Sessions": failing_ephys_count,
+    }
+]
+failing_sessions_summary_table = tabulate2.tabulate(
+    tabular_data=failing_sessions_summary, headers="keys", tablefmt="github", colglobalalign="center"
+)
+failing_sessions_file_lines = (
+    ["# Failing Sessions", ""] + failing_sessions_summary_table.splitlines() + [""] + conversion_failure_lines
+)
+conversion_failures_file_path.write_text(data="\n".join(failing_sessions_file_lines), encoding="utf-8")
 
 # README - Filtered Table
 readme_lines += ["### Dandisets"]

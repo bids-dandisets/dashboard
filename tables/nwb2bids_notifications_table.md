@@ -1,3 +1,5 @@
+# `nwb2bids` Notifications
+A table summarizing the `nwb2bids` notification results for all Dandisets.
 ### Summary
 |  Latest<br>version  |  Non-failing<br>datasets  |  Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)  |  Passing<br>`nwb2bids`<br>Notifications<br>(Basic sanitization)  |
 | :-----------------: | :-----------------------: | :-------------------------------------------------------: | :--------------------------------------------------------------: |

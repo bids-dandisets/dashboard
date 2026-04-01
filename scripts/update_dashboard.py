@@ -94,6 +94,16 @@ BIDS_VALIDATION_COLUMNS = [
     BIDS_VALIDATION_UNSANITIZED_KEY,
     BIDS_VALIDATION_BASIC_SANITIZATION_KEY,
 ]
+FULL_TABLE_COLUMNS = [
+    "Dandiset ID",
+    "Dandiset<br>Modalities",
+    "`nwb2bids`<br>Version",
+    "Status<br>(Unsanitized)",
+    "`nwb2bids`<br>Notifications<br>(Unsanitized)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)",
+    BIDS_VALIDATION_UNSANITIZED_KEY,
+    BIDS_VALIDATION_BASIC_SANITIZATION_KEY,
+]
 
 
 def project_columns(data, columns):
@@ -546,18 +556,13 @@ bids_validation_table = tabulate2.tabulate(
 )
 nwb2bids_table_lines = nwb2bids_table.splitlines()
 bids_validation_table_lines = bids_validation_table.splitlines()
-full_table_file_content = "\n".join(
-    [
-        "## `nwb2bids` Notifications",
-        "",
-        *nwb2bids_table_lines,
-        "",
-        "## BIDS Validations",
-        "",
-        *bids_validation_table_lines,
-    ]
+full_table = tabulate2.tabulate(
+    tabular_data=project_columns(table_data, FULL_TABLE_COLUMNS),
+    headers="keys",
+    tablefmt="github",
+    colglobalalign="center",
 )
-full_table_file_path.write_text(data=full_table_file_content, encoding="utf-8")
+full_table_file_path.write_text(data=full_table, encoding="utf-8")
 
 # Conversion Failures Table
 readme_lines += ["### Failing Sessions"]

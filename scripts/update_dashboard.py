@@ -542,16 +542,27 @@ for row in failing_session_rows:
     key = " + ".join(tags) if tags else "(none)"
     modality_counts[key] = modality_counts.get(key, 0) + 1
 
-failing_sessions_summary = [
-    {
-        "Modality Tag(s)": modality,
-        "Count": count,
-        "% of Failing": f"{100 * count / failing_total:.1f}%" if failing_total else "N/A",
-    }
-    for modality, count in sorted(modality_counts.items(), key=lambda x: -x[1])
+sorted_modalities = sorted(modality_counts.items(), key=lambda x: -x[1])
+cumulative = 0.0
+modality_labels: list[str] = []
+counts: list[int] = []
+pct_of_failing: list[str] = []
+cumulative_pct: list[str] = []
+for modality, count in sorted_modalities:
+    cumulative += count
+    modality_labels.append(modality)
+    counts.append(count)
+    pct_of_failing.append(f"{100 * count / failing_total:.1f}%" if failing_total else "N/A")
+    cumulative_pct.append(f"{100 * cumulative / failing_total:.1f}%" if failing_total else "N/A")
+
+# Transpose: each modality combination is a column; rows are Count, % of Failing, Cumulative %
+transposed_summary = [
+    {"Metric": "Count", **dict(zip(modality_labels, counts))},
+    {"Metric": "% of Failing", **dict(zip(modality_labels, pct_of_failing))},
+    {"Metric": "Cumulative %", **dict(zip(modality_labels, cumulative_pct))},
 ]
 failing_sessions_summary_table = tabulate2.tabulate(
-    tabular_data=failing_sessions_summary, headers="keys", tablefmt="github", colglobalalign="center"
+    tabular_data=transposed_summary, headers="keys", tablefmt="github", colglobalalign="center"
 )
 failing_sessions_file_lines = (
     ["# Failing Sessions", ""] + failing_sessions_summary_table.splitlines() + [""] + conversion_failure_lines

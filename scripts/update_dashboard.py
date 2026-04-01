@@ -472,12 +472,14 @@ passing_bids_basic_sanitization_count = sum(
     and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 
+overall_total = len(table_data)
 bids_summary_entry = {
     "Latest<br>version": latest_version,
-    "Non-failing<br>datasets": total,
+    "Non-failing<br>datasets": (
+        f"{total}/{overall_total} ({total / overall_total * 100:.1f}%)" if overall_total else "N/A"
+    ),
     f"Passing<br>{BIDS_VALIDATION_UNSANITIZED_KEY}": (
-        f"{passing_bids_unsanitized_count}/{total} "
-        f"({passing_bids_unsanitized_count / total * 100:0.1f}%)"
+        f"{passing_bids_unsanitized_count}/{total} " f"({passing_bids_unsanitized_count / total * 100:0.1f}%)"
     ),
     f"Passing<br>{BIDS_VALIDATION_BASIC_SANITIZATION_KEY}": (
         f"{passing_bids_basic_sanitization_count}/{total} "
@@ -494,10 +496,11 @@ readme_lines += bids_summary_table.splitlines()
 nwb2bids_notifications_lines += ["### Summary"]
 nwb2bids_summary_entry = {
     "Latest<br>version": latest_version,
-    "Non-failing<br>datasets": total,
+    "Non-failing<br>datasets": (
+        f"{total}/{overall_total} ({total / overall_total * 100:.1f}%)" if overall_total else "N/A"
+    ),
     "Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)": (
-        f"{passing_nwb2bids_unsanitized_count}/{total} "
-        f"({passing_nwb2bids_unsanitized_count / total * 100:0.1f}%)"
+        f"{passing_nwb2bids_unsanitized_count}/{total} " f"({passing_nwb2bids_unsanitized_count / total * 100:0.1f}%)"
     ),
     "Passing<br>`nwb2bids`<br>Notifications<br>(Basic sanitization)": (
         f"{passing_nwb2bids_basic_sanitization_count}/{total} "

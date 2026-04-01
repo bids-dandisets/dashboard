@@ -3,7 +3,7 @@ A simple dashboard for displaying the successes or failures of running `nwb2bids
 ### Summary
 |  Latest<br>version  |  Non-failing<br>datasets  |  Passing<br>BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)  |  Passing<br>BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)  |
 | :-----------------: | :-----------------------: | :-------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
-|       0.12.0        |            123            |                                                    19/123 (15.4%)                                                     |                                                        54/123 (43.9%)                                                        |
+|       0.12.0        |         123/492 (25.0%)         |                                                    19/123 (15.4%)                                                     |                                                        54/123 (43.9%)                                                        |
 ### Common Issues
 To see a table summarizing current issues by commonality of occurrence, go to the [Common Issues Table](./common_issues_table.md).
 ### `nwb2bids` Notifications

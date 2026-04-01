@@ -27,6 +27,7 @@ def extract_datetime(filename):
 dashboard_directory = pathlib.Path(__file__).parent.parent
 readme_file_path = dashboard_directory / "README.md"
 full_table_file_path = dashboard_directory / "full_table.md"
+nwb2bids_notifications_file_path = dashboard_directory / "nwb2bids_notifications_table.md"
 conversion_failures_file_path = dashboard_directory / "failing_sessions_table.md"
 content_directory = dashboard_directory / "content"
 content_directory.mkdir(exist_ok=True)
@@ -39,6 +40,10 @@ github_auth_header = {"Authorization": f"token {GITHUB_TOKEN}"}
 readme_lines = [
     "# BIDS-Dandisets Dashboard",
     "A simple dashboard for displaying the successes or failures of running `nwb2bids` on all Dandisets.",
+]
+nwb2bids_notifications_lines = [
+    "# `nwb2bids` Notifications",
+    "A table summarizing the `nwb2bids` notification results for all Dandisets.",
 ]
 table_data = []
 
@@ -425,7 +430,7 @@ for dandiset in tqdm.tqdm(
 
     table_data.append(row)
 
-# README - Summary
+# README (BIDS Validations) - Summary
 readme_lines += ["### Summary"]
 total = sum(1 for row in table_data if "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", ""))
 latest_version = max(
@@ -467,21 +472,12 @@ passing_bids_basic_sanitization_count = sum(
     and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 
-_key1 = "Passing<br>`nwb2bids`<br>Notifications<br>(Basic sanitization)"
-summary_entry = {
+bids_summary_entry = {
     "Latest<br>version": latest_version,
     "Non-failing<br>datasets": total,
-    "Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)": (
-        f"{passing_nwb2bids_unsanitized_count}/{total} "
-        f"({passing_nwb2bids_unsanitized_count / total * 100:0.1f}%)"
-    ),
     f"Passing<br>{BIDS_VALIDATION_UNSANITIZED_KEY}": (
         f"{passing_bids_unsanitized_count}/{total} "
         f"({passing_bids_unsanitized_count / total * 100:0.1f}%)"
-    ),
-    _key1: (
-        f"{passing_nwb2bids_basic_sanitization_count}/{total} "
-        f"({passing_nwb2bids_basic_sanitization_count / total * 100:0.1f}%)"
     ),
     f"Passing<br>{BIDS_VALIDATION_BASIC_SANITIZATION_KEY}": (
         f"{passing_bids_basic_sanitization_count}/{total} "
@@ -489,18 +485,43 @@ summary_entry = {
     ),
 }
 
-summary_data = [summary_entry]
-summary_table = tabulate2.tabulate(
-    tabular_data=summary_data, headers="keys", tablefmt="github", colglobalalign="center"
+bids_summary_table = tabulate2.tabulate(
+    tabular_data=[bids_summary_entry], headers="keys", tablefmt="github", colglobalalign="center"
 )
-summary_table_lines = summary_table.splitlines()
-readme_lines += summary_table_lines
+readme_lines += bids_summary_table.splitlines()
+
+# nwb2bids Notifications file - Summary
+nwb2bids_notifications_lines += ["### Summary"]
+nwb2bids_summary_entry = {
+    "Latest<br>version": latest_version,
+    "Non-failing<br>datasets": total,
+    "Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)": (
+        f"{passing_nwb2bids_unsanitized_count}/{total} "
+        f"({passing_nwb2bids_unsanitized_count / total * 100:0.1f}%)"
+    ),
+    "Passing<br>`nwb2bids`<br>Notifications<br>(Basic sanitization)": (
+        f"{passing_nwb2bids_basic_sanitization_count}/{total} "
+        f"({passing_nwb2bids_basic_sanitization_count / total * 100:0.1f}%)"
+    ),
+}
+
+nwb2bids_summary_table = tabulate2.tabulate(
+    tabular_data=[nwb2bids_summary_entry], headers="keys", tablefmt="github", colglobalalign="center"
+)
+nwb2bids_notifications_lines += nwb2bids_summary_table.splitlines()
 
 # README - Common Issues
 readme_lines += ["### Common Issues"]
 readme_lines += [
     "To see a table summarizing current issues by commonality of occurrence, "
     "go to the [Common Issues Table](./common_issues_table.md)."
+]
+
+# README - nwb2bids Notifications
+readme_lines += ["### `nwb2bids` Notifications"]
+readme_lines += [
+    "To see the `nwb2bids` notification results for all Dandisets, "
+    "go to the [`nwb2bids` Notifications Table](./nwb2bids_notifications_table.md)."
 ]
 
 # README - Full Table
@@ -596,17 +617,8 @@ failing_sessions_file_content = "\n".join(
 )
 conversion_failures_file_path.write_text(data=failing_sessions_file_content, encoding="utf-8")
 
-# README - Filtered Table
+# README - Filtered Table (BIDS Validations only)
 readme_lines += ["### Dandisets"]
-readme_lines += ["#### `nwb2bids` Notifications"]
-unskipped_nwb2bids_lines = [
-    line
-    for line in nwb2bids_table_lines
-    if "Skipped" not in line and "Session(s): 0/" not in line and line.count("Missing") < 3
-]
-readme_lines += unskipped_nwb2bids_lines
-readme_lines += [""]
-readme_lines += ["#### BIDS Validations"]
 unskipped_bids_validation_lines = [
     line
     for line in bids_validation_table_lines
@@ -615,6 +627,16 @@ unskipped_bids_validation_lines = [
 readme_lines += unskipped_bids_validation_lines
 
 readme_file_path.write_text(data="\n".join(readme_lines), encoding="utf-8")
+
+# nwb2bids Notifications file - Filtered Table
+nwb2bids_notifications_lines += ["### Dandisets"]
+unskipped_nwb2bids_lines = [
+    line
+    for line in nwb2bids_table_lines
+    if "Skipped" not in line and "Session(s): 0/" not in line and line.count("Missing") < 3
+]
+nwb2bids_notifications_lines += unskipped_nwb2bids_lines
+nwb2bids_notifications_file_path.write_text(data="\n".join(nwb2bids_notifications_lines), encoding="utf-8")
 passing_rows = [row for row in table_data if "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")]
 with table_data_file_path.open(mode="w") as file_stream:
     json.dump(obj=passing_rows, fp=file_stream, indent=2)

@@ -26,13 +26,15 @@ def extract_datetime(filename):
 
 dashboard_directory = pathlib.Path(__file__).parent.parent
 readme_file_path = dashboard_directory / "README.md"
-full_table_file_path = dashboard_directory / "full_table.md"
-nwb2bids_notifications_file_path = dashboard_directory / "nwb2bids_notifications_table.md"
-conversion_failures_file_path = dashboard_directory / "failing_sessions_table.md"
-content_directory = dashboard_directory / "content"
-content_directory.mkdir(exist_ok=True)
-table_data_file_path = content_directory / "table_data.json"
-failing_sessions_data_file_path = content_directory / "failing_sessions_data.json"
+tables_directory = dashboard_directory / "tables"
+tables_directory.mkdir(exist_ok=True)
+full_table_file_path = tables_directory / "full_table.md"
+nwb2bids_notifications_file_path = tables_directory / "nwb2bids_notifications_table.md"
+conversion_failures_file_path = tables_directory / "failing_sessions_table.md"
+data_directory = dashboard_directory / "data"
+data_directory.mkdir(exist_ok=True)
+table_data_file_path = data_directory / "table_data.json"
+failing_sessions_data_file_path = data_directory / "failing_sessions_data.json"
 
 client = dandi.dandiapi.DandiAPIClient()
 github_auth_header = {"Authorization": f"token {GITHUB_TOKEN}"}
@@ -517,19 +519,19 @@ nwb2bids_notifications_lines += nwb2bids_summary_table.splitlines()
 readme_lines += ["### Common Issues"]
 readme_lines += [
     "To see a table summarizing current issues by commonality of occurrence, "
-    "go to the [Common Issues Table](./common_issues_table.md)."
+    "go to the [Common Issues Table](./tables/common_issues_table.md)."
 ]
 
 # README - nwb2bids Notifications
 readme_lines += ["### `nwb2bids` Notifications"]
 readme_lines += [
     "To see the `nwb2bids` notification results for all Dandisets, "
-    "go to the [`nwb2bids` Notifications Table](./nwb2bids_notifications_table.md)."
+    "go to the [`nwb2bids` Notifications Table](./tables/nwb2bids_notifications_table.md)."
 ]
 
 # README - Full Table
 readme_lines += ["### Full Table"]
-readme_lines += ["To see the results without any skips removed, go to the [Full Table](./full_table.md)."]
+readme_lines += ["To see the results without any skips removed, go to the [Full Table](./tables/full_table.md)."]
 nwb2bids_table = tabulate2.tabulate(
     tabular_data=project_columns(table_data, NWB2BIDS_NOTIFICATIONS_COLUMNS),
     headers="keys",
@@ -561,7 +563,7 @@ full_table_file_path.write_text(data=full_table_file_content, encoding="utf-8")
 readme_lines += ["### Failing Sessions"]
 readme_lines += [
     "To see the datasets that failed to convert any sessions, "
-    "go to the [Failing Sessions Table](./failing_sessions_table.md)."
+    "go to the [Failing Sessions Table](./tables/failing_sessions_table.md)."
 ]
 failing_session_rows = [row for row in table_data if "Session(s): 0/" in row.get("Status<br>(Unsanitized)", "")]
 nwb2bids_failing_lines = nwb2bids_table_lines[:2] + [

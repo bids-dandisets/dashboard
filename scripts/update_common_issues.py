@@ -15,10 +15,12 @@ if GITHUB_TOKEN is None:
     raise ValueError(message)
 
 dashboard_directory = pathlib.Path(__file__).parent.parent
-common_issues_table_file_path = dashboard_directory / "common_issues_table.md"
-content_directory = dashboard_directory / "content"
-content_directory.mkdir(exist_ok=True)
-common_issues_data_file_path = content_directory / "common_issues_data.json"
+tables_directory = dashboard_directory / "tables"
+tables_directory.mkdir(exist_ok=True)
+common_issues_table_file_path = tables_directory / "common_issues_table.md"
+data_directory = dashboard_directory / "data"
+data_directory.mkdir(exist_ok=True)
+common_issues_data_file_path = data_directory / "common_issues_data.json"
 
 client = dandi.dandiapi.DandiAPIClient()
 GITHUB_AUTH_HEADER = {"Authorization": f"token {GITHUB_TOKEN}"}

@@ -27,9 +27,11 @@ def extract_datetime(filename):
 dashboard_directory = pathlib.Path(__file__).parent.parent
 readme_file_path = dashboard_directory / "README.md"
 full_table_file_path = dashboard_directory / "full_table.md"
+conversion_failures_file_path = dashboard_directory / "failing_sessions_table.md"
 content_directory = dashboard_directory / "content"
 content_directory.mkdir(exist_ok=True)
 table_data_file_path = content_directory / "table_data.json"
+failing_sessions_data_file_path = content_directory / "failing_sessions_data.json"
 
 client = dandi.dandiapi.DandiAPIClient()
 github_auth_header = {"Authorization": f"token {GITHUB_TOKEN}"}
@@ -404,7 +406,7 @@ for dandiset in tqdm.tqdm(
 
 # README - Summary
 readme_lines += ["### Summary"]
-total = len(table_data)
+total = sum(1 for row in table_data if "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", ""))
 latest_version = max(
     (
         packaging.version.Version(version=(row["`nwb2bids`<br>Version"].split("-")[0].removeprefix("`v")))
@@ -415,80 +417,56 @@ latest_version = max(
     if row["`nwb2bids`<br>Version"] != "❌"
 )
 
-run_on_count = 0
-for row in table_data:
-    if row["`nwb2bids`<br>Version"] == "❌":
-        continue
-
-    version = (
-        packaging.version.Version(version=row["`nwb2bids`<br>Version"].split("-")[0].removeprefix("`v"))
-        if "❗" not in row["`nwb2bids`<br>Version"]
-        else packaging.version.Version("0.0.0")
-    )
-    if version != latest_version:
-        continue
-
-    if row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] == "Skipped (already BIDS)" or "BIDS" in row["Dandiset ID"]:
-        run_on_count += 1
-
 passing_nwb2bids_unsanitized_count = sum(
     1
     for row in table_data
     if "❌" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
     and "❗" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
+    and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 passing_nwb2bids_basic_sanitization_count = sum(
     1
     for row in table_data
     if "❌" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
     and "❗" not in row["`nwb2bids`<br>Notifications<br>(Unsanitized)"]
+    and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 passing_bids_unsanitized_count = sum(
     1
     for row in table_data
-    if "❌" not in row[BIDS_VALIDATION_UNSANITIZED_KEY] and "❗" not in row[BIDS_VALIDATION_UNSANITIZED_KEY]
+    if "❌" not in row[BIDS_VALIDATION_UNSANITIZED_KEY]
+    and "❗" not in row[BIDS_VALIDATION_UNSANITIZED_KEY]
+    and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 passing_bids_basic_sanitization_count = sum(
     1
     for row in table_data
     if "❌" not in row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY]
     and "❗" not in row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY]
+    and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 
-if run_on_count == 0:
-    nwb2bids_inspection_unsanitized_summary_text = (
-        f"{passing_nwb2bids_unsanitized_count}/{run_on_count} "
+_key1 = "Passing<br>`nwb2bids`<br>Notifications<br>(Basic sanitization)"
+summary_entry = {
+    "Latest<br>version": latest_version,
+    "Non-failing<br>datasets": total,
+    "Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)": (
+        f"{passing_nwb2bids_unsanitized_count}/{total} "
         f"({passing_nwb2bids_unsanitized_count / total * 100:0.1f}%)"
-    )
-    summary_entry = {
-        BIDS_VALIDATION_UNSANITIZED_KEY: (
-            f"{passing_bids_unsanitized_count}/{run_on_count} ({passing_bids_unsanitized_count / total * 100:0.1f}%)"
-        ),
-    }
-else:
-    nwb2bids_inspection_unsanitized_summary_text = (
-        f"{passing_nwb2bids_unsanitized_count}/{run_on_count} "
-        f"({passing_nwb2bids_unsanitized_count / run_on_count * 100:0.1f}%)"
-    )
-    nwb2bids_inspection_basic_sanitization_summary_text = (
-        f"{passing_nwb2bids_basic_sanitization_count}/{run_on_count} "
-        f"({passing_nwb2bids_basic_sanitization_count / run_on_count * 100:0.1f}%)"
-    )
-    _key1 = "Passing<br>`nwb2bids`<br>Notifications<br>(Basic sanitization)"
-    summary_entry = {
-        "Latest<br>version": latest_version,
-        "Run on<br>latest<br>version": f"{run_on_count}/{total} ({run_on_count / total * 100:0.1f}%)",
-        "Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)": nwb2bids_inspection_unsanitized_summary_text,
-        f"Passing<br>{BIDS_VALIDATION_UNSANITIZED_KEY}": (
-            f"{passing_bids_unsanitized_count}/{run_on_count} "
-            f"({passing_bids_unsanitized_count / run_on_count * 100:0.1f}%)"
-        ),
-        _key1: nwb2bids_inspection_basic_sanitization_summary_text,
-        f"Passing<br>{BIDS_VALIDATION_BASIC_SANITIZATION_KEY}": (
-            f"{passing_bids_basic_sanitization_count}/{run_on_count} "
-            f"({passing_bids_basic_sanitization_count / run_on_count * 100:0.1f}%)"
-        ),
-    }
+    ),
+    f"Passing<br>{BIDS_VALIDATION_UNSANITIZED_KEY}": (
+        f"{passing_bids_unsanitized_count}/{total} "
+        f"({passing_bids_unsanitized_count / total * 100:0.1f}%)"
+    ),
+    _key1: (
+        f"{passing_nwb2bids_basic_sanitization_count}/{total} "
+        f"({passing_nwb2bids_basic_sanitization_count / total * 100:0.1f}%)"
+    ),
+    f"Passing<br>{BIDS_VALIDATION_BASIC_SANITIZATION_KEY}": (
+        f"{passing_bids_basic_sanitization_count}/{total} "
+        f"({passing_bids_basic_sanitization_count / total * 100:0.1f}%)"
+    ),
+}
 
 summary_data = [summary_entry]
 summary_table = tabulate2.tabulate(
@@ -511,13 +489,66 @@ full_table = tabulate2.tabulate(tabular_data=table_data, headers="keys", tablefm
 full_table_lines = full_table.splitlines()
 full_table_file_path.write_text(data="\n".join(full_table_lines), encoding="utf-8")
 
+# Conversion Failures Table
+readme_lines += ["### Failing Sessions"]
+readme_lines += [
+    "To see the datasets that failed to convert any sessions, "
+    "go to the [Failing Sessions Table](./failing_sessions_table.md)."
+]
+# full_table_lines[0] is the header row, full_table_lines[1] is the separator row
+table_header_lines = full_table_lines[:2]
+failing_session_rows = [row for row in table_data if "Session(s): 0/" in row.get("Status<br>(Unsanitized)", "")]
+conversion_failure_lines = table_header_lines + [line for line in full_table_lines[2:] if "Session(s): 0/" in line]
+
+# Build summary table for failing sessions by modality combination
+failing_total = len(failing_session_rows)
+modality_counts: dict[str, int] = {}
+for row in failing_session_rows:
+    raw_modalities = row.get("Dandiset<br>Modalities", "")
+    # Normalize tag order so "ephys<br>beh" and "beh<br>ephys" are the same bucket
+    tags = sorted(tag.strip() for tag in raw_modalities.split("<br>") if tag.strip())
+    key = " + ".join(tags) if tags else "(none)"
+    modality_counts[key] = modality_counts.get(key, 0) + 1
+
+sorted_modalities = sorted(modality_counts.items(), key=lambda x: -x[1])
+cumulative = 0.0
+modality_labels: list[str] = []
+counts: list[int] = []
+pct_of_failing: list[str] = []
+cumulative_pct: list[str] = []
+for modality, count in sorted_modalities:
+    cumulative += count
+    modality_labels.append(modality)
+    counts.append(count)
+    pct_of_failing.append(f"{100 * count / failing_total:.1f}%" if failing_total else "N/A")
+    cumulative_pct.append(f"{100 * cumulative / failing_total:.1f}%" if failing_total else "N/A")
+
+# Transpose: each modality combination is a column; rows are Count, % of Failing, Cumulative %
+transposed_summary = [
+    {"Metric": "Count", **dict(zip(modality_labels, counts))},
+    {"Metric": "% of Failing", **dict(zip(modality_labels, pct_of_failing))},
+    {"Metric": "Cumulative %", **dict(zip(modality_labels, cumulative_pct))},
+]
+failing_sessions_summary_table = tabulate2.tabulate(
+    tabular_data=transposed_summary, headers="keys", tablefmt="github", colglobalalign="center"
+)
+failing_sessions_file_lines = (
+    ["# Failing Sessions", ""] + failing_sessions_summary_table.splitlines() + [""] + conversion_failure_lines
+)
+conversion_failures_file_path.write_text(data="\n".join(failing_sessions_file_lines), encoding="utf-8")
+
 # README - Filtered Table
 readme_lines += ["### Dandisets"]
 unskipped_lines = [
-    line for line in full_table_lines if "Skipped" not in line and "0/0" not in line and line.count("Missing") < 3
+    line
+    for line in full_table_lines
+    if "Skipped" not in line and "Session(s): 0/" not in line and line.count("Missing") < 3
 ]
 readme_lines += unskipped_lines
 
 readme_file_path.write_text(data="\n".join(readme_lines), encoding="utf-8")
+passing_rows = [row for row in table_data if "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")]
 with table_data_file_path.open(mode="w") as file_stream:
-    json.dump(obj=table_data, fp=file_stream, indent=2)
+    json.dump(obj=passing_rows, fp=file_stream, indent=2)
+with failing_sessions_data_file_path.open(mode="w") as file_stream:
+    json.dump(obj=failing_session_rows, fp=file_stream, indent=2)

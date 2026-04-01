@@ -417,25 +417,6 @@ latest_version = max(
     if row["`nwb2bids`<br>Version"] != "❌"
 )
 
-run_on_count = 0
-for row in table_data:
-    if row["`nwb2bids`<br>Version"] == "❌":
-        continue
-
-    if "Session(s): 0/" in row.get("Status<br>(Unsanitized)", ""):
-        continue
-
-    version = (
-        packaging.version.Version(version=row["`nwb2bids`<br>Version"].split("-")[0].removeprefix("`v"))
-        if "❗" not in row["`nwb2bids`<br>Version"]
-        else packaging.version.Version("0.0.0")
-    )
-    if version != latest_version:
-        continue
-
-    if row["`nwb2bids`<br>Notifications<br>(Unsanitized)"] == "Skipped (already BIDS)" or "BIDS" in row["Dandiset ID"]:
-        run_on_count += 1
-
 passing_nwb2bids_unsanitized_count = sum(
     1
     for row in table_data
@@ -465,40 +446,27 @@ passing_bids_basic_sanitization_count = sum(
     and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 
-if run_on_count == 0:
-    nwb2bids_inspection_unsanitized_summary_text = (
-        f"{passing_nwb2bids_unsanitized_count}/{run_on_count} "
+_key1 = "Passing<br>`nwb2bids`<br>Notifications<br>(Basic sanitization)"
+summary_entry = {
+    "Latest<br>version": latest_version,
+    "Non-failing<br>datasets": total,
+    "Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)": (
+        f"{passing_nwb2bids_unsanitized_count}/{total} "
         f"({passing_nwb2bids_unsanitized_count / total * 100:0.1f}%)"
-    )
-    summary_entry = {
-        BIDS_VALIDATION_UNSANITIZED_KEY: (
-            f"{passing_bids_unsanitized_count}/{run_on_count} ({passing_bids_unsanitized_count / total * 100:0.1f}%)"
-        ),
-    }
-else:
-    nwb2bids_inspection_unsanitized_summary_text = (
-        f"{passing_nwb2bids_unsanitized_count}/{run_on_count} "
-        f"({passing_nwb2bids_unsanitized_count / run_on_count * 100:0.1f}%)"
-    )
-    nwb2bids_inspection_basic_sanitization_summary_text = (
-        f"{passing_nwb2bids_basic_sanitization_count}/{run_on_count} "
-        f"({passing_nwb2bids_basic_sanitization_count / run_on_count * 100:0.1f}%)"
-    )
-    _key1 = "Passing<br>`nwb2bids`<br>Notifications<br>(Basic sanitization)"
-    summary_entry = {
-        "Latest<br>version": latest_version,
-        "Run on<br>latest<br>version": f"{run_on_count}/{total} ({run_on_count / total * 100:0.1f}%)",
-        "Passing<br>`nwb2bids`<br>Notifications<br>(Unsanitized)": nwb2bids_inspection_unsanitized_summary_text,
-        f"Passing<br>{BIDS_VALIDATION_UNSANITIZED_KEY}": (
-            f"{passing_bids_unsanitized_count}/{run_on_count} "
-            f"({passing_bids_unsanitized_count / run_on_count * 100:0.1f}%)"
-        ),
-        _key1: nwb2bids_inspection_basic_sanitization_summary_text,
-        f"Passing<br>{BIDS_VALIDATION_BASIC_SANITIZATION_KEY}": (
-            f"{passing_bids_basic_sanitization_count}/{run_on_count} "
-            f"({passing_bids_basic_sanitization_count / run_on_count * 100:0.1f}%)"
-        ),
-    }
+    ),
+    f"Passing<br>{BIDS_VALIDATION_UNSANITIZED_KEY}": (
+        f"{passing_bids_unsanitized_count}/{total} "
+        f"({passing_bids_unsanitized_count / total * 100:0.1f}%)"
+    ),
+    _key1: (
+        f"{passing_nwb2bids_basic_sanitization_count}/{total} "
+        f"({passing_nwb2bids_basic_sanitization_count / total * 100:0.1f}%)"
+    ),
+    f"Passing<br>{BIDS_VALIDATION_BASIC_SANITIZATION_KEY}": (
+        f"{passing_bids_basic_sanitization_count}/{total} "
+        f"({passing_bids_basic_sanitization_count / total * 100:0.1f}%)"
+    ),
+}
 
 summary_data = [summary_entry]
 summary_table = tabulate2.tabulate(

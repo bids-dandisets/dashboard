@@ -71,6 +71,27 @@ BIDS_VALIDATION_BASIC_SANITIZATION_KEY = (
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)"
 )
 
+NWB2BIDS_NOTIFICATIONS_COLUMNS = [
+    "Dandiset ID",
+    "Dandiset<br>Modalities",
+    "`nwb2bids`<br>Version",
+    "Status<br>(Unsanitized)",
+    "`nwb2bids`<br>Notifications<br>(Unsanitized)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)",
+]
+BIDS_VALIDATION_COLUMNS = [
+    "Dandiset ID",
+    "Dandiset<br>Modalities",
+    "`nwb2bids`<br>Version",
+    "Status<br>(Unsanitized)",
+    BIDS_VALIDATION_UNSANITIZED_KEY,
+    BIDS_VALIDATION_BASIC_SANITIZATION_KEY,
+]
+
+
+def project_columns(data, columns):
+    return [{col: row.get(col, "") for col in columns} for row in data]
+
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
@@ -485,9 +506,32 @@ readme_lines += [
 # README - Full Table
 readme_lines += ["### Full Table"]
 readme_lines += ["To see the results without any skips removed, go to the [Full Table](./full_table.md)."]
-full_table = tabulate2.tabulate(tabular_data=table_data, headers="keys", tablefmt="github", colglobalalign="center")
-full_table_lines = full_table.splitlines()
-full_table_file_path.write_text(data="\n".join(full_table_lines), encoding="utf-8")
+nwb2bids_table = tabulate2.tabulate(
+    tabular_data=project_columns(table_data, NWB2BIDS_NOTIFICATIONS_COLUMNS),
+    headers="keys",
+    tablefmt="github",
+    colglobalalign="center",
+)
+bids_validation_table = tabulate2.tabulate(
+    tabular_data=project_columns(table_data, BIDS_VALIDATION_COLUMNS),
+    headers="keys",
+    tablefmt="github",
+    colglobalalign="center",
+)
+nwb2bids_table_lines = nwb2bids_table.splitlines()
+bids_validation_table_lines = bids_validation_table.splitlines()
+full_table_file_content = "\n".join(
+    [
+        "## `nwb2bids` Notifications",
+        "",
+        *nwb2bids_table_lines,
+        "",
+        "## BIDS Validations",
+        "",
+        *bids_validation_table_lines,
+    ]
+)
+full_table_file_path.write_text(data=full_table_file_content, encoding="utf-8")
 
 # Conversion Failures Table
 readme_lines += ["### Failing Sessions"]
@@ -495,10 +539,13 @@ readme_lines += [
     "To see the datasets that failed to convert any sessions, "
     "go to the [Failing Sessions Table](./failing_sessions_table.md)."
 ]
-# full_table_lines[0] is the header row, full_table_lines[1] is the separator row
-table_header_lines = full_table_lines[:2]
 failing_session_rows = [row for row in table_data if "Session(s): 0/" in row.get("Status<br>(Unsanitized)", "")]
-conversion_failure_lines = table_header_lines + [line for line in full_table_lines[2:] if "Session(s): 0/" in line]
+nwb2bids_failing_lines = nwb2bids_table_lines[:2] + [
+    line for line in nwb2bids_table_lines[2:] if "Session(s): 0/" in line
+]
+bids_validation_failing_lines = bids_validation_table_lines[:2] + [
+    line for line in bids_validation_table_lines[2:] if "Session(s): 0/" in line
+]
 
 # Build summary table for failing sessions by modality combination
 failing_total = len(failing_session_rows)
@@ -532,19 +579,40 @@ transposed_summary = [
 failing_sessions_summary_table = tabulate2.tabulate(
     tabular_data=transposed_summary, headers="keys", tablefmt="github", colglobalalign="center"
 )
-failing_sessions_file_lines = (
-    ["# Failing Sessions", ""] + failing_sessions_summary_table.splitlines() + [""] + conversion_failure_lines
+failing_sessions_file_content = "\n".join(
+    [
+        "# Failing Sessions",
+        "",
+        *failing_sessions_summary_table.splitlines(),
+        "",
+        "## `nwb2bids` Notifications",
+        "",
+        *nwb2bids_failing_lines,
+        "",
+        "## BIDS Validations",
+        "",
+        *bids_validation_failing_lines,
+    ]
 )
-conversion_failures_file_path.write_text(data="\n".join(failing_sessions_file_lines), encoding="utf-8")
+conversion_failures_file_path.write_text(data=failing_sessions_file_content, encoding="utf-8")
 
 # README - Filtered Table
 readme_lines += ["### Dandisets"]
-unskipped_lines = [
+readme_lines += ["#### `nwb2bids` Notifications"]
+unskipped_nwb2bids_lines = [
     line
-    for line in full_table_lines
+    for line in nwb2bids_table_lines
     if "Skipped" not in line and "Session(s): 0/" not in line and line.count("Missing") < 3
 ]
-readme_lines += unskipped_lines
+readme_lines += unskipped_nwb2bids_lines
+readme_lines += [""]
+readme_lines += ["#### BIDS Validations"]
+unskipped_bids_validation_lines = [
+    line
+    for line in bids_validation_table_lines
+    if "Skipped" not in line and "Session(s): 0/" not in line and line.count("Missing") < 3
+]
+readme_lines += unskipped_bids_validation_lines
 
 readme_file_path.write_text(data="\n".join(readme_lines), encoding="utf-8")
 passing_rows = [row for row in table_data if "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")]

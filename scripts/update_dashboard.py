@@ -31,6 +31,7 @@ conversion_failures_file_path = dashboard_directory / "failing_sessions_table.md
 content_directory = dashboard_directory / "content"
 content_directory.mkdir(exist_ok=True)
 table_data_file_path = content_directory / "table_data.json"
+failing_sessions_data_file_path = content_directory / "failing_sessions_data.json"
 
 client = dandi.dandiapi.DandiAPIClient()
 github_auth_header = {"Authorization": f"token {GITHUB_TOKEN}"}
@@ -531,14 +532,23 @@ table_header_lines = full_table_lines[:2]
 failing_session_rows = [row for row in table_data if "Session(s): 0/" in row.get("Status<br>(Unsanitized)", "")]
 conversion_failure_lines = table_header_lines + [line for line in full_table_lines[2:] if "Session(s): 0/" in line]
 
-# Build summary table for failing sessions
+# Build summary table for failing sessions by modality combination
 failing_total = len(failing_session_rows)
-failing_ephys_count = sum(1 for row in failing_session_rows if "ephys" in row.get("Dandiset<br>Modalities", ""))
+modality_counts: dict[str, int] = {}
+for row in failing_session_rows:
+    raw_modalities = row.get("Dandiset<br>Modalities", "")
+    # Normalize tag order so "ephys<br>beh" and "beh<br>ephys" are the same bucket
+    tags = sorted(tag.strip() for tag in raw_modalities.split("<br>") if tag.strip())
+    key = " + ".join(tags) if tags else "(none)"
+    modality_counts[key] = modality_counts.get(key, 0) + 1
+
 failing_sessions_summary = [
     {
-        "Total<br>Failing<br>Sessions": failing_total,
-        "Failing<br>ephys<br>Sessions": failing_ephys_count,
+        "Modality Tag(s)": modality,
+        "Count": count,
+        "% of Failing": f"{100 * count / failing_total:.1f}%" if failing_total else "N/A",
     }
+    for modality, count in sorted(modality_counts.items(), key=lambda x: -x[1])
 ]
 failing_sessions_summary_table = tabulate2.tabulate(
     tabular_data=failing_sessions_summary, headers="keys", tablefmt="github", colglobalalign="center"
@@ -558,5 +568,8 @@ unskipped_lines = [
 readme_lines += unskipped_lines
 
 readme_file_path.write_text(data="\n".join(readme_lines), encoding="utf-8")
+passing_rows = [row for row in table_data if "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")]
 with table_data_file_path.open(mode="w") as file_stream:
-    json.dump(obj=table_data, fp=file_stream, indent=2)
+    json.dump(obj=passing_rows, fp=file_stream, indent=2)
+with failing_sessions_data_file_path.open(mode="w") as file_stream:
+    json.dump(obj=failing_session_rows, fp=file_stream, indent=2)

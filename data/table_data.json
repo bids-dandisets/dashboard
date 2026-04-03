@@ -1120,7 +1120,7 @@
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "[\u274c1836 Errors<br>\u26a0\ufe0f4132 Warnings](https://github.com/bids-dandisets//001533/blob/basic_sanitization/derivatives/validations/bids_validation.txt)"
   },
   {
-    "Dandiset ID": "001550<br><a href=\"https://dandiarchive.org/dandiset/001550\"><img src=\"https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico\" width=\"16\" height=\"16\"/></a><br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/001550)<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)](https://github.com/bids-dandisets//001550)",
+    "Dandiset ID": "001550<br><a href=\"https://dandiarchive.org/dandiset/001550\"><img src=\"https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico\" width=\"16\" height=\"16\"/></a><br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/001550)<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)](https://github.com/bids-dandisets//001550)<br>[![](https://img.shields.io/badge/Sanitized-blue?logo=github)](https://github.com/bids-dandisets//001550/tree/basic_sanitization)",
     "Dandiset<br>Modalities": "",
     "`nwb2bids`<br>Version": "`v0.12.0-6-gf29fa00`",
     "Status<br>(Unsanitized)": "Session(s): 11/11 (100.0%)<br>NWB file(s): 11<br>Participant files: 1 .tsv 1 .json<br>Session files: 5 .tsv 5 .json",

@@ -58,6 +58,8 @@ bids_validation_file_path = "draft/derivatives/validations/bids_validation.txt"
 bids_validation_json_file_path = "draft/derivatives/validations/bids_validation.json"
 basic_sanitization_bids_validation_file_path = "basic_sanitization/derivatives/validations/bids_validation.txt"
 basic_sanitization_bids_validation_json_file_path = "basic_sanitization/derivatives/validations/bids_validation.json"
+curation_bids_validation_file_path = "curation/derivatives/validations/bids_validation.txt"
+curation_bids_validation_json_file_path = "curation/derivatives/validations/bids_validation.json"
 # dandi_validation_file_path = "draft/derivatives/validations/dandi_validation.txt"
 
 MODALITY_SHORT_MAP = {
@@ -71,11 +73,15 @@ SOURCE_SHIELD_MD = "![](https://img.shields.io/badge/Source-blue?logo=github)"
 BIDS_SHIELD_URL = "https://img.shields.io/badge/BIDS-blue?logo=github"
 BIDS_SHIELD_MD = "![](https://img.shields.io/badge/BIDS-blue?logo=github)"
 BASIC_SANITIZATION_SHIELD_MD = "![](https://img.shields.io/badge/Sanitized-blue?logo=github)"
+CURATION_SHIELD_MD = "![](https://img.shields.io/badge/Curated-blue?logo=github)"
 BIDS_VALIDATION_UNSANITIZED_KEY = (
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)"
 )
 BIDS_VALIDATION_BASIC_SANITIZATION_KEY = (
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)"
+)
+BIDS_VALIDATION_CURATION_KEY = (
+    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Curation)"
 )
 
 NWB2BIDS_NOTIFICATIONS_COLUMNS = [
@@ -85,6 +91,7 @@ NWB2BIDS_NOTIFICATIONS_COLUMNS = [
     "Status<br>(Unsanitized)",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)",
     "`nwb2bids`<br>Notifications<br>(Basic Sanitization)",
+    "`nwb2bids`<br>Notifications<br>(Curation)",
 ]
 BIDS_VALIDATION_COLUMNS = [
     "Dandiset ID",
@@ -93,6 +100,7 @@ BIDS_VALIDATION_COLUMNS = [
     "Status<br>(Unsanitized)",
     BIDS_VALIDATION_UNSANITIZED_KEY,
     BIDS_VALIDATION_BASIC_SANITIZATION_KEY,
+    BIDS_VALIDATION_CURATION_KEY,
 ]
 FULL_TABLE_COLUMNS = [
     "Dandiset ID",
@@ -101,8 +109,10 @@ FULL_TABLE_COLUMNS = [
     "Status<br>(Unsanitized)",
     "`nwb2bids`<br>Notifications<br>(Unsanitized)",
     "`nwb2bids`<br>Notifications<br>(Basic Sanitization)",
+    "`nwb2bids`<br>Notifications<br>(Curation)",
     BIDS_VALIDATION_UNSANITIZED_KEY,
     BIDS_VALIDATION_BASIC_SANITIZATION_KEY,
+    BIDS_VALIDATION_CURATION_KEY,
 ]
 
 
@@ -268,6 +278,8 @@ for dandiset in tqdm.tqdm(
         row[BIDS_VALIDATION_UNSANITIZED_KEY] = "⏭️Skipped"
         row["`nwb2bids`<br>Notifications<br>(Basic Sanitization)"] = "️⏭️"
         row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY] = "⏭️Skipped"
+        row["`nwb2bids`<br>Notifications<br>(Curation)"] = "️⏭️"
+        row[BIDS_VALIDATION_CURATION_KEY] = "⏭️Skipped"
         table_data.append(row)
         continue
 
@@ -424,6 +436,117 @@ for dandiset in tqdm.tqdm(
         blob_url = f"{repo_base_url}/{dandiset_id}/blob/{basic_sanitization_bids_validation_file_path}"
         row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY] = f"[{bids_validation_text}]({blob_url})"
 
+    # Curation
+    curation_run_info_file_path = (
+        f"{raw_content_base_url}/{dandiset_id}/curation/.nwb2bids/run_info.json"
+    )
+    response = requests.get(url=curation_run_info_file_path, headers=github_auth_header)
+    if response.status_code != 200:
+        row["`nwb2bids`<br>Notifications<br>(Curation)"] = ""
+        row[BIDS_VALIDATION_CURATION_KEY] = ""
+    else:
+        row[
+            "Dandiset ID"
+        ] += f"<br>[{CURATION_SHIELD_MD}]({repo_base_url}/{dandiset_id}/tree/curation)"
+
+        nwb2bids_info_url = f"https://api.github.com/repos/bids-dandisets/{dandiset_id}/contents/.nwb2bids"
+        nwb2bids_info_response = requests.get(
+            url=nwb2bids_info_url, headers=github_auth_header, params={"ref": "curation"}
+        )
+        curation_notifications_filename = ""
+        if nwb2bids_info_response.status_code != 200:
+            row["`nwb2bids`<br>Notifications<br>(Curation)"] = "❗Missing"
+        else:
+            nwb2bids_info = nwb2bids_info_response.json()
+
+            notifications_filenames = [
+                file_info["name"]
+                for file_info in nwb2bids_info
+                if (filename := file_info.get("name", "")).endswith("_notifications.json")
+            ]
+            if len(notifications_filenames) > 1:
+                curation_notifications_filename = max(notifications_filenames, key=extract_datetime)
+            if len(notifications_filenames) == 1:
+                curation_notifications_filename = notifications_filenames[0]
+
+        curation_nwb2bids_notifications_content_url = (
+            f"{raw_content_base_url}/{dandiset_id}/curation/.nwb2bids/{curation_notifications_filename}"
+        )
+        response = requests.get(url=curation_nwb2bids_notifications_content_url, headers=github_auth_header)
+        if response.status_code == 200:
+            nwb2bids_notifications = response.json()
+
+            already_bids = (
+                issue for issue in nwb2bids_notifications if issue.get("title", "") == "Dandiset is already BIDS"
+            )
+            if any(already_bids):
+                row["`nwb2bids`<br>Notifications<br>(Curation)"] = "⏭️"
+                row[BIDS_VALIDATION_CURATION_KEY] = "⏭️"
+                table_data.append(row)
+                continue
+
+            nwb2bids_notifications_text = "✅"
+            if len(nwb2bids_notifications) > 0:
+                notifications_by_severity = collections.defaultdict(list)
+                for notification in nwb2bids_notifications:
+                    severity = notification["severity"]
+                    match severity:
+                        case "ERROR":
+                            notifications_by_severity["ERROR"].append(notification)
+                        case "CRITICAL":
+                            notifications_by_severity["CRITICAL"].append(notification)
+                        case "WARNING" | "INFO" | "DEBUG":
+                            notifications_by_severity["SUGGESTION"].append(notification)
+
+                _notification_parts = []
+                if len(errors := notifications_by_severity["ERROR"]) > 0:
+                    plural = "s" if (count := len(errors)) > 1 else ""
+                    _notification_parts.append(f"❌{count} Error{plural}")
+                if len(criticals := notifications_by_severity["CRITICAL"]) > 0:
+                    plural = "s" if (count := len(criticals)) > 1 else ""
+                    _notification_parts.append(f"🔶{count} Critical{plural}")
+                if len(suggestions := notifications_by_severity["SUGGESTION"]) > 0:
+                    plural = "s" if (count := len(suggestions)) > 1 else ""
+                    _notification_parts.append(f"⚠️{count} Suggestion{plural}")
+                nwb2bids_notifications_text = "<br>".join(_notification_parts)
+
+            blob_url = f"{repo_base_url}/{dandiset_id}/blob/curation/.nwb2bids/{curation_notifications_filename}"
+            row["`nwb2bids`<br>Notifications<br>(Curation)"] = f"[{nwb2bids_notifications_text}]({blob_url})"
+
+        # Parse detailed BIDS validation results (curation)
+        bids_validation_json_content_url = (
+            f"{raw_content_base_url}/{dandiset_id}/{curation_bids_validation_json_file_path}"
+        )
+        json_response = requests.get(url=bids_validation_json_content_url, headers=github_auth_header)
+        if json_response.status_code != 200:
+            row[BIDS_VALIDATION_CURATION_KEY] = "❗Missing"
+        else:
+            bids_validation = json_response.json()
+            issues = bids_validation.get("issues", dict()).get("issues", [])
+
+            bids_validation_text = "✅"
+            if len(issues) > 0:
+                issues_by_severity = collections.defaultdict(list)
+                for issue in issues:
+                    severity = issue["severity"]
+                    match severity:
+                        case "error":
+                            issues_by_severity["ERROR"].append(issue)
+                        case "warning":
+                            issues_by_severity["WARNING"].append(issue)
+
+                bids_validation_lines = []
+                if len(errors := issues_by_severity["ERROR"]) > 0:
+                    plural = "s" if (count := len(errors)) > 1 else ""
+                    bids_validation_lines.append(f"❌{count} Error{plural}")
+                if len(warnings := issues_by_severity["WARNING"]) > 0:
+                    plural = "s" if (count := len(warnings)) > 1 else ""
+                    bids_validation_lines.append(f"⚠️{count} Warning{plural}")
+                bids_validation_text = "<br>".join(bids_validation_lines)
+
+            blob_url = f"{repo_base_url}/{dandiset_id}/blob/{curation_bids_validation_file_path}"
+            row[BIDS_VALIDATION_CURATION_KEY] = f"[{bids_validation_text}]({blob_url})"
+
     # nwb_inspection_content_url = f"{raw_content_base_url}/{dandiset_id}/{nwb_inspection_file_path}"
     # response = requests.get(url=nwb_inspection_content_url, headers=GITHUB_AUTH_HEADER)
     # if response.status_code != 200:
@@ -483,6 +606,28 @@ passing_bids_basic_sanitization_count = sum(
     and "❗" not in row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY]
     and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
+curation_total = sum(
+    1
+    for row in table_data
+    if row.get(BIDS_VALIDATION_CURATION_KEY, "") not in ("", "⏭️Skipped", "️⏭️", "⏭️")
+    and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
+)
+passing_bids_curation_count = sum(
+    1
+    for row in table_data
+    if "❌" not in row.get(BIDS_VALIDATION_CURATION_KEY, "❌")
+    and "❗" not in row.get(BIDS_VALIDATION_CURATION_KEY, "❗")
+    and row.get(BIDS_VALIDATION_CURATION_KEY, "") not in ("", "⏭️Skipped", "️⏭️", "⏭️")
+    and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
+)
+passing_nwb2bids_curation_count = sum(
+    1
+    for row in table_data
+    if "❌" not in row.get("`nwb2bids`<br>Notifications<br>(Curation)", "❌")
+    and "❗" not in row.get("`nwb2bids`<br>Notifications<br>(Curation)", "❗")
+    and row.get("`nwb2bids`<br>Notifications<br>(Curation)", "") not in ("", "️⏭️", "⏭️")
+    and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
+)
 
 overall_total = len(table_data)
 bids_summary_entry = {
@@ -496,6 +641,11 @@ bids_summary_entry = {
     f"Passing<br>{BIDS_VALIDATION_BASIC_SANITIZATION_KEY}": (
         f"{passing_bids_basic_sanitization_count}/{total} "
         f"({passing_bids_basic_sanitization_count / total * 100:0.1f}%)"
+    ),
+    f"Passing<br>{BIDS_VALIDATION_CURATION_KEY}": (
+        f"{passing_bids_curation_count}/{curation_total} ({passing_bids_curation_count / curation_total * 100:0.1f}%)"
+        if curation_total
+        else "N/A"
     ),
 }
 
@@ -517,6 +667,11 @@ nwb2bids_summary_entry = {
     "Passing<br>`nwb2bids`<br>Notifications<br>(Basic sanitization)": (
         f"{passing_nwb2bids_basic_sanitization_count}/{total} "
         f"({passing_nwb2bids_basic_sanitization_count / total * 100:0.1f}%)"
+    ),
+    "Passing<br>`nwb2bids`<br>Notifications<br>(Curation)": (
+        f"{passing_nwb2bids_curation_count}/{curation_total} ({passing_nwb2bids_curation_count / curation_total * 100:0.1f}%)"
+        if curation_total
+        else "N/A"
     ),
 }
 

@@ -120,11 +120,16 @@ def project_columns(data, columns):
     return [{col: row.get(col, "") for col in columns} for row in data]
 
 
+EXCLUDED_DANDISET_IDS = ["000019", "000029"]
+
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
     iterable=dandisets, total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
 ):
     dandiset_id = dandiset.identifier
+
+    if dandiset_id in EXCLUDED_DANDISET_IDS:
+        continue
 
     row = dict()
     row["Dandiset ID"] = "1"

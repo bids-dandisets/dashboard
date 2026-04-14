@@ -38,11 +38,16 @@ all_issues_per_source = {
     "bids_invalidations": {"unsanitized": [], "basic_sanitization": []},
 }
 
+EXCLUDED_DANDISET_IDS = ["000019", "000029"]
+
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(
     iterable=dandisets, total=len(dandisets), desc="Scanning bids-dandisets repos", smoothing=0, unit="Dandiset"
 ):
     dandiset_id = dandiset.identifier
+
+    if dandiset_id in EXCLUDED_DANDISET_IDS:
+        continue
 
     repo_api_url = f"{repo_api_base_url}/{dandiset_id}"
     raw_content_url = f"{raw_content_base_url}/{dandiset_id}"

@@ -11,6 +11,8 @@ import requests
 import tabulate2
 import tqdm
 
+from excluded_dandisets import EXCLUDED_DANDISET_IDS
+
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", None)
 if GITHUB_TOKEN is None:
     message = "GITHUB_TOKEN environment variable not set"
@@ -119,8 +121,6 @@ FULL_TABLE_COLUMNS = [
 def project_columns(data, columns):
     return [{col: row.get(col, "") for col in columns} for row in data]
 
-
-EXCLUDED_DANDISET_IDS = ["000019", "000029", "000144", "000149"]
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(

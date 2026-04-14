@@ -120,7 +120,7 @@ def project_columns(data, columns):
     return [{col: row.get(col, "") for col in columns} for row in data]
 
 
-EXCLUDED_DANDISET_IDS = ["000019", "000029"]
+EXCLUDED_DANDISET_IDS = ["000019", "000029", "000149"]
 
 dandisets = list(client.get_dandisets())
 for dandiset in tqdm.tqdm(

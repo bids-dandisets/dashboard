@@ -135,10 +135,13 @@ for dandiset in tqdm.tqdm(
     row["Dandiset ID"] = "1"
 
     raw_metadata = dandiset.get_raw_metadata()
+    approaches = raw_metadata.get("assetsSummary", dict()).get("approach", [])
+    if any("microscopy" in approach.get("name", "").lower() for approach in approaches):
+        continue
     row["Dandiset<br>Modalities"] = "<br>".join(
         [
             MODALITY_SHORT_MAP.get(approach_name := approach.get("name", ""), approach_name.removesuffix(" approach"))
-            for approach in raw_metadata.get("assetsSummary", dict()).get("approach", [])
+            for approach in approaches
         ]
     )
 

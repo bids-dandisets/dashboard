@@ -606,18 +606,41 @@ passing_bids_basic_sanitization_count = sum(
     and "❗" not in row[BIDS_VALIDATION_BASIC_SANITIZATION_KEY]
     and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
+def _basic_sanitization_passes_without_curation(row):
+    """Return True if basic sanitization passes and no curation branch exists.
+
+    Datasets with no errors in basic sanitization do not need a curation branch,
+    but should still be counted towards the curation total.
+    """
+    basic_san = row.get(BIDS_VALIDATION_BASIC_SANITIZATION_KEY, "")
+    return (
+        row.get(BIDS_VALIDATION_CURATION_KEY, "") == ""
+        and "❌" not in basic_san
+        and "❗" not in basic_san
+        and basic_san not in ("", "⏭️Skipped", "️⏭️", "⏭️")
+    )
+
+
 curation_total = sum(
     1
     for row in table_data
-    if row.get(BIDS_VALIDATION_CURATION_KEY, "") not in ("", "⏭️Skipped", "️⏭️", "⏭️")
+    if (
+        row.get(BIDS_VALIDATION_CURATION_KEY, "") not in ("", "⏭️Skipped", "️⏭️", "⏭️")
+        or _basic_sanitization_passes_without_curation(row)
+    )
     and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 passing_bids_curation_count = sum(
     1
     for row in table_data
-    if "❌" not in row.get(BIDS_VALIDATION_CURATION_KEY, "❌")
-    and "❗" not in row.get(BIDS_VALIDATION_CURATION_KEY, "❗")
-    and row.get(BIDS_VALIDATION_CURATION_KEY, "") not in ("", "⏭️Skipped", "️⏭️", "⏭️")
+    if (
+        (
+            "❌" not in row.get(BIDS_VALIDATION_CURATION_KEY, "❌")
+            and "❗" not in row.get(BIDS_VALIDATION_CURATION_KEY, "❗")
+            and row.get(BIDS_VALIDATION_CURATION_KEY, "") not in ("", "⏭️Skipped", "️⏭️", "⏭️")
+        )
+        or _basic_sanitization_passes_without_curation(row)
+    )
     and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
 )
 passing_nwb2bids_curation_count = sum(

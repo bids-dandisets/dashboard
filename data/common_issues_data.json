@@ -6,48 +6,15 @@
   "bids_invalidations": {
     "unsanitized": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 713,
-        "TSV_COLUMN_TYPE_REDEFINED": 39577,
-        "SIDECAR_KEY_RECOMMENDED": 80160,
-        "SUBJECT_FOLDERS": 371,
-        "NO_AUTHORS": 116,
-        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39,
-        "EVENT_ONSET_ORDER": 316
+        "SUBJECT_FOLDERS": 1,
+        "JSON_KEY_RECOMMENDED": 2
       },
       "ERROR": {
-        "TSV_VALUE_INCORRECT_TYPE": 890,
-        "INVALID_ENTITY_LABEL": 19597,
-        "NOT_INCLUDED": 35829,
-        "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 116,
-        "JSON_SCHEMA_VALIDATION_ERROR": 377,
-        "SIDECAR_KEY_REQUIRED": 13467,
-        "SIDECAR_WITHOUT_DATAFILE": 346,
-        "TSV_INDEX_VALUE_NOT_UNIQUE": 3584,
-        "TSV_EQUAL_ROWS": 316,
-        "TSV_COLUMN_MISSING": 632
+        "JSON_SCHEMA_VALIDATION_ERROR": 4,
+        "TSV_VALUE_INCORRECT_TYPE": 48,
+        "NOT_INCLUDED": 261
       }
     },
-    "basic_sanitization": {
-      "WARNING": {
-        "JSON_KEY_RECOMMENDED": 710,
-        "SIDECAR_KEY_RECOMMENDED": 330927,
-        "TSV_COLUMN_TYPE_REDEFINED": 65838,
-        "SUBJECT_FOLDERS": 369,
-        "EVENT_ONSET_ORDER": 436,
-        "NO_AUTHORS": 115,
-        "SUSPICIOUS_POSITIVE_EVENT_ONSET": 39
-      },
-      "ERROR": {
-        "TSV_VALUE_INCORRECT_TYPE": 183,
-        "SIDECAR_KEY_REQUIRED": 108453,
-        "PARTICIPANT_ID_MISMATCH": 1,
-        "JSON_KEY_REQUIRED": 115,
-        "JSON_SCHEMA_VALIDATION_ERROR": 377,
-        "TSV_EQUAL_ROWS": 407,
-        "TSV_COLUMN_MISSING": 814,
-        "TSV_INDEX_VALUE_NOT_UNIQUE": 13334
-      }
-    }
+    "basic_sanitization": {}
   }
 }

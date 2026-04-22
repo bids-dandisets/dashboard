@@ -4,17 +4,7 @@
     "basic_sanitization": {}
   },
   "bids_invalidations": {
-    "unsanitized": {
-      "WARNING": {
-        "SUBJECT_FOLDERS": 1,
-        "JSON_KEY_RECOMMENDED": 2
-      },
-      "ERROR": {
-        "JSON_SCHEMA_VALIDATION_ERROR": 4,
-        "TSV_VALUE_INCORRECT_TYPE": 48,
-        "NOT_INCLUDED": 261
-      }
-    },
+    "unsanitized": {},
     "basic_sanitization": {}
   }
 }

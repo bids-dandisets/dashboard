@@ -27,9 +27,14 @@ def extract_datetime(filename):
 
 
 def parse_nwb2bids_version(version_text):
-    cleaned_version = version_text.strip().strip("`").split("-")[0].removeprefix("v")
+    """Parse a table version cell into a comparable version.
+
+    Handles markdown-wrapped strings and git-describe suffixes.
+    Falls back to 0.0.0 for missing or invalid values.
+    """
+    cleaned_version = version_text.strip().split("-")[0].strip("`").removeprefix("v")
     try:
-        return packaging.version.Version(version=cleaned_version)
+        return packaging.version.Version(cleaned_version)
     except packaging.version.InvalidVersion:
         return packaging.version.Version("0.0.0")
 

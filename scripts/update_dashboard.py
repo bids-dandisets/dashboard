@@ -627,7 +627,7 @@ def _basic_sanitization_passes_without_curation(row):
     """Return True if basic sanitization passes and no curation branch exists.
 
     Datasets with no errors in basic sanitization do not need a curation branch,
-    but should still be counted towards the curation total.
+    and should be counted as passing for the curation column.
     """
     basic_san = row.get(BIDS_VALIDATION_BASIC_SANITIZATION_KEY, "")
     return (
@@ -638,15 +638,6 @@ def _basic_sanitization_passes_without_curation(row):
     )
 
 
-curation_total = sum(
-    1
-    for row in table_data
-    if (
-        row.get(BIDS_VALIDATION_CURATION_KEY, "") not in ("", "⏭️Skipped", "️⏭️", "⏭️")
-        or _basic_sanitization_passes_without_curation(row)
-    )
-    and "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", "")
-)
 passing_bids_curation_count = sum(
     1
     for row in table_data
@@ -683,8 +674,8 @@ bids_summary_entry = {
         f"({passing_bids_basic_sanitization_count / total * 100:0.1f}%)"
     ),
     f"Passing<br>{BIDS_VALIDATION_CURATION_KEY}": (
-        f"{passing_bids_curation_count}/{curation_total} ({passing_bids_curation_count / curation_total * 100:0.1f}%)"
-        if curation_total
+        f"{passing_bids_curation_count}/{total} ({passing_bids_curation_count / total * 100:0.1f}%)"
+        if total
         else "N/A"
     ),
 }
@@ -709,8 +700,8 @@ nwb2bids_summary_entry = {
         f"({passing_nwb2bids_basic_sanitization_count / total * 100:0.1f}%)"
     ),
     "Passing<br>`nwb2bids`<br>Notifications<br>(Curation)": (
-        f"{passing_nwb2bids_curation_count}/{curation_total} ({passing_nwb2bids_curation_count / curation_total * 100:0.1f}%)"
-        if curation_total
+        f"{passing_nwb2bids_curation_count}/{total} ({passing_nwb2bids_curation_count / total * 100:0.1f}%)"
+        if total
         else "N/A"
     ),
 }

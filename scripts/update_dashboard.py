@@ -26,6 +26,19 @@ def extract_datetime(filename):
     return datetime.min
 
 
+def parse_nwb2bids_version(version_text):
+    """Parse a table version cell into a comparable version.
+
+    Handles markdown-wrapped strings and git-describe suffixes.
+    Falls back to 0.0.0 for missing or invalid values.
+    """
+    cleaned_version = version_text.strip().split("-")[0].strip("`").removeprefix("v")
+    try:
+        return packaging.version.Version(cleaned_version)
+    except packaging.version.InvalidVersion:
+        return packaging.version.Version("0.0.0")
+
+
 dashboard_directory = pathlib.Path(__file__).parent.parent
 readme_file_path = dashboard_directory / "README.md"
 tables_directory = dashboard_directory / "tables"
@@ -577,11 +590,7 @@ for dandiset in tqdm.tqdm(
 readme_lines += ["### Summary"]
 total = sum(1 for row in table_data if "Session(s): 0/" not in row.get("Status<br>(Unsanitized)", ""))
 latest_version = max(
-    (
-        packaging.version.Version(version=(row["`nwb2bids`<br>Version"].split("-")[0].removeprefix("`v")))
-        if "❗" not in row["`nwb2bids`<br>Version"]
-        else packaging.version.Version("0.0.0")
-    )
+    parse_nwb2bids_version(row["`nwb2bids`<br>Version"])
     for row in table_data
     if row["`nwb2bids`<br>Version"] != "❌"
 )

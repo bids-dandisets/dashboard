@@ -813,7 +813,7 @@
   },
   {
     "Dandiset ID": "001697<br>[![](https://img.shields.io/badge/Sanitized-blue?logo=github)](https://github.com/bids-dandisets//001697/tree/basic_sanitization)",
-    "Dandiset<br>Modalities": "",
+    "Dandiset<br>Modalities": "ephys",
     "`nwb2bids`<br>Version": "`v0.13.0`",
     "Status<br>(Unsanitized)": "\u23ed\ufe0fSkipped (already BIDS)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c1 Error<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//001697/blob/draft/derivatives/validations/bids_validation.txt)",

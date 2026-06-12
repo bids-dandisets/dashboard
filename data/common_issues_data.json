@@ -29,10 +29,10 @@
     },
     "basic_sanitization": {
       "WARNING": {
-        "JSON_KEY_RECOMMENDED": 744,
+        "JSON_KEY_RECOMMENDED": 745,
         "TSV_COLUMN_TYPE_REDEFINED": 65902,
         "SIDECAR_KEY_RECOMMENDED": 323440,
-        "SUBJECT_FOLDERS": 381,
+        "SUBJECT_FOLDERS": 382,
         "EVENT_ONSET_ORDER": 549,
         "NO_AUTHORS": 128,
         "SUSPICIOUS_POSITIVE_EVENT_ONSET": 41,

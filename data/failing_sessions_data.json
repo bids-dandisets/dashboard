@@ -1272,6 +1272,18 @@
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Curation)": ""
   },
   {
+    "Dandiset ID": "000620<br><a href=\"https://dandiarchive.org/dandiset/000620\"><img src=\"https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico\" width=\"16\" height=\"16\"/></a><br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/000620)<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)](https://github.com/bids-dandisets//000620)<br>[![](https://img.shields.io/badge/Sanitized-blue?logo=github)](https://github.com/bids-dandisets//000620/tree/basic_sanitization)",
+    "Dandiset<br>Modalities": "ephys<br>beh",
+    "`nwb2bids`<br>Version": "`v0.13.0`",
+    "Status<br>(Unsanitized)": "Session(s): 0/48 (0.0%)<br>NWB file(s): 0",
+    "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c3 Errors](https://github.com/bids-dandisets//000620/blob/draft/.nwb2bids/datetime-20260421160725_notifications.json)",
+    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c1 Error<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000620/blob/draft/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c3 Errors](https://github.com/bids-dandisets//000620/blob/basic_sanitization/.nwb2bids/datetime-20260422023114_notifications.json)",
+    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "[\u274c1 Error<br>\u26a0\ufe0f5 Warnings](https://github.com/bids-dandisets//000620/blob/basic_sanitization/derivatives/validations/bids_validation.txt)",
+    "`nwb2bids`<br>Notifications<br>(Curation)": "",
+    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Curation)": ""
+  },
+  {
     "Dandiset ID": "000624<br><a href=\"https://dandiarchive.org/dandiset/000624\"><img src=\"https://raw.githubusercontent.com/dandi/dandi-archive/master/web/public/favicon.ico\" width=\"16\" height=\"16\"/></a><br>[![](https://img.shields.io/badge/Source-blue?logo=github)](https://github.com/dandisets/000624)<br>[![](https://img.shields.io/badge/BIDS-blue?logo=github)](https://github.com/bids-dandisets//000624)<br>[![](https://img.shields.io/badge/Sanitized-blue?logo=github)](https://github.com/bids-dandisets//000624/tree/basic_sanitization)",
     "Dandiset<br>Modalities": "beh<br>ephys",
     "`nwb2bids`<br>Version": "`v0.13.0`",

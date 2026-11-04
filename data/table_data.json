@@ -188,7 +188,6 @@
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c99 Errors<br>\u26a0\ufe0f4 Warnings](https://github.com/bids-dandisets//000165/blob/draft/derivatives/validations/bids_validation.txt)",
     "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c101 Errors](https://github.com/bids-dandisets//000165/blob/basic_sanitization/.nwb2bids/datetime-20260422022118_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "[\u274c1 Error<br>\u26a0\ufe0f984 Warnings](https://github.com/bids-dandisets//000165/blob/basic_sanitization/derivatives/validations/bids_validation.txt)",
-    "`nwb2bids`<br>Notifications<br>(Curation)": "[\u274c100 Errors](https://github.com/bids-dandisets//000165/blob/curation/.nwb2bids/datetime-20260327214828_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Curation)": "[\u26a0\ufe0f981 Warnings](https://github.com/bids-dandisets//000165/blob/curation/derivatives/validations/bids_validation.txt)"
   },
   {
@@ -735,7 +734,7 @@
     "`nwb2bids`<br>Notifications<br>(Unsanitized)": "[\u274c126 Errors](https://github.com/bids-dandisets//001530/blob/draft/.nwb2bids/datetime-20260421162656_notifications.json)",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Unsanitized)": "[\u274c147 Errors<br>\u26a0\ufe0f1 Warning](https://github.com/bids-dandisets//001530/blob/draft/derivatives/validations/bids_validation.txt)",
     "`nwb2bids`<br>Notifications<br>(Basic Sanitization)": "[\u274c126 Errors](https://github.com/bids-dandisets//001530/blob/basic_sanitization/.nwb2bids/datetime-20260422030456_notifications.json)",
-    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "[\u274c10023 Errors<br>\u26a0\ufe0f1079 Warnings](https://github.com/bids-dandisets//001530/blob/basic_sanitization/derivatives/validations/bids_validation.txt)",
+    "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Basic Sanitization)": "\u2757Missing",
     "`nwb2bids`<br>Notifications<br>(Curation)": "",
     "BIDS ([BEP32](https://bids.neuroimaging.io/extensions/beps/bep_032.html))<br>Validation<br>(Curation)": ""
   },
